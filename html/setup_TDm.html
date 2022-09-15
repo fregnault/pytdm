@@ -1,0 +1,3560 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>setup_TDm API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>setup_TDm</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">##
+import numpy as np 
+import pyevtk as vtk 
+from tqdm import tqdm 
+from scipy.special import ellipk,ellipe
+import pyPLUTO as pp
+import AStools as ASt
+import math
+import os
+
+import matplotlib.pyplot as plt 
+
+
+from pyevtk.hl import gridToVTK
+
+import imp
+
+from scipy.sparse import coo_matrix
+##
+
+
+def compute_Is(B_p,R,a):
+    &#39;&#39;&#39; Compute the shafranov intensity according to Titov et al. 2014 equation 14
+    &#39;&#39;&#39;
+
+    # eq. 7 of Titov 2014
+    Is = - (4 * np.pi * R * B_p) / (np.log(8 * R/a) - 3/2 + 1/2)
+
+    return Is
+
+def rotation_matrix_axes(alpha,axe):
+    &#39;&#39;&#39; Compute the rotation of an angle alpha of a 3D vector around the axe
+    &#39;axe&#39; which can be x,y,z
+    &#39;&#39;&#39;
+
+
+
+
+
+    rotation_matrix = dict({
+        &#39;x&#39;: np.array(( ( 1 , 0            , 0            ),
+                        ( 0 , np.cos(alpha),-np.sin(alpha)),
+                        ( 0 , np.sin(alpha), np.cos(alpha))  )),
+
+        &#39;y&#39;: np.array(( ( np.cos(alpha)  , 0  , np.sin(alpha)),
+                        ( 0              , 1  , 0           ),
+                        ( -np.sin(alpha) , 0  , np.cos(alpha))  )),
+
+        &#39;z&#39;: np.array(( ( np.cos(alpha)  , -np.sin(alpha) , 0  ),
+                        ( np.sin(alpha)   , np.cos(alpha)  , 0 ),
+                        ( 0               ,             0  , 1 )  ))  })
+    
+    return rotation_matrix[axe]
+
+def rotation_matrix(theta_0,phi_0):
+
+    # https://en.wikipedia.org/wiki/Spherical_coordinate_system
+    rot = np.array((
+        (np.cos(theta_0) * np.cos(phi_0) , np.cos(theta_0) * np.sin(phi_0) , - np.sin(theta_0)) ,
+        (-np.sin(phi_0)                  , np.cos(phi_0)                   , 0                ) ,
+        (np.sin(theta_0) * np.cos(phi_0) , np.sin(theta_0) * np.sin(phi_0) , np.cos(theta_0))))
+
+    return rot
+
+
+def base_rotation(X,Y,Z,alpha_0,theta_0,phi_0):
+    &#39;&#39;&#39; perform the rotation of the base but in the inverse order with respect
+    to the vector
+
+    X,Y,Z have to be 3D meshgrid
+    alpha_0,theta_0 and phi_0 are the angle of rotation 
+    &#39;&#39;&#39;
+
+    # X,Y,Z = np.meshgrid(x,y,z,indexing = &#39;ij&#39;)
+    
+    rot = rotation_matrix(theta_0,phi_0)
+    # rot = np.array((
+        # (np.cos(phi_0) * np.cos(theta_0), np.cos(phi_0) * np.sin(theta_0), - np.sin(phi_0)),
+            # (-np.sin(theta_0), np.cos(theta_0), 0 ),
+            # (np.sin(phi_0) * np.cos(theta_0), np.sin(phi_0) * np.sin(theta_0),np.cos(phi_0))))
+
+    R = \
+            rotation_matrix_axes(-alpha_0,&#39;z&#39;) @ \
+            rot
+
+                    #rotation_matrix(-theta,&#39;z&#39;) @ \
+                    #rotation_matrix(-phi,&#39;y&#39;)  
+                   
+    new_x = R[0,0] * X + R[0,1] * Y +  R[0,2] * Z
+    new_y = R[1,0] * X + R[1,1] * Y +  R[1,2] * Z
+    new_z = R[2,0] * X + R[2,1] * Y +  R[2,2] * Z
+    
+    #for i,j,k in zip(range(len(x)),range(len(y)),range(len(z))):
+
+        #vec = np.array([x[i],y[j],z[k]]) 
+
+        #new_vec = rotation_matrix(-theta,&#39;z&#39;) @ \
+                    #rotation_matrix(-phi,&#39;y&#39;) @   \
+                    #rotation_matrix(-alpha,&#39;z&#39;) @ \
+                    #vec
+        
+        #new_x[i] = new_vec[0]
+        #new_y[j] = new_vec[1]
+        #new_z[k] = new_vec[2]
+
+    return new_x,new_y,new_z
+
+
+
+def cube_rotation(x_comp,y_comp,z_comp,alpha_0,theta_0,phi_0):
+    &#39;&#39;&#39;
+    Performs the (de)rotation of the components using 3 cubes for each components
+    &#39;&#39;&#39;
+
+    # Rotation matrix
+    # rot = np.array((
+        # (np.cos(phi) * np.cos(theta) , np.cos(phi) * np.sin(theta) , - np.sin(phi)) ,
+        # (-np.sin(theta)              , np.cos(theta)               , 0            ) ,
+        # (np.sin(phi) * np.cos(theta) , np.sin(phi) * np.sin(theta) , np.cos(phi))))
+
+    # Rotation matrix
+    rot = rotation_matrix(theta_0,phi_0)
+
+
+    R = \
+            rotation_matrix_axes(-alpha_0,&#39;z&#39;) @ \
+            rot
+
+    R = R.T
+    #R = rotation_matrix(alpha,&#39;z&#39;) @ \
+            #rotation_matrix(phi,&#39;y&#39;) @ \
+            #rotation_matrix(theta,&#39;z&#39;) 
+                    
+    new_x_comp = R[0,0] * x_comp + R[0,1] * y_comp +  R[0,2] *z_comp 
+    new_y_comp = R[1,0] * x_comp + R[1,1] * y_comp +  R[1,2] *z_comp 
+    new_z_comp = R[2,0] * x_comp + R[2,1] * y_comp +  R[2,2] *z_comp 
+
+
+    return new_x_comp,new_y_comp,new_z_comp
+
+def cart_TDm_setup(x,y,z,d,a,R,I,zeta,Delta,case,rho_sw,only_AF_zeta=False,diag=False,Bf=False,ret_BI=False):
+    &#39;&#39;&#39; Set up of the flux-rope using TDm and its local coordinates
+
+    Inputs:
+    =======
+    x,y,z are in global cartesian system
+    F = 3 / ( 5 * np.sqrt(2)) * I * a
+
+
+
+    Outputs
+    =======
+    A_tot : vector potential
+    &#39;&#39;&#39;
+    
+    mu = 1
+
+    # delta eq.8
+    delta = Delta / a
+    
+    eps = a/R
+
+    # # mu (Set as mu_0 for now)
+    # mu = 4 * np.pi * 10**-7
+
+    # r_perp eq.16
+    r_p = np.sqrt(y**2 + (z + d)**2) 
+
+    # rho eq.15
+    rho = np.sqrt((x**2 + (r_p - R)**2))
+
+    # mask_high_rho = (rho &gt; 40)
+    phi = np.arccos((R - r_p)/rho)
+
+
+    # ksi eq.24
+    ksi = (rho - a) / (delta * a)
+
+    # ksi_m = ksi.copy()[mask_high_ksi]
+    # mask_high_ksi = (ksi&lt; 40000)
+    # ksi = np.where(ksi_full &lt; 300,ksi_full,np.nan)
+
+    # print(np.nanmax(ksi))
+
+    #=========================================================
+    # Definition depending on the case that we are taking !!!
+    #=========================================================
+    # Apparently no...
+
+    def logcosh(x):
+        # s always has real part &gt;= 0
+        s = np.sign(x) * x
+        p = np.exp(-2 * s)
+        return s + np.log1p(p) - np.log(2)
+
+
+    # h(ksi) eq 49
+    # def h(ksi):
+        # return (ksi + np.log( 2 * np.cosh(ksi) ))/2 
+
+    def h(ksi):
+        return (ksi + logcosh(ksi) + np.log(2))/2
+
+    def hp(ksi):
+        return (1 + np.sinh(ksi) / np.cosh(ksi))/2
+
+
+    # Tricks so as to use math.cosh instead of np.cosh. The latter gives an
+    # overflow
+    # h(ksi) eq 49
+    # def h(ksi):
+        # # out = []
+        # # for this_ksi in ksi:
+            # # out.append(this_ksi + np.log( 2 * math.cosh(this_ksi)))/2
+        # return np.exp(np.logaddexp(ksi,-ksi) - np.log(2))
+
+
+    # f(ksi) eq 61
+    def f(ksi):
+        f0 = -0.406982224701535
+        M1 = -1.5464309982239
+        M2 = -0.249947772314288
+        return (h(ksi) + f0 * np.exp( M1 * h(ksi) + M2 * h(ksi)**2 ))
+
+    # eq. 56
+    def fp(ksi):
+        # eq 55
+        def Theta(ksi):
+            return np.pi/4 *( 1 + np.tanh(ksi))
+
+        return np.sin(Theta(ksi))
+
+
+    # g(ksi) eq 62
+    def g(ksi):
+        f0 = -0.406982224701535
+        M3 = -2.38261647628
+        return (h(ksi) - f0 * np.exp(M3*h(ksi)))
+    
+    def gp(ksi):
+        f0 = -0.406982224701535
+        M3 = -2.38261647628
+        return hp(ksi) - M3* hp(ksi) * f0 * np.exp(M3*h(ksi))
+
+    # eq. 59
+    def gp_bis(ksi):
+        # eq 55
+        def Theta(ksi):
+            return np.pi/4 *( 1 + np.tanh(ksi))
+
+        return 1 - np.cos(Theta(ksi))
+
+    #eq. A1
+    def h_bis(ksi,delta,h):
+        return h(-1/delta) + (h(ksi) - h(-1/delta))*np.tanh((ksi+(1/delta))/3)
+
+    #eq. A1 for f
+    def f_bis(ksi,delta,f):
+        return f(-1/delta) + (f(ksi) - f(-1/delta))*np.tanh((ksi+(1/delta))/3)
+
+    #eq. A1 for g
+    def g_bis(ksi,delta,g):
+        return g(-1/delta) + (g(ksi) - g(-1/delta))*np.tanh((ksi+(1/delta))/3)
+
+
+
+    # rho* eq. 24
+    rho_star = a * ( 1 + delta * f_bis(ksi,delta,f))
+
+    # F = 3 / ( 5 * np.sqrt(2)) * I * a
+
+    # rho solid star eq.40
+    rho_solid = a * ( 1 + delta * g_bis(ksi,delta,g))
+
+
+    # k* eq. 23
+    k_star = np.sqrt( (r_p * R) / ( r_p * R + rho_star**2 / 4))
+
+    # k solid star eq. 39
+    k_solid = np.sqrt( (r_p * R) / ( r_p * R + rho_solid**2 / 4))
+
+
+    #k eq. 14
+    k = np.sqrt( (r_p* R) / (r_p * R + rho**2 / 4))
+
+    # Flux eq. 69
+    # added a minus here !
+    #print(&#39;minus F&#39;,end=&#39;\r&#39;)
+    # F = - 3 / ( 5 * np.sqrt(2)) * I * a
+    F = - (1 / 2) * mu * I * a
+
+
+
+
+    # Function A and its derivative
+    # eq. 13
+    def A(k):
+
+        return ((2 - k**2) * ellipk(k**2) - 2 * ellipe(k**2)) / k  
+
+    # eq. 41
+    def Ap(k):
+
+        return ((2 - k**2)/(k**2 * (1 - k**2)) * ellipe(k**2) - 2/k**2 * ellipk(k**2))  
+
+    # eq. 48
+    def App(k):
+
+        T1 = (5 * k**2 - 4)/(k**3 * (k**2 - 1))
+        T2 = (k**4 - 7 * k**2 + 4)/(k**3 *(k**2 - 1)**2)
+
+        return  T1 * ellipk(k**2) -  T2 * ellipe(k**2)
+
+
+    # Projections on cartersian axes
+
+    proj_x = dict({&#39;x&#39;:1,&#39;y&#39;:0,&#39;z&#39;:0}) 
+
+    proj_r_p = dict({&#39;x&#39;:0,&#39;y&#39;:y/r_p,&#39;z&#39;:(z+d)/r_p}) 
+
+    proj_theta = dict({&#39;x&#39;:0,&#39;y&#39;:-(z+d)/r_p,&#39;z&#39;:y/r_p})
+
+    A_tot = dict({})
+    BF = dict({})
+    BI = dict({})
+    B_tot = dict({})
+    
+    # eq. 2
+    B_phia = mu * I / (2*np.pi*a)
+
+    # eq. 31
+    BI_rho = (eps / 2) * (np.log(8/eps) - 1) * np.sin(phi) * B_phia
+
+    # eq. 32
+    BI_phi = (fp(ksi) - f(ksi)*fp(ksi)*delta +\
+            (eps / 2) * (np.log(8/eps) - 1 + fp(ksi)) * np.cos(phi)) * B_phia
+    
+    # ===========================================================================
+    # Setting up the pression to counter balance the fast expansion of the flux
+    # rope
+    # ===========================================================================
+    
+    frac = 0.01
+
+    #print(&#39;I&#39;,I)
+    #print( &#39;---------------&#39;)
+    #print(f&#39;P_MEI is {frac}&#39;)
+    #print( &#39;---------------&#39;)
+
+    # I is already multiplied by zeta
+    #P_Mei = frac * I**2/(4*(np.pi**2)*(a**2)) * (1 -1/2 *(1+ np.tanh((rho-a/2)/(0.5 *a))))
+    
+    # Test the presence of the pluto.ini file and get the rho star value if it
+    # exists
+
+     
+    # fname = &#39;pluto.ini&#39;
+    # if (os.path.exists(fname)):
+        # lines=[line.strip() for line in open(fname)]
+        # for ll in lines[lines.index(&#39;[Parameters]&#39;)+2:]:
+            # lll = ll.split()
+            # if lll[0] == &#39;RHO_STAR&#39;:
+                # rho_star = float(lll[1])
+    # else:
+        # print (&#39;Err: I did not find /pluto.ini,Setting RHO_STAR to 0.95&#39;)
+    
+    # Rho star is not exactly 1 a the surface
+    rho_star = 0.956
+
+
+    
+    step = (1 -1/2 *(1+ np.tanh((rho-(0.8 *a))/(0.1 *a))))[2:-2,2:-2,2:-2]
+    #print(&#39;STEP : &#39;,step.shape)
+    #
+    #try:
+    #    print(&#39;rho_sw : &#39;,rho_sw.shape)
+    #except:
+    #    pass
+
+    rho_FR = 1
+
+    density = rho_sw * (1 -step) + rho_star * step
+
+    # print(P_Mei.max())
+    if case == &#39;first&#39;:
+        
+
+
+        AI_out = dict({&#39;x&#39;:np.array([]),&#39;y&#39;:np.array([]),&#39;z&#39;:np.array([])})
+        AF_out = dict({&#39;x&#39;:np.array([]),&#39;y&#39;:np.array([]),&#39;z&#39;:np.array([])})
+
+        for comp in [&#39;x&#39;,&#39;y&#39;,&#39;z&#39;]:
+            
+            # eq. 45
+            BF[comp] = F/(np.pi*a**2) * (1 - gp_bis(ksi)) * proj_theta[comp]
+            
+
+            BI[comp] = eps / 2 * (np.log(8/eps) - 1) * B_phia * proj_x[comp]
+
+            B_tot[comp] = BF[comp] + BI[comp]
+
+            T1 = (k - k_solid) * (Ap(k_solid) + \
+                    a**2 * k_solid**3 /( 4 * R * r_p) * App(k_solid))
+
+            T2 = k**3 * (R **2 - r_p**2 + x**2) * Ap(k_solid)/ (4 * R * r_p)
+
+            T3 = x * k**3 / (2*R) * Ap(k_solid)
+
+            # eq. 47
+            AF = zeta * F / (4 * np.pi * r_p) * np.sqrt(R/r_p) * \
+                    (  (A(k_solid) + T1 + T2) * proj_x[comp] + T3 * proj_r_p[comp])
+
+            AF_out[comp] = AF         
+
+            # Checkng if we want to increase only AF or not
+            if only_AF_zeta:
+                zeta = 1
+
+            # eq. 22
+            AI =  zeta * I / ( 2 * np.pi) * np.sqrt(R / r_p) * \
+                    A(k_star) * proj_theta[comp]
+            
+
+            # print(&#39;Setting artificial factor in front of the AI&#39;,end = &#39;\r&#39;)
+
+            # AI = AI / (np.pi/2)
+
+            AI_out[comp] = AI
+
+            A_tot[comp] = AI + AF
+
+
+        if diag:
+            if ret_BI:
+                return AI_out,AF_out,BI
+
+            else:
+                return AI_out,AF_out
+
+        else: 
+            # print(&#39;Here&#39;)
+            return A_tot,density
+
+    elif case == &#39;second&#39;:
+        # Intermediary steps
+
+        # Redefining rho_star and k_star using h sewing function (paragraphs after eq. 70 and
+        # before eq. 74)
+        rho_star = a * (1 + delta * h(ksi))
+
+        k_star = np.sqrt( (r_p * R) / ( r_p * R + rho_star**2 / 4))
+
+
+        Apk_kstar = (3 + 4 * Ap(k_star) * (k-k_star))
+
+        TF1 = (a**2 * k_solid**3)/(4 * R * r_p) * Ap(k_solid)
+
+        TF2 = (np.sign(Apk_kstar) * np.abs(Apk_kstar)**(5/2))/ (30 * np.sqrt(3))
+
+        TF3_1 = (np.sign(Apk_kstar) * np.abs(Apk_kstar)**(3/2))/(12 * np.sqrt(3) * R * r_p)
+
+        TF3_2 =(k**3 * (R**2 - r_p**2 + x**2) - (a**2 * k_solid**3)) * Ap(k_solid) \
+                + a**2 * k_solid**3 * App(k_solid) * (k-k_solid)
+
+        TF3 = TF3_1 * TF3_2
+
+        TF4 = np.sign(Apk_kstar) * np.abs(Apk_kstar)**(3/2) * (x * k**3 * Ap(k_star)) / (6 * np.sqrt(3) * R)
+
+
+        # bla =  np.sqrt(R) / (4* np.pi) * 2 * R
+        # rp_cut = r_p[50,50,:]**(-3/2)
+        # plt.figure(&#39;TF1&#39;,clear = True)
+        # plt.plot(rp_cut* TF1[50,50,:],label = &#39;TF1&#39;)
+
+        # plt.plot(rp_cut* (TF2[50,50,:] - 3/10),label = &#39;TF2&#39;)
+
+        # plt.plot(Ap(k_star[50,50,:]),label = &#39;k_star&#39;)
+
+
+        # plt.plot(rp_cut*r_p[50,50,:],label = &#39;rp&#39;)
+
+        # plt.plot(rp_cut*A(k_star)[50,50,:], label = &#39;A&#39;)
+        # plt.plot(rp_cut*TF3[50,50,:],label = &#39;TF3&#39;)
+
+        # plt.plot(rp_cut*TF4[50,50,:],label = &#39;TF4&#39;)
+
+        # plt.legend()
+
+        #===============
+        # Final formula
+        #===============
+
+        A_tot = dict({&#39;x&#39;:np.array([]),&#39;y&#39;:np.array([]),&#39;z&#39;:np.array([])})
+        AI_out = dict({&#39;x&#39;:np.array([]),&#39;y&#39;:np.array([]),&#39;z&#39;:np.array([])})
+        AF_out = dict({&#39;x&#39;:np.array([]),&#39;y&#39;:np.array([]),&#39;z&#39;:np.array([])})
+
+        for comp in [&#39;x&#39;,&#39;y&#39;,&#39;z&#39;]:
+
+            # eq. 70
+            AF = zeta * F/(4 * np.pi * r_p) * np.sqrt(R/r_p) * \
+                    ( (A(k_solid) + TF1 + TF2  - 3/10 + TF3) * proj_x[comp] 
+                            + TF4 * proj_r_p[comp])
+            AF_out[comp] = AF         
+            
+
+            # Checkng if we want to increase only AF or not
+            if only_AF_zeta:
+                zeta = 1
+
+            # eq. 74
+            AI =  zeta * I / (2 * np.pi) * np.sqrt(R / r_p) * \
+                    (A(k_star) + Ap(k_star) * (k-k_star) + App(k_star)/2 * (k-k_star)**2) \
+                    * proj_theta[comp]
+
+            AI_out[comp] = AI         
+
+            A_tot[comp] = AI + AF
+    else:
+        raise ValueError(&#39;Wrong name of case&#39;)
+
+    if diag:
+        if BI:
+            return AI_out,AF_out,Bf
+        else:
+            return AI_out,AF_out
+    else: 
+        return A_tot,density
+
+def to_spheric(A,rr,tt,pph):
+    &#39;&#39;&#39; Transform each components of the vector potential in spherical system
+    &#39;&#39;&#39;
+
+    A_out = dict({}) 
+    A_out[&#39;r&#39;] = np.sin(tt)*np.cos(pph) * A[&#39;x&#39;] \
+            + np.sin(tt) * np.sin(pph) * A[&#39;y&#39;] \
+            + np.cos(tt) * A[&#39;z&#39;] 
+    A_out[&#39;theta&#39;] = np.cos(tt)*np.cos(pph) * A[&#39;x&#39;] \
+            + np.cos(tt) * np.sin(pph) * A[&#39;y&#39;] \
+            -np.sin(tt) * A[&#39;z&#39;]
+    A_out[&#39;phi&#39;] = -np.sin(pph) * A[&#39;x&#39;] \
+            + np.cos(pph) * A[&#39;y&#39;]
+
+    return A_out
+
+
+
+def set_site_points(R,a,d,alpha_0,theta_0,phi_0,R_star,bdirOut):
+    &#39;&#39;&#39; Set sitepoints from streamlines plotting inside the flux rope for vizualisation
+    3 circles at 0.5a, a, 1.5a
+
+    Formatted for the scatter matplotlib function 
+    &#39;&#39;&#39;
+
+    # print(&#39;This is deprecated now you should take a look at the version inside
+    # the TDm.py file&#39;)
+
+    # local polar coordinates (rho,theta,x)
+
+    # Number of sitepoints for each circle
+    n_site = 10
+
+    # Theta value of this 5 points around the circle
+    theta_list = np.linspace(0,2 * np.pi, n_site+1) # +1 in order to do not
+    # count the point that is at the same place than the first one
+
+
+    # Position of the circle
+    rho_list = [a/4,a,3*a/2]
+    name_circle = [&#39;0.25a&#39;,&#39;a&#39;,&#39;1.5a&#39;]
+
+    # Number of circle around the center of the thor
+    n_circle = len(rho_list)
+
+
+
+    # Rotation matrix
+    # Here you have to reverse phi and theta
+    rot = rotation_matrix(theta_0,phi_0)
+
+    Rot = \
+            rotation_matrix_axes(-alpha_0,&#39;z&#39;) @ \
+            rot
+
+    Rot = Rot.T
+
+
+    # Generating n_site points around n_circle circle around the axis of the flux
+    # rope
+    circles = dict({})
+    for i in range(n_circle):
+        # Initialisation
+        # rho,theta and cylindrical x coordinates 
+        rho_points = []
+        theta_points = []
+        x_cyl = []
+
+        x_points = []
+        y_points = []
+        z_points = []
+
+        r_points = []
+        theta_cyl_points = []
+        phi_points = []
+
+        # print(name_circle[i],i)
+        circles[name_circle[i]] = dict({})
+        this_circle = circles[name_circle[i]]
+
+        for j in range(n_site):
+
+            rho = rho_list[i]
+            theta = theta_list[j]
+
+            # cylindrical coordinates
+            rho_points.append(rho)
+            theta_cyl_points.append(theta)
+            x_cyl.append(0)
+
+            # local cartesian and putting the circle in the (x,z) plan
+
+            x = np.cos(theta) * rho
+            z = np.sin(theta) * rho + (R - d) 
+            y = 0 
+
+            # Rotation 
+            new_x = Rot[0,0] * x + Rot[0,1] * y +  Rot[0,2] * z
+            new_y = Rot[1,0] * x + Rot[1,1] * y +  Rot[1,2] * z
+            new_z = Rot[2,0] * x + Rot[2,1] * y +  Rot[2,2] * z
+
+            # Components of the translated base
+            # local coordinates
+            ax_x = new_x + R_star * np.sin(theta_0) * np.cos(phi_0) 
+            ax_y = new_y + R_star * np.sin(theta_0) * np.sin(phi_0) 
+            ax_z = new_z + R_star * np.cos(theta_0)
+
+            # Conversion to spheric
+            x_points.append(ax_x)
+            z_points.append(ax_z)
+            y_points.append(ax_y)
+
+            r = np.sqrt(ax_x**2 + ax_y**2 + ax_z**2)
+            theta = np.arccos(ax_z/r) 
+            phi = np.arctan2(ax_y,ax_x)
+
+            r_points.append(r)
+            theta_points.append(theta)
+            phi_points.append(phi)
+
+        this_circle[&#39;r&#39;] = r_points
+        this_circle[&#39;t&#39;] = theta_points
+        this_circle[&#39;p&#39;] = phi_points
+
+        this_circle[&#39;x&#39;] = x_points
+        this_circle[&#39;y&#39;] = y_points
+        this_circle[&#39;z&#39;] = z_points
+
+
+    # Writing points coordinates in txt files
+
+    for i,name_circle in enumerate(circles.keys()):
+        this_circle = circles[name_circle]
+        array_to_write = np.vstack([
+            this_circle[&#39;x&#39;],\
+                    this_circle[&#39;y&#39;],\
+                    this_circle[&#39;z&#39;]
+                    ]).T
+
+        filename = f&#39;{bdirOut}/{name_circle}&#39; + &#39;.txt&#39;
+        f = open(filename,&#39;w&#39;) 
+        # Writing each line 
+        for line in array_to_write:
+            # Line to write
+            to_write = &#39;&#39;
+            for col in line:
+
+                str_col = f&#39;{col:.5f}&#39;
+                to_write += str_col.replace(&#39;.&#39;,&#39;,&#39;) + &#39; &#39;
+
+            to_write += &#39;\n&#39;
+            f.write(to_write)
+
+        f.close()
+
+
+
+def TDm_setup(x1,x2,x3,alpha_0,theta_0,phi_0,d,a,R,zeta,B_p,Delta,case,rho_sw,geometry,R_star=1,
+        only_AF_zeta = False):
+
+    &#39;&#39;&#39; Set up in spherical coordinates of the flux-rope 
+    using TDm and its local coordinates
+
+    Inputs:
+    =======
+    r
+    theta
+    phi
+    d
+    a
+    R
+    B_p
+    zeta
+    I
+    Delta
+    case : &#39;first&#39; or &#39;second&#39;
+    geometry : &#39;spherical&#39; or &#39;cartesian&#39;
+    R_star
+
+
+
+    Outputs
+    =======
+    # ===========================================================================
+    B : magnetic field in spherical coordinates
+    &#39;&#39;&#39;
+
+
+    # print(&#34;TDm B_amb,d,a,R,Delta,case,zeta,R_star,alpha_0,theta_0,phi_0&#34;,
+           # B_p,d,a,R,Delta,case,zeta,R_star,alpha_0,theta_0,phi_0)
+
+    #Temporary
+    #-------------------------------------- 
+    # print(&#39;Temporary setup activated !&#39;) 
+
+    # # Change here !
+    # r = np.linspace(1,2,100)
+    # theta = np.linspace(np.pi/4 ,3 *np.pi/4,100)
+    # phi = np.linspace(-np.pi/4,np.pi/4,100)
+
+    # # theta = np.linspace(eps,np.pi-eps,100)
+    # # phi = np.linspace(0,2*np.pi,100)
+
+    # alpha_0 = 0
+    # theta_0 = np.pi/2
+    # phi_0   = 0
+
+    # # TDm parameters setup
+    # d = 0.15
+    # a = 0.10
+    # R = 0.3 
+    # Delta = 0.033
+    # case = &#39;first&#39;
+    # zeta = 1
+
+    # eps = a/R
+
+    # # mu_0 = 4 * np.pi * 10e-7 
+    # mu = 1 
+    # R_star = 1
+
+    # x = np.linspace(-1,1,100)
+    # y = np.linspace(-1,1,100)
+    # z = np.linspace(-1,1,100)
+    # -------------------------------------- 
+
+
+    if geometry == &#39;cartesian&#39;:
+
+
+        # Setting the grid for cartesian setup
+        xx,yy,zz = np.meshgrid(x1,x2,x3,indexing=&#39;ij&#39;)
+
+        # Computing the Shafranov current
+        Is = compute_Is(B_p,R,a)
+
+        # Modulation of the relative intensity of the FR compared to the
+        # shafranov (ie stable) FR
+        # The multiplication by zeta is inside the  cart TDm now
+        I = Is
+
+        # Computing the potential vector
+        A,density = cart_TDm_setup(xx,yy,zz,d,a,R,I,zeta,Delta,case,rho_sw)
+
+        B_out = ASt.ComputeRot(x1,x2,x3,A[&#39;x&#39;],A[&#39;y&#39;],A[&#39;z&#39;])
+
+
+
+
+    elif geometry == &#39;spherical&#39;:
+
+        r = x1
+        theta = x2
+        phi = x3
+
+        rr,tt,pph = np.meshgrid(r,theta,phi,indexing = &#39;ij&#39;)
+
+        xx = rr * np.sin(tt)*np.cos(pph)
+        yy = rr * np.sin(tt)*np.sin(pph)
+        zz = rr * np.cos(tt)
+
+        # Getting the position of the FR for the evaluation of the ambient
+        # magnetic field
+        pos_tube_r = np.argmin(np.abs( r - (R - d + R_star)))
+        pos_tube_t = np.argmin(np.abs(theta - theta_0))
+        pos_tube_p = np.argmin(np.abs(phi - phi_0))
+
+        # set_site_points(R,a,d,alpha_0,theta_0,phi_0,R_star)
+
+        # B_dipole = set_dipole(mu,xx,yy,zz)
+
+        # B_dip_sph = to_spheric(B_dipole,rr,tt,pph)
+
+        # B_p = 0
+        # for comp in B_dip_sph.keys():
+            # B_p += B_dip_sph[comp][pos_tube_r,pos_tube_t,pos_tube_p]**2
+
+        # B_p_with_dip = np.sqrt(B_p)
+
+        # B_p = B_p_with_dip
+
+        Is = compute_Is(B_p,R,a)
+
+        I = Is
+
+        new_xx = xx - R_star * np.sin(theta_0) * np.cos(phi_0)
+        new_yy = yy - R_star * np.sin(theta_0) * np.sin(phi_0)
+        new_zz = zz - R_star * np.cos(theta_0)
+
+        # Rotation of the base
+        new_x,new_y,new_z = base_rotation(new_xx,new_yy,new_zz,alpha_0,theta_0,phi_0)
+        
+
+        # A in cartesian
+        # AI,AF,BI = cart_TDm_setup(new_x,new_y,new_z,d,a,R,I,Delta,case=case,diag=True,BI=True)
+        A,density = cart_TDm_setup(new_x,new_y,new_z,d,a,R,I,zeta,Delta,case,rho_sw,only_AF_zeta=only_AF_zeta)
+
+        # rot_AF = ASt.ComputeRot(x_1d,y_1d,z_1d,AF[&#39;x&#39;],AF[&#39;y&#39;],AF[&#39;z&#39;])
+        
+        # x_comp = np.zeros_like(rr)
+        # y_comp = np.ones_like(rr)
+        # z_comp = np.zeros_like(rr)
+        # for i in [0,1,2]: 
+            # B_hybrid[0] = rot_AF[0] + BI[0]
+
+        x_comp = A[&#39;x&#39;] 
+        y_comp = A[&#39;y&#39;] 
+        z_comp = A[&#39;z&#39;] 
+
+        
+
+        # Rotation of the composant 
+        # new_x_comp,new_y_comp,new_z_comp = \
+
+        # A in cartesian with the good orientation on the sphere
+        new_A = dict({})
+        new_A[&#39;x&#39;],new_A[&#39;y&#39;],new_A[&#39;z&#39;] = \
+                cube_rotation(x_comp,y_comp,z_comp,alpha_0,theta_0,phi_0)
+
+        # new_AF = dict({})
+        # new_AF[&#39;x&#39;],new_AF[&#39;y&#39;],new_AF[&#39;z&#39;] = \
+                # cube_rotation(AF[&#39;x&#39;],AF[&#39;y&#39;],AF[&#39;z&#39;],alpha_0,theta_0,phi_0)
+    
+        # new_BI = dict({})
+        # new_BI[&#39;x&#39;],new_BI[&#39;y&#39;],new_BI[&#39;z&#39;] = \
+                # cube_rotation(BI[&#39;x&#39;],BI[&#39;y&#39;],BI[&#39;z&#39;],alpha_0,theta_0,phi_0)
+        
+        # new_B = dict({})
+        # new_B[&#39;x&#39;],new_B[&#39;y&#39;],new_B[&#39;z&#39;] = \
+                # cube_rotation(BF[&#39;x&#39;],BF[&#39;y&#39;],BF[&#39;z&#39;],alpha_0,theta_0,phi_0)
+
+    # Setting A of TDm in local coordinates 
+
+    # # Setting the localisation in the local coordinates
+    # x_comp,y_comp,z_comp = \
+        # localisation_rope(new_x,new_y,new_z,alpha,theta,phi)
+    
+    # # Getting the vector potential in cartesian 
+    # A_tot = cart_TDm_setup(new_x,new_y,new_z,d,a,R,I,Delta,case)
+    
+        # Transforming the vector potential in spheric system
+        # BI_sph = to_spheric(new_BI,rr,tt,pph)
+        # AF_sph = to_spheric(new_AF,rr,tt,pph)
+        
+
+        A_sph = to_spheric(new_A,rr,tt,pph)
+
+        
+
+        B_sph = ASt.ComputeRot(r,theta,phi,A_sph[&#39;r&#39;],A_sph[&#39;theta&#39;],A_sph[&#39;phi&#39;],geom=&#39;spherical&#39;)
+
+        B_out = B_sph
+
+        # J = ASt.ComputeRot(r,theta,phi,B_sph[0],B_sph[1],B_sph[2],geom=&#39;spherical&#39;)
+        
+        # norm_B = np.sqrt(B_sph[0] **2  + B_sph[1]**2 + B_sph[2]**2)
+        # norm_J = np.sqrt(J[0] **2  + J[1]**2 + J[2]**2)
+
+            # current = np.log(norm_J/norm_B)
+        # B_out = [0] * 3
+        # for i,comp in enumerate([&#39;r&#39;,&#39;theta&#39;,&#39;phi&#39;]):
+            # B_out[i] = BI_sph[comp] + BF_sph[i]
+
+   
+        # B_sph = A_sph
+        # B_sph[&#39;r&#39;] = 
+        # B_sph[&#39;theta&#39;] = A_sph[&#39;theta&#39;] 
+        # B_sph[&#39;phi&#39;] = A_sph[&#39;phi&#39;] 
+
+        # B_tot = dict({})
+        # for i,comp in enumerate(B_dip_sph.keys()):
+            # B_tot[comp] = B_sph[i] + B_dip_sph[comp]
+            #  B_tot[comp] = B_dip_sph[comp]
+        
+        # plt.imshow(B_sph[0][:,:,25]) 
+        # fig = plt.figure()
+        # B_sph_plot = plt.pcolormesh(
+                # (rr2*np.sin(tt2)),
+                # (rr2*np.cos(tt2)),
+                # B_sph[0][:,:,0].T
+                # )
+        # plt.axis(&#39;equal&#39;)
+        # fig.colorbar(B_sph_plot)
+
+        # dict_output_B = dict({
+            # &#39;B_r&#39;:np.asfortranarray(B_tot[&#39;r&#39;]),
+            # &#39;B_t&#39;:np.asfortranarray(B_tot[&#39;theta&#39;]),
+            # &#39;B_p&#39;:np.asfortranarray(B_tot[&#39;phi&#39;]),
+            # &#39;current&#39;:np.asfortranarray(current)
+            # })
+
+        # dict_output_A = dict({
+            # &#39;A_r&#39;:np.asfortranarray(new_A[&#39;x&#39;]),
+            # &#39;A_t&#39;:np.asfortranarray(new_A[&#39;y&#39;]),
+            # &#39;A_p&#39;:np.asfortranarray(new_A[&#39;z&#39;])
+            # })
+
+        # dict_output_B = dict({
+            # &#39;B_r&#39;:np.asfortranarray(B_sph[0]),
+            # &#39;B_t&#39;:np.asfortranarray(B_sph[1]),
+            # &#39;B_p&#39;:np.asfortranarray(B_sph[2])
+            # })
+
+
+        # savefile = &#39;cartesian_TDm&#39;
+
+        # bx1 = np.asfortranarray(B_out[0])
+        # bx2 = np.asfortranarray(B_out[1])
+        # bx3 = np.asfortranarray(B_out[2])
+
+        # gridToVTK(savefile,x1,x2,x3,pointData= {
+                                   # &#34;B&#34;:(bx1,bx2,bx3),
+                                   # &#34;bx1&#34;:bx1,
+                                   # &#34;bx2&#34;:bx2,
+                                   # &#34;bx3&#34;:bx3,
+                                    # })
+
+        # r = np.asfortranarray(r)
+        # theta = np.asfortranarray(theta)
+        # phi = np.asfortranarray(phi)
+
+        # vtk.hl.gridToVTK(outfile_A,r,theta,phi,pointData=dict_output_A)
+        # # vtk.hl.gridToVTK(outfile_B,r,theta,phi,pointData=dict_output_B)
+
+
+
+    return B_out,density
+
+##
+
+def test_rotation():
+    &#39;&#39;&#39; Tests the cube rotation function 
+    &#39;&#39;&#39;
+
+
+
+
+    #Temporary
+    #-------------------------------------- 
+    
+    # Change here !
+   
+    x = np.linspace(-1,1,100)
+    y = np.linspace(-1,1,99)
+    z = np.linspace(-1,1,101)
+
+
+
+    alpha_0 = 0
+    theta_0 = np.pi/4
+    phi_0   = 0
+
+    # TDm parameters setup
+    case = &#39;second&#39;
+    zeta = 10
+    mu = 0 #4 * np.pi * 10e-7 
+    R_star = 1
+
+    # -------------------------------------- 
+    xx,yy,zz = np.meshgrid(x,y,z,indexing = &#39;ij&#39;)
+    # rr2,tt2 = np.meshgrid(r,theta,indexing = &#39;ij&#39;)
+
+
+    x_comp = np.ones_like(xx)
+    y_comp = np.zeros_like(yy)
+    z_comp = np.zeros_like(zz)
+    
+
+    # Rotation of the composant 
+    # new_x_comp,new_y_comp,new_z_comp = \
+
+    new_A = dict({})
+    new_x_comp,new_y_comp,new_z_comp = \
+            cube_rotation(x_comp,y_comp,z_comp,alpha_0,theta_0,phi_0)
+    dict_output = dict({
+        &#39;new_x_comp&#39;:new_x_comp,
+        &#39;new_y_comp&#39;:new_y_comp,
+        &#39;new_z_comp&#39;:new_z_comp,
+        })
+
+    mv.flow(new_x_comp,new_y_comp,new_z_comp)
+    vectors = mv.quiver3d(new_x_comp,new_y_comp,new_z_comp)
+    mv.axes()
+    vectors.glyph.glyph.range = np.array([0., 1.])
+    # vectors.glyph.glyph.input_connection =
+    # &lt;tvtk.tvtk_classes.algorithm_output.AlgorithmOutput object at
+    # 0x7effcc029af0&gt;
+    vectors.glyph.mask_input_points = True
+    vectors.glyph.mask_points.progress = 1.0
+    vectors.glyph.mask_points.maximum_number_of_points = 1000
+    
+    outfile = &#39;cart_rotation&#39; 
+    x = np.asfortranarray(x)
+    y = np.asfortranarray(y)
+    z = np.asfortranarray(z)
+    vtk.hl.gridToVTK(outfile,x,y,z, pointData=dict_output)
+
+
+
+
+##
+
+
+def set_dipole(mu,x,y,z):
+    &#39;&#39;&#39; Set the magnetic field of a dipole according to
+    https://ccmc.gsfc.nasa.gov/RoR_WWW/presentations/Dipole.pdf
+    &#39;&#39;&#39;
+    
+    M = mu
+    r = np.sqrt(x**2 + y**2 + z**2)
+
+    def Bx_dipole(M,r):                                              
+        return 3 * M * x * z / r**5
+                                                                        
+    def By_dipole(M,r):                                              
+        return 3 * M * y * z / r**5
+    
+    def Bz_dipole(M,r):
+        return M * (3*z**2 - r**2) / r**5
+    
+    return dict({&#39;x&#39;:Bx_dipole(M,r),&#39;y&#39;:By_dipole(M,r),&#39;z&#39;:Bz_dipole(M,r)})
+
+def localisation_rope(x,y,z,alpha,theta,phi):
+    &#39;&#39;&#39; locate the rope in the local coordinate
+    TDm must be coded in this function !!!!!
+    everything here is in local coordinates
+    &#39;&#39;&#39;
+    
+    # Function of localisation 
+    delta_t = 0.01
+    width = 0.05
+
+    #begin_x = 0.5 * (1 + np.tanh((x + width)/delta_t))
+    #end_x = 1 -(0.5 * (1 + np.tanh((x -  width )/delta_t)))
+    #floc_x =  begin_x * end_x 
+
+    value_x = np.zeros_like(x) #np.sin((2 * np.pi / (2 *width) ) * (x))
+
+    #begin_y = 0.5 * (1 + np.tanh((y + width)/delta_t))
+    #end_y = 1 -(0.5 * (1 + np.tanh((y -  width )/delta_t)))
+    #floc_y =  begin_y * end_y 
+
+    value_y = np.ones_like(y) #np.sin((2 * np.pi / (2 *width)) * (y))
+
+    width_z = 0.01
+    begin_z = 0.5 * (1 + np.tanh((z + width_z)/delta_t))
+    end_z = 1 -(0.5 * (1 + np.tanh((z - width_z) /delta_t)))
+    floc_z = begin_z * end_z 
+
+    value_z = np.zeros_like(z)
+
+    #X,Y = np.meshgrid(x,y,indexing = &#39;ij&#39;)
+    r = np.sqrt(x**2 + y**2) 
+    floc_r = 1 -(0.5 * (1 + np.tanh((r - width)/delta_t)))
+
+    # Initialisation 
+    N = len(x)
+    x_comp = np.zeros((N,N,N))
+    N = 100
+    xg = np.linspace(-1,1,N)
+    yg = np.linspace(-1,1,N)
+    zg = np.linspace(-1,1,N)
+
+    #Position of the center of the localisation
+    #pos_xg,pos_yg,pos_zg = N/2,N/2,N/2
+    
+    R_star = 0.7
+    # Transposition of the position
+    # minus because we are going inside the sphere
+
+    #pos_x = pos_xg - R_star * np.sin(phi) * np.cos(theta) 
+    #pos_y = pos_yg - R_star * np.sin(phi) * np.sin(theta) 
+    #pos_z = pos_zg - R_star * np.cos(phi)
+   
+    x = xg - R_star * np.sin(phi) * np.cos(theta) 
+    y = yg - R_star * np.sin(phi) * np.sin(theta) 
+    z = zg - R_star * np.cos(phi)
+    y_comp = np.zeros((N,N,N))
+    z_comp = np.zeros((N,N,N))
+    # Setting the localisation
+    x_comp = value_x *floc_r* floc_z 
+    y_comp = value_y *floc_r* floc_z  
+    z_comp = value_z *floc_r* floc_z
+
+    #for i in range(0,len(x)) :
+        #for j in range(0,len(y)):
+            #for k in range(0,len(z)): 
+
+                #x_comp[i,j,k] = value_x[i] *floc_r[i,j,k] * floc_z[k] 
+                #y_comp[i,j,k] = value_y[j] *floc_r[i,j,k] * floc_z[k]  
+                #z_comp[i,j,k] = value_z[k] *floc_r[i,j,k] * floc_z[k]
+
+
+
+    return x_comp,y_comp,z_comp
+
+def from_lcart_to_gcart(case):
+    &#39;&#39;&#39; Depreciated
+    Compute the localisation of the rope in local coordinates.
+    xg,yg,zg are the global cartesian coordinates
+    x,y,z are the local coordinates
+
+    The idea is : with xg,yg,zg given what is my x,y,z,x_comp,y_comp,z_comp
+    
+    input:
+    ======
+    pos_xg/yg/zg is the position in the global cartesian coordinates
+    &#39;&#39;&#39;
+    
+    engine = Engine()
+    engine.start()
+    scene = engine.new_scene()
+
+    alpha_0 = 0
+    phi_0 = 0
+    theta_0 = np.pi/2
+
+    N = 100
+    xg = np.linspace(-1,1,N)
+    yg = np.linspace(-1,1,N)
+    zg = np.linspace(-1,1,N)
+
+    #Position of the center of the localisation
+    #pos_xg,pos_yg,pos_zg = N/2,N/2,N/2
+    
+    # R_star = 0.5
+    # Transposition of the position
+    # minus because we are going inside the sphere
+    R_star = 0.7 
+    # position of the thor in the global cartesian system
+    pos_x = R_star * np.sin(theta) * np.cos(phi) 
+    pos_y = R_star * np.sin(theta) * np.sin(phi) 
+    pos_z = R_star * np.cos(theta)
+  
+    # Components of the translated base
+    # local coordinates
+    ax_x = xg - pos_x 
+    ax_y = yg - pos_y
+    ax_z = zg - pos_z
+    
+    pos_x_ind = np.argmin(np.abs(xg - pos_x))
+    pos_y_ind = np.argmin(np.abs(yg - pos_y))
+    pos_z_ind = np.argmin(np.abs(zg - pos_z))
+
+    
+    print(&#39;from lcart to gcart used&#39;)
+
+    # Rotation of the coordinates 
+
+    X,Y,Z = np.meshgrid(xg,yg,zg,indexing = &#39;ij&#39;)
+    # sphere = mv.contour3d(X,Y,Z,R_star * np.sqrt(X**2 + Y**2 + Z**2))
+    axX,axY,axZ = np.meshgrid(ax_x,ax_y,ax_z,indexing = &#39;ij&#39;)
+
+    new_x,new_y,new_z = base_rotation(axX,axY,axZ,alpha_0,theta_0,phi_0)
+    
+
+    mu = 4*np.pi*10**-7
+    B_dipole = set_dipole(mu,X,Y,Z)
+
+    # mv.flow(X,Y,Z,B_dipole[&#39;x&#39;],B_dipole[&#39;y&#39;],B_dipole[&#39;z&#39;])
+    # mv.axes()
+
+
+    # Normalisation in order to have input in SI  
+    R_sol = 7*10**10 # m
+
+    # Magnetic field of the dipole that is perp to the cycle
+
+    B_p = B_dipole[&#39;z&#39;][pos_x_ind,pos_y_ind,pos_z_ind] # Strapping field
+    
+    # TDm setup
+    d = 0 
+    a = 0.05
+    Radii = 0.1
+
+    # Shafranov intensity
+    Is = compute_Is(B_p,mu,Radii,a)
+
+    zeta = 1 
+    I = zeta * Is
+    Delta = 0.1
+
+    # Setting A of TDm in local coordinates 
+    A = cart_TDm_setup(new_x,new_y,new_z,d,a,Radii,I,Delta,case = case)
+    x_comp = A[&#39;x&#39;]
+    y_comp = A[&#39;y&#39;]
+    z_comp = A[&#39;z&#39;]
+
+    # # Setting the localisation in the local coordinates
+    # x_comp,y_comp,z_comp = \
+        # localisation_rope(new_x,new_y,new_z,alpha,theta,phi)
+    
+    # (de)Rotation
+    new_x_comp,new_y_comp,new_z_comp = \
+        cube_rotation(x_comp,y_comp,z_comp,alpha_0,theta_0,phi_0)
+
+    new_A = dict({&#39;x&#39;:new_x_comp,&#39;y&#39;:new_y_comp,&#39;z&#39;:new_z_comp}) 
+    # Computing the magnetic field and the current
+    # B = ASt.ComputeRot(new_x,new_y,new_z,new_A[&#39;x&#39;],new_A[&#39;y&#39;],new_A[&#39;z&#39;])
+
+    # x1 = new_x[0,:,0]
+    # x2 = new_y[:,0,0]
+    # x3 = new_z[0,0,:]
+
+    B = ASt.ComputeRot(xg,yg,zg,new_A[&#39;x&#39;],new_A[&#39;y&#39;],new_A[&#39;z&#39;])
+    
+    # plt.imshow(B[0][:,50,:])
+    # print(B[&#39;x&#39;].max())
+    # Saving to vtk
+    # dict_output = dict({
+        # &#39;x_comp&#39;:np.asfortranarray(x_comp),
+        # &#39;y_comp&#39;:np.asfortranarray(y_comp),
+        # &#39;z_comp&#39;:np.asfortranarray(z_comp)
+        # })
+
+    # outfile = &#39;TDm&#39;
+
+    # xg = np.asfortranarray(xg)
+    # yg = np.asfortranarray(yg)
+    # zg = np.asfortranarray(zg)
+
+    # vtk.hl.gridToVTK(outfile,xg,yg,zg, pointData=dict_output)
+
+    # # new_dict_output = dict({
+        # # &#39;new_x_comp&#39;:np.asfortranarray(new_x_comp),
+        # # &#39;new_y_comp&#39;:np.asfortranarray(new_y_comp),
+        # # &#39;new_z_comp&#39;:np.asfortranarray(new_z_comp)
+        # # })
+
+    # new_dict_output = dict({
+        # &#39;new_x_comp&#39;:np.asfortranarray(B[&#39;x&#39;]),
+        # &#39;new_y_comp&#39;:np.asfortranarray(B[&#39;y&#39;]),
+        # &#39;new_z_comp&#39;:np.asfortranarray(B[&#39;z&#39;])
+        # })
+
+    # new_outfile = &#39;new_TDm&#39;
+
+    # vtk.hl.gridToVTK(new_outfile,xg,yg,zg, pointData=new_dict_output)
+    
+    B_tot = dict({})
+    for i,comp in enumerate(B_dipole.keys()):
+        B_tot[comp] = B[i]#B_dipole[comp] + B[i]
+        
+    # mv.flow(new_x_comp,new_y_comp,new_z_comp)
+    # mv.quiver3d(new_x_comp,new_y_comp,new_z_comp,colormap = &#39;magma&#39;)
+    # mv.quiver3d(B[&#39;x&#39;],B[&#39;y&#39;],B[&#39;z&#39;],colormap = &#39;magma&#39;)
+    # mv.flow(B[&#39;x&#39;],B[&#39;y&#39;],B[&#39;z&#39;],colormap = &#39;magma&#39;)
+    # mv.flow(J[&#39;x&#39;],J[&#39;y&#39;],J[&#39;z&#39;],colormap = &#39;magma&#39;)
+
+    streamline = mv.flow(
+            X,Y,Z,
+            B_tot[&#39;x&#39;],
+            B_tot[&#39;y&#39;],
+            B_tot[&#39;z&#39;],
+            colormap = &#39;magma&#39;,
+            )
+
+    # streamline = mv.flow(X,Y,Z,B[0],B[1],B[2],colormap = &#39;magma&#39;)
+    streamline.seed.widget = streamline.seed.widget_list[2] # 0 : sphere, 2 : plane
+    streamline.stream_tracer.progress = 1.0
+    streamline.stream_tracer.integration_direction = &#39;both&#39;
+    streamline.seed.widget.normal_to_z_axis = True
+    mv.colorbar()
+    mv.axes(extent = (X.min(),X.max(),Y.min(),Y.max(),Z.min(),Z.max()))
+
+
+    if False:
+        streamline = \
+        engine.scenes[0].children[0].children[0].children[0].children[0]
+        streamline.seed.widget = streamline.seed.widget_list[2]
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        # streamline.seed.widget.handle_direction = array([1., 0., 0.])
+        streamline.seed.widget.enabled = False
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        # streamline.seed.widget.handle_direction = array([1., 0., 0.])
+        streamline.seed.widget.interactor = None
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        streamline.seed.widget.normal = array([1., 0., 0.])
+        streamline.seed.widget.origin = array([50.5 , 25.75, 25.75])
+        streamline.seed.widget.point1 = array([50.5 , 75.25, 25.75])
+        streamline.seed.widget.point2 = array([50.5 , 25.75, 75.25])
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        streamline.seed.widget.normal = array([0., 0., 1.])
+        streamline.seed.widget.origin = array([25.75, 25.75, 50.5 ])
+        streamline.seed.widget.point1 = array([75.25, 25.75, 50.5 ])
+        streamline.seed.widget.point2 = array([25.75, 75.25, 50.5 ])
+        streamline.seed.widget.normal_to_z_axis = True
+        streamline.seed.widget.resolution = 20
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        streamline.seed.widget.normal = array([0., 0., 1.])
+        streamline.seed.widget.origin = array([25.75, 25.75, 50.5 ])
+        streamline.seed.widget.point1 = array([75.25, 25.75, 50.5 ])
+        streamline.seed.widget.point2 = array([25.75, 75.25, 50.5 ])
+        streamline.seed.widget.enabled = False
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        streamline.seed.widget.normal = array([0., 0., 1.])
+        streamline.seed.widget.origin = array([25.75, 25.75, 50.5 ])
+        streamline.seed.widget.point1 = array([75.25, 25.75, 50.5 ])
+        streamline.seed.widget.point2 = array([25.75, 75.25, 50.5 ])
+        streamline.seed.widget.enabled = True
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        streamline.seed.widget.normal = array([0., 0., 1.])
+        streamline.seed.widget.origin = array([25.75, 25.75, 50.5 ])
+        streamline.seed.widget.point1 = array([75.25, 25.75, 50.5 ])
+        streamline.seed.widget.point2 = array([25.75, 75.25, 50.5 ])
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([25.75, 50.5 , 25.75])
+        streamline.seed.widget.point1 = array([75.25, 50.5 , 25.75])
+        streamline.seed.widget.point2 = array([25.75, 50.5 , 75.25])
+        streamline.seed.widget.normal_to_y_axis = True
+        scene = engine.scenes[0]
+        scene.scene.camera.position = [48.393592834472656, 63.31793689727783,
+                225.2483545308699]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.0, 1.0, 0.0]
+        scene.scene.camera.clipping_range = [94.70283359008391,
+                275.35281539875973]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [48.393592834472656, 63.31793689727783,
+                193.7698166788601]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.0, 1.0, 0.0]
+        scene.scene.camera.clipping_range = [63.53908111659422,
+                243.40209947896977]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [48.393592834472656, 63.31793689727783,
+                167.75449614000905]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.0, 1.0, 0.0]
+        scene.scene.camera.clipping_range = [37.783913783131666,
+                216.99654913203597]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [46.825577324320015, 86.53295847766863,
+                165.54975833573167]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.0011110205857407897,
+                0.9822837058438225, -0.1873966031361957]
+        scene.scene.camera.clipping_range = [24.33169688805394,
+                235.56041250572883]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [42.50087037573129, 118.14836992844988,
+                154.80338345501858]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.01137249068036417, 0.8966530889707284,
+                -0.4425877364941058]
+        scene.scene.camera.clipping_range = [10.182315151006001,
+                256.58433582988306]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [41.2633986593956, 129.66276086499602,
+                178.09897033002164]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.01137249068036417, 0.8966530889707284,
+                -0.4425877364941058]
+        scene.scene.camera.clipping_range = [35.93748248446848,
+                282.98988617681687]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [39.76605788262941, 143.59517389821684,
+                206.28663044877538]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.01137249068036417, 0.8966530889707284,
+                -0.4425877364941058]
+        scene.scene.camera.clipping_range = [67.1012349579581,
+                314.9406020966067]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [37.95427554274233, 160.45339366841404,
+                240.39369919246738]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.01137249068036417, 0.8966530889707284,
+                -0.4425877364941058]
+        scene.scene.camera.clipping_range = [104.80937545088048,
+                353.6009683595524]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        streamline.seed.widget.center = array([52.19202448, 49.16472415,
+            51.24987253])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([27.44202448, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point1 = array([76.94202448, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point2 = array([27.44202448, 49.16472415,
+            75.99987253])
+        streamline.seed.widget.center = array([52.19202448, 49.16472415,
+            51.24987253])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([27.44202448, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point1 = array([76.94202448, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point2 = array([27.44202448, 49.16472415,
+            75.99987253])
+        streamline.seed.widget.center = array([53.01312066, 49.16472415,
+            57.35626085])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([27.44202448, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point1 = array([78.58421683, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point2 = array([27.44202448, 49.16472415,
+            88.21264916])
+        streamline.seed.widget.center = array([53.01312066, 49.16472415,
+            57.35626085])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([27.44202448, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point1 = array([78.58421683, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point2 = array([27.44202448, 49.16472415,
+            88.21264916])
+        scene.scene.camera.position = [202.25186936122225, 117.87692858319745,
+                190.55533238253227]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.14147531241395866, 0.8701470485332377,
+                -0.4720475081030175]
+        scene.scene.camera.clipping_range = [83.49906583742481,
+                373.871467159378]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [265.509474089526, 46.6352946103883,
+                71.21120687080304]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.127730232593729, 0.8638832642041235,
+                -0.48722755824109587]
+        scene.scene.camera.clipping_range = [130.10839656536703,
+                324.94291011756053]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [137.953001075165, 111.28490434679145,
+                238.4056395621682]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.2452228632441935, 0.9089971844188196,
+                -0.33703095712557063]
+        scene.scene.camera.clipping_range = [84.41341151064617,
+                367.64717255009424]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        streamline.seed.widget.center = array([45.72549341, 49.16472415,
+            62.4936104 ])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([27.44202448, 49.16472415,
+            36.77457164])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            36.77457164])
+        streamline.seed.widget.point2 = array([27.44202448, 49.16472415,
+            88.21264916])
+        streamline.seed.widget.center = array([45.72549341, 49.16472415,
+            62.4936104 ])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([27.44202448, 49.16472415,
+            36.77457164])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            36.77457164])
+        streamline.seed.widget.point2 = array([27.44202448, 49.16472415,
+            88.21264916])
+        scene.scene.camera.position = [184.80626431925975, 227.92930733940022,
+                -5.723622628415381]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [-0.5213886250492, 0.1808143881749589,
+                -0.83394247925035]
+        scene.scene.camera.clipping_range = [102.36093954446538,
+                376.99784250492667]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        streamline.seed.widget.center = array([50.40747017, 49.16472415,
+            73.44017362])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([36.80597802, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point2 = array([36.80597802, 49.16472415,
+            88.21264916])
+        streamline.seed.widget.center = array([50.40747017, 49.16472415,
+            73.44017362])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([36.80597802, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point2 = array([36.80597802, 49.16472415,
+            88.21264916])
+        scene.scene.camera.position = [161.1313378632223, 199.36039180812276,
+                2.8838851422607163]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [-0.5213886250492, 0.1808143881749589,
+                -0.83394247925035]
+        scene.scene.camera.clipping_range = [59.39957215643646,
+                339.57840518638]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [68.61251333486736, 23.980773215493794,
+                219.7730079556563]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.4464560494384805, 0.8827970109717889,
+                0.1461041865897777]
+        scene.scene.camera.clipping_range = [58.37377025633887,
+                310.24019339880755]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [37.70629931361493, -66.07462493488231,
+                170.52399082527566]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.3229669582863309, 0.648254536232576,
+                0.6895349158013416]
+        scene.scene.camera.clipping_range = [53.81368138006664,
+                323.7897315168627]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        streamline.seed.widget.center = array([50.40747017, 49.16472415,
+            73.44017362])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([36.80597802, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point2 = array([36.80597802, 49.16472415,
+            88.21264916])
+        streamline.seed.widget.enabled = False
+        streamline.seed.widget.resolution = 25
+        streamline.seed.widget.center = array([50.40747017, 49.16472415,
+            73.44017362])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([36.80597802, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point2 = array([36.80597802, 49.16472415,
+            88.21264916])
+        streamline.seed.widget.enabled = True
+        streamline.seed.widget.center = array([50.40747017, 49.16472415,
+            73.44017362])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([36.80597802, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point2 = array([36.80597802, 49.16472415,
+            88.21264916])
+        streamline.seed.widget.enabled = False
+        scene.scene.camera.position = [20.271592295251857, 50.53585782685812,
+                222.59847658107856]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.395936262501626, 0.9094061682964114,
+                0.1273377285044871]
+        scene.scene.camera.clipping_range = [64.32382114763425,
+                303.06495916405197]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+
+
+
+##
+def between(i,num1,num2):
+    
+    if (( i &gt; num1) and( i &lt; num2)):
+        return True
+    else:
+        return False
+##
+
+def cart_to_sph(vcart,xx2,xx3):
+    
+
+    sinth=np.sin(xx2);
+    costh=np.cos(xx2);
+    sinph=np.sin(xx3);
+    cosph=np.cos(xx3);
+    vsph = [0]*3
+
+    vsph[0] =  sinth*cosph*vcart[0] + sinth*sinph*vcart[1] + costh*vcart[2] ;
+    vsph[1] =  costh*cosph*vcart[0] + costh*sinph*vcart[1] - sinth*vcart[2] ;
+    vsph[2] = -sinph*vcart[0] + cosph*vcart[1] ;
+
+    return vsph
+
+##
+
+if __name__ == &#39;__main__&#39;:
+
+    
+    pass    
+    
+    
+    
+    
+    
+    
+    
+# Creation of the cube of data
+
+#value_z = np.ones(len(floc_z))
+
+#floc_z = 0 * begin_z * end_z # np.sin((z-pos_z))
+
+    # x = np.asfortranarray(x)
+    # y = np.asfortranarray(y)
+    # z = np.asfortranarray(z)
+
+    # vtk.hl.gridToVTK(outfile,x,y,z, pointData=dict_output)
+
+    # alpha = np.pi/4
+    # theta = 0
+    # phi = 0
+    # new_x_comp,new_y_comp,new_z_comp = \
+    # cube_rotation(x_comp,y_comp,z_comp,alpha,theta,phi)
+
+    # #for i in tqdm(range(len(x_comp[:,0,0]))):
+        # #for j in range(len(x_comp[0,:,0])):
+            # #for k in range(len(x_comp[0,0,:])):
+                
+                # #if ((y_comp[i,j,k] == new_y_comp[i,j,k]) and 
+                    # #(np.abs(y_comp[i,j,k]) &gt; 1e-19)):
+
+                    # #print(&#39;same !&#39;,y_comp[i,j,k],new_y_comp[i,j,k]) 
+
+    # new_dict_output = dict({
+        # &#39;new_x_comp&#39;:np.asfortranarray(new_x_comp),
+        # &#39;new_y_comp&#39;:np.asfortranarray(new_y_comp),
+        # &#39;new_z_comp&#39;:np.asfortranarray(new_z_comp)
+        # })
+
+    # new_outfile = &#39;new_comp&#39;
+
+    # vtk.hl.gridToVTK(new_outfile,x,y,z, pointData=new_dict_output)
+
+##</code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-functions">Functions</h2>
+<dl>
+<dt id="setup_TDm.TDm_setup"><code class="name flex">
+<span>def <span class="ident">TDm_setup</span></span>(<span>x1, x2, x3, alpha_0, theta_0, phi_0, d, a, R, zeta, B_p, Delta, case, rho_sw, geometry, R_star=1, only_AF_zeta=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set up in spherical coordinates of the flux-rope
+using TDm and its local coordinates</p>
+<h1 id="inputs">Inputs:</h1>
+<p>r
+theta
+phi
+d
+a
+R
+B_p
+zeta
+I
+Delta
+case : 'first' or 'second'
+geometry : 'spherical' or 'cartesian'
+R_star</p>
+<h1 id="outputs">Outputs</h1>
+<h1 id="_1">===========================================================================</h1>
+<p>B : magnetic field in spherical coordinates</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def TDm_setup(x1,x2,x3,alpha_0,theta_0,phi_0,d,a,R,zeta,B_p,Delta,case,rho_sw,geometry,R_star=1,
+        only_AF_zeta = False):
+
+    &#39;&#39;&#39; Set up in spherical coordinates of the flux-rope 
+    using TDm and its local coordinates
+
+    Inputs:
+    =======
+    r
+    theta
+    phi
+    d
+    a
+    R
+    B_p
+    zeta
+    I
+    Delta
+    case : &#39;first&#39; or &#39;second&#39;
+    geometry : &#39;spherical&#39; or &#39;cartesian&#39;
+    R_star
+
+
+
+    Outputs
+    =======
+    # ===========================================================================
+    B : magnetic field in spherical coordinates
+    &#39;&#39;&#39;
+
+
+    # print(&#34;TDm B_amb,d,a,R,Delta,case,zeta,R_star,alpha_0,theta_0,phi_0&#34;,
+           # B_p,d,a,R,Delta,case,zeta,R_star,alpha_0,theta_0,phi_0)
+
+    #Temporary
+    #-------------------------------------- 
+    # print(&#39;Temporary setup activated !&#39;) 
+
+    # # Change here !
+    # r = np.linspace(1,2,100)
+    # theta = np.linspace(np.pi/4 ,3 *np.pi/4,100)
+    # phi = np.linspace(-np.pi/4,np.pi/4,100)
+
+    # # theta = np.linspace(eps,np.pi-eps,100)
+    # # phi = np.linspace(0,2*np.pi,100)
+
+    # alpha_0 = 0
+    # theta_0 = np.pi/2
+    # phi_0   = 0
+
+    # # TDm parameters setup
+    # d = 0.15
+    # a = 0.10
+    # R = 0.3 
+    # Delta = 0.033
+    # case = &#39;first&#39;
+    # zeta = 1
+
+    # eps = a/R
+
+    # # mu_0 = 4 * np.pi * 10e-7 
+    # mu = 1 
+    # R_star = 1
+
+    # x = np.linspace(-1,1,100)
+    # y = np.linspace(-1,1,100)
+    # z = np.linspace(-1,1,100)
+    # -------------------------------------- 
+
+
+    if geometry == &#39;cartesian&#39;:
+
+
+        # Setting the grid for cartesian setup
+        xx,yy,zz = np.meshgrid(x1,x2,x3,indexing=&#39;ij&#39;)
+
+        # Computing the Shafranov current
+        Is = compute_Is(B_p,R,a)
+
+        # Modulation of the relative intensity of the FR compared to the
+        # shafranov (ie stable) FR
+        # The multiplication by zeta is inside the  cart TDm now
+        I = Is
+
+        # Computing the potential vector
+        A,density = cart_TDm_setup(xx,yy,zz,d,a,R,I,zeta,Delta,case,rho_sw)
+
+        B_out = ASt.ComputeRot(x1,x2,x3,A[&#39;x&#39;],A[&#39;y&#39;],A[&#39;z&#39;])
+
+
+
+
+    elif geometry == &#39;spherical&#39;:
+
+        r = x1
+        theta = x2
+        phi = x3
+
+        rr,tt,pph = np.meshgrid(r,theta,phi,indexing = &#39;ij&#39;)
+
+        xx = rr * np.sin(tt)*np.cos(pph)
+        yy = rr * np.sin(tt)*np.sin(pph)
+        zz = rr * np.cos(tt)
+
+        # Getting the position of the FR for the evaluation of the ambient
+        # magnetic field
+        pos_tube_r = np.argmin(np.abs( r - (R - d + R_star)))
+        pos_tube_t = np.argmin(np.abs(theta - theta_0))
+        pos_tube_p = np.argmin(np.abs(phi - phi_0))
+
+        # set_site_points(R,a,d,alpha_0,theta_0,phi_0,R_star)
+
+        # B_dipole = set_dipole(mu,xx,yy,zz)
+
+        # B_dip_sph = to_spheric(B_dipole,rr,tt,pph)
+
+        # B_p = 0
+        # for comp in B_dip_sph.keys():
+            # B_p += B_dip_sph[comp][pos_tube_r,pos_tube_t,pos_tube_p]**2
+
+        # B_p_with_dip = np.sqrt(B_p)
+
+        # B_p = B_p_with_dip
+
+        Is = compute_Is(B_p,R,a)
+
+        I = Is
+
+        new_xx = xx - R_star * np.sin(theta_0) * np.cos(phi_0)
+        new_yy = yy - R_star * np.sin(theta_0) * np.sin(phi_0)
+        new_zz = zz - R_star * np.cos(theta_0)
+
+        # Rotation of the base
+        new_x,new_y,new_z = base_rotation(new_xx,new_yy,new_zz,alpha_0,theta_0,phi_0)
+        
+
+        # A in cartesian
+        # AI,AF,BI = cart_TDm_setup(new_x,new_y,new_z,d,a,R,I,Delta,case=case,diag=True,BI=True)
+        A,density = cart_TDm_setup(new_x,new_y,new_z,d,a,R,I,zeta,Delta,case,rho_sw,only_AF_zeta=only_AF_zeta)
+
+        # rot_AF = ASt.ComputeRot(x_1d,y_1d,z_1d,AF[&#39;x&#39;],AF[&#39;y&#39;],AF[&#39;z&#39;])
+        
+        # x_comp = np.zeros_like(rr)
+        # y_comp = np.ones_like(rr)
+        # z_comp = np.zeros_like(rr)
+        # for i in [0,1,2]: 
+            # B_hybrid[0] = rot_AF[0] + BI[0]
+
+        x_comp = A[&#39;x&#39;] 
+        y_comp = A[&#39;y&#39;] 
+        z_comp = A[&#39;z&#39;] 
+
+        
+
+        # Rotation of the composant 
+        # new_x_comp,new_y_comp,new_z_comp = \
+
+        # A in cartesian with the good orientation on the sphere
+        new_A = dict({})
+        new_A[&#39;x&#39;],new_A[&#39;y&#39;],new_A[&#39;z&#39;] = \
+                cube_rotation(x_comp,y_comp,z_comp,alpha_0,theta_0,phi_0)
+
+        # new_AF = dict({})
+        # new_AF[&#39;x&#39;],new_AF[&#39;y&#39;],new_AF[&#39;z&#39;] = \
+                # cube_rotation(AF[&#39;x&#39;],AF[&#39;y&#39;],AF[&#39;z&#39;],alpha_0,theta_0,phi_0)
+    
+        # new_BI = dict({})
+        # new_BI[&#39;x&#39;],new_BI[&#39;y&#39;],new_BI[&#39;z&#39;] = \
+                # cube_rotation(BI[&#39;x&#39;],BI[&#39;y&#39;],BI[&#39;z&#39;],alpha_0,theta_0,phi_0)
+        
+        # new_B = dict({})
+        # new_B[&#39;x&#39;],new_B[&#39;y&#39;],new_B[&#39;z&#39;] = \
+                # cube_rotation(BF[&#39;x&#39;],BF[&#39;y&#39;],BF[&#39;z&#39;],alpha_0,theta_0,phi_0)
+
+    # Setting A of TDm in local coordinates 
+
+    # # Setting the localisation in the local coordinates
+    # x_comp,y_comp,z_comp = \
+        # localisation_rope(new_x,new_y,new_z,alpha,theta,phi)
+    
+    # # Getting the vector potential in cartesian 
+    # A_tot = cart_TDm_setup(new_x,new_y,new_z,d,a,R,I,Delta,case)
+    
+        # Transforming the vector potential in spheric system
+        # BI_sph = to_spheric(new_BI,rr,tt,pph)
+        # AF_sph = to_spheric(new_AF,rr,tt,pph)
+        
+
+        A_sph = to_spheric(new_A,rr,tt,pph)
+
+        
+
+        B_sph = ASt.ComputeRot(r,theta,phi,A_sph[&#39;r&#39;],A_sph[&#39;theta&#39;],A_sph[&#39;phi&#39;],geom=&#39;spherical&#39;)
+
+        B_out = B_sph
+
+        # J = ASt.ComputeRot(r,theta,phi,B_sph[0],B_sph[1],B_sph[2],geom=&#39;spherical&#39;)
+        
+        # norm_B = np.sqrt(B_sph[0] **2  + B_sph[1]**2 + B_sph[2]**2)
+        # norm_J = np.sqrt(J[0] **2  + J[1]**2 + J[2]**2)
+
+            # current = np.log(norm_J/norm_B)
+        # B_out = [0] * 3
+        # for i,comp in enumerate([&#39;r&#39;,&#39;theta&#39;,&#39;phi&#39;]):
+            # B_out[i] = BI_sph[comp] + BF_sph[i]
+
+   
+        # B_sph = A_sph
+        # B_sph[&#39;r&#39;] = 
+        # B_sph[&#39;theta&#39;] = A_sph[&#39;theta&#39;] 
+        # B_sph[&#39;phi&#39;] = A_sph[&#39;phi&#39;] 
+
+        # B_tot = dict({})
+        # for i,comp in enumerate(B_dip_sph.keys()):
+            # B_tot[comp] = B_sph[i] + B_dip_sph[comp]
+            #  B_tot[comp] = B_dip_sph[comp]
+        
+        # plt.imshow(B_sph[0][:,:,25]) 
+        # fig = plt.figure()
+        # B_sph_plot = plt.pcolormesh(
+                # (rr2*np.sin(tt2)),
+                # (rr2*np.cos(tt2)),
+                # B_sph[0][:,:,0].T
+                # )
+        # plt.axis(&#39;equal&#39;)
+        # fig.colorbar(B_sph_plot)
+
+        # dict_output_B = dict({
+            # &#39;B_r&#39;:np.asfortranarray(B_tot[&#39;r&#39;]),
+            # &#39;B_t&#39;:np.asfortranarray(B_tot[&#39;theta&#39;]),
+            # &#39;B_p&#39;:np.asfortranarray(B_tot[&#39;phi&#39;]),
+            # &#39;current&#39;:np.asfortranarray(current)
+            # })
+
+        # dict_output_A = dict({
+            # &#39;A_r&#39;:np.asfortranarray(new_A[&#39;x&#39;]),
+            # &#39;A_t&#39;:np.asfortranarray(new_A[&#39;y&#39;]),
+            # &#39;A_p&#39;:np.asfortranarray(new_A[&#39;z&#39;])
+            # })
+
+        # dict_output_B = dict({
+            # &#39;B_r&#39;:np.asfortranarray(B_sph[0]),
+            # &#39;B_t&#39;:np.asfortranarray(B_sph[1]),
+            # &#39;B_p&#39;:np.asfortranarray(B_sph[2])
+            # })
+
+
+        # savefile = &#39;cartesian_TDm&#39;
+
+        # bx1 = np.asfortranarray(B_out[0])
+        # bx2 = np.asfortranarray(B_out[1])
+        # bx3 = np.asfortranarray(B_out[2])
+
+        # gridToVTK(savefile,x1,x2,x3,pointData= {
+                                   # &#34;B&#34;:(bx1,bx2,bx3),
+                                   # &#34;bx1&#34;:bx1,
+                                   # &#34;bx2&#34;:bx2,
+                                   # &#34;bx3&#34;:bx3,
+                                    # })
+
+        # r = np.asfortranarray(r)
+        # theta = np.asfortranarray(theta)
+        # phi = np.asfortranarray(phi)
+
+        # vtk.hl.gridToVTK(outfile_A,r,theta,phi,pointData=dict_output_A)
+        # # vtk.hl.gridToVTK(outfile_B,r,theta,phi,pointData=dict_output_B)
+
+
+
+    return B_out,density</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.base_rotation"><code class="name flex">
+<span>def <span class="ident">base_rotation</span></span>(<span>X, Y, Z, alpha_0, theta_0, phi_0)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>perform the rotation of the base but in the inverse order with respect
+to the vector</p>
+<p>X,Y,Z have to be 3D meshgrid
+alpha_0,theta_0 and phi_0 are the angle of rotation</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def base_rotation(X,Y,Z,alpha_0,theta_0,phi_0):
+    &#39;&#39;&#39; perform the rotation of the base but in the inverse order with respect
+    to the vector
+
+    X,Y,Z have to be 3D meshgrid
+    alpha_0,theta_0 and phi_0 are the angle of rotation 
+    &#39;&#39;&#39;
+
+    # X,Y,Z = np.meshgrid(x,y,z,indexing = &#39;ij&#39;)
+    
+    rot = rotation_matrix(theta_0,phi_0)
+    # rot = np.array((
+        # (np.cos(phi_0) * np.cos(theta_0), np.cos(phi_0) * np.sin(theta_0), - np.sin(phi_0)),
+            # (-np.sin(theta_0), np.cos(theta_0), 0 ),
+            # (np.sin(phi_0) * np.cos(theta_0), np.sin(phi_0) * np.sin(theta_0),np.cos(phi_0))))
+
+    R = \
+            rotation_matrix_axes(-alpha_0,&#39;z&#39;) @ \
+            rot
+
+                    #rotation_matrix(-theta,&#39;z&#39;) @ \
+                    #rotation_matrix(-phi,&#39;y&#39;)  
+                   
+    new_x = R[0,0] * X + R[0,1] * Y +  R[0,2] * Z
+    new_y = R[1,0] * X + R[1,1] * Y +  R[1,2] * Z
+    new_z = R[2,0] * X + R[2,1] * Y +  R[2,2] * Z
+    
+    #for i,j,k in zip(range(len(x)),range(len(y)),range(len(z))):
+
+        #vec = np.array([x[i],y[j],z[k]]) 
+
+        #new_vec = rotation_matrix(-theta,&#39;z&#39;) @ \
+                    #rotation_matrix(-phi,&#39;y&#39;) @   \
+                    #rotation_matrix(-alpha,&#39;z&#39;) @ \
+                    #vec
+        
+        #new_x[i] = new_vec[0]
+        #new_y[j] = new_vec[1]
+        #new_z[k] = new_vec[2]
+
+    return new_x,new_y,new_z</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.between"><code class="name flex">
+<span>def <span class="ident">between</span></span>(<span>i, num1, num2)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def between(i,num1,num2):
+    
+    if (( i &gt; num1) and( i &lt; num2)):
+        return True
+    else:
+        return False</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.cart_TDm_setup"><code class="name flex">
+<span>def <span class="ident">cart_TDm_setup</span></span>(<span>x, y, z, d, a, R, I, zeta, Delta, case, rho_sw, only_AF_zeta=False, diag=False, Bf=False, ret_BI=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set up of the flux-rope using TDm and its local coordinates</p>
+<h1 id="inputs">Inputs:</h1>
+<p>x,y,z are in global cartesian system
+F = 3 / ( 5 * np.sqrt(2)) * I * a</p>
+<h1 id="outputs">Outputs</h1>
+<p>A_tot : vector potential</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def cart_TDm_setup(x,y,z,d,a,R,I,zeta,Delta,case,rho_sw,only_AF_zeta=False,diag=False,Bf=False,ret_BI=False):
+    &#39;&#39;&#39; Set up of the flux-rope using TDm and its local coordinates
+
+    Inputs:
+    =======
+    x,y,z are in global cartesian system
+    F = 3 / ( 5 * np.sqrt(2)) * I * a
+
+
+
+    Outputs
+    =======
+    A_tot : vector potential
+    &#39;&#39;&#39;
+    
+    mu = 1
+
+    # delta eq.8
+    delta = Delta / a
+    
+    eps = a/R
+
+    # # mu (Set as mu_0 for now)
+    # mu = 4 * np.pi * 10**-7
+
+    # r_perp eq.16
+    r_p = np.sqrt(y**2 + (z + d)**2) 
+
+    # rho eq.15
+    rho = np.sqrt((x**2 + (r_p - R)**2))
+
+    # mask_high_rho = (rho &gt; 40)
+    phi = np.arccos((R - r_p)/rho)
+
+
+    # ksi eq.24
+    ksi = (rho - a) / (delta * a)
+
+    # ksi_m = ksi.copy()[mask_high_ksi]
+    # mask_high_ksi = (ksi&lt; 40000)
+    # ksi = np.where(ksi_full &lt; 300,ksi_full,np.nan)
+
+    # print(np.nanmax(ksi))
+
+    #=========================================================
+    # Definition depending on the case that we are taking !!!
+    #=========================================================
+    # Apparently no...
+
+    def logcosh(x):
+        # s always has real part &gt;= 0
+        s = np.sign(x) * x
+        p = np.exp(-2 * s)
+        return s + np.log1p(p) - np.log(2)
+
+
+    # h(ksi) eq 49
+    # def h(ksi):
+        # return (ksi + np.log( 2 * np.cosh(ksi) ))/2 
+
+    def h(ksi):
+        return (ksi + logcosh(ksi) + np.log(2))/2
+
+    def hp(ksi):
+        return (1 + np.sinh(ksi) / np.cosh(ksi))/2
+
+
+    # Tricks so as to use math.cosh instead of np.cosh. The latter gives an
+    # overflow
+    # h(ksi) eq 49
+    # def h(ksi):
+        # # out = []
+        # # for this_ksi in ksi:
+            # # out.append(this_ksi + np.log( 2 * math.cosh(this_ksi)))/2
+        # return np.exp(np.logaddexp(ksi,-ksi) - np.log(2))
+
+
+    # f(ksi) eq 61
+    def f(ksi):
+        f0 = -0.406982224701535
+        M1 = -1.5464309982239
+        M2 = -0.249947772314288
+        return (h(ksi) + f0 * np.exp( M1 * h(ksi) + M2 * h(ksi)**2 ))
+
+    # eq. 56
+    def fp(ksi):
+        # eq 55
+        def Theta(ksi):
+            return np.pi/4 *( 1 + np.tanh(ksi))
+
+        return np.sin(Theta(ksi))
+
+
+    # g(ksi) eq 62
+    def g(ksi):
+        f0 = -0.406982224701535
+        M3 = -2.38261647628
+        return (h(ksi) - f0 * np.exp(M3*h(ksi)))
+    
+    def gp(ksi):
+        f0 = -0.406982224701535
+        M3 = -2.38261647628
+        return hp(ksi) - M3* hp(ksi) * f0 * np.exp(M3*h(ksi))
+
+    # eq. 59
+    def gp_bis(ksi):
+        # eq 55
+        def Theta(ksi):
+            return np.pi/4 *( 1 + np.tanh(ksi))
+
+        return 1 - np.cos(Theta(ksi))
+
+    #eq. A1
+    def h_bis(ksi,delta,h):
+        return h(-1/delta) + (h(ksi) - h(-1/delta))*np.tanh((ksi+(1/delta))/3)
+
+    #eq. A1 for f
+    def f_bis(ksi,delta,f):
+        return f(-1/delta) + (f(ksi) - f(-1/delta))*np.tanh((ksi+(1/delta))/3)
+
+    #eq. A1 for g
+    def g_bis(ksi,delta,g):
+        return g(-1/delta) + (g(ksi) - g(-1/delta))*np.tanh((ksi+(1/delta))/3)
+
+
+
+    # rho* eq. 24
+    rho_star = a * ( 1 + delta * f_bis(ksi,delta,f))
+
+    # F = 3 / ( 5 * np.sqrt(2)) * I * a
+
+    # rho solid star eq.40
+    rho_solid = a * ( 1 + delta * g_bis(ksi,delta,g))
+
+
+    # k* eq. 23
+    k_star = np.sqrt( (r_p * R) / ( r_p * R + rho_star**2 / 4))
+
+    # k solid star eq. 39
+    k_solid = np.sqrt( (r_p * R) / ( r_p * R + rho_solid**2 / 4))
+
+
+    #k eq. 14
+    k = np.sqrt( (r_p* R) / (r_p * R + rho**2 / 4))
+
+    # Flux eq. 69
+    # added a minus here !
+    #print(&#39;minus F&#39;,end=&#39;\r&#39;)
+    # F = - 3 / ( 5 * np.sqrt(2)) * I * a
+    F = - (1 / 2) * mu * I * a
+
+
+
+
+    # Function A and its derivative
+    # eq. 13
+    def A(k):
+
+        return ((2 - k**2) * ellipk(k**2) - 2 * ellipe(k**2)) / k  
+
+    # eq. 41
+    def Ap(k):
+
+        return ((2 - k**2)/(k**2 * (1 - k**2)) * ellipe(k**2) - 2/k**2 * ellipk(k**2))  
+
+    # eq. 48
+    def App(k):
+
+        T1 = (5 * k**2 - 4)/(k**3 * (k**2 - 1))
+        T2 = (k**4 - 7 * k**2 + 4)/(k**3 *(k**2 - 1)**2)
+
+        return  T1 * ellipk(k**2) -  T2 * ellipe(k**2)
+
+
+    # Projections on cartersian axes
+
+    proj_x = dict({&#39;x&#39;:1,&#39;y&#39;:0,&#39;z&#39;:0}) 
+
+    proj_r_p = dict({&#39;x&#39;:0,&#39;y&#39;:y/r_p,&#39;z&#39;:(z+d)/r_p}) 
+
+    proj_theta = dict({&#39;x&#39;:0,&#39;y&#39;:-(z+d)/r_p,&#39;z&#39;:y/r_p})
+
+    A_tot = dict({})
+    BF = dict({})
+    BI = dict({})
+    B_tot = dict({})
+    
+    # eq. 2
+    B_phia = mu * I / (2*np.pi*a)
+
+    # eq. 31
+    BI_rho = (eps / 2) * (np.log(8/eps) - 1) * np.sin(phi) * B_phia
+
+    # eq. 32
+    BI_phi = (fp(ksi) - f(ksi)*fp(ksi)*delta +\
+            (eps / 2) * (np.log(8/eps) - 1 + fp(ksi)) * np.cos(phi)) * B_phia
+    
+    # ===========================================================================
+    # Setting up the pression to counter balance the fast expansion of the flux
+    # rope
+    # ===========================================================================
+    
+    frac = 0.01
+
+    #print(&#39;I&#39;,I)
+    #print( &#39;---------------&#39;)
+    #print(f&#39;P_MEI is {frac}&#39;)
+    #print( &#39;---------------&#39;)
+
+    # I is already multiplied by zeta
+    #P_Mei = frac * I**2/(4*(np.pi**2)*(a**2)) * (1 -1/2 *(1+ np.tanh((rho-a/2)/(0.5 *a))))
+    
+    # Test the presence of the pluto.ini file and get the rho star value if it
+    # exists
+
+     
+    # fname = &#39;pluto.ini&#39;
+    # if (os.path.exists(fname)):
+        # lines=[line.strip() for line in open(fname)]
+        # for ll in lines[lines.index(&#39;[Parameters]&#39;)+2:]:
+            # lll = ll.split()
+            # if lll[0] == &#39;RHO_STAR&#39;:
+                # rho_star = float(lll[1])
+    # else:
+        # print (&#39;Err: I did not find /pluto.ini,Setting RHO_STAR to 0.95&#39;)
+    
+    # Rho star is not exactly 1 a the surface
+    rho_star = 0.956
+
+
+    
+    step = (1 -1/2 *(1+ np.tanh((rho-(0.8 *a))/(0.1 *a))))[2:-2,2:-2,2:-2]
+    #print(&#39;STEP : &#39;,step.shape)
+    #
+    #try:
+    #    print(&#39;rho_sw : &#39;,rho_sw.shape)
+    #except:
+    #    pass
+
+    rho_FR = 1
+
+    density = rho_sw * (1 -step) + rho_star * step
+
+    # print(P_Mei.max())
+    if case == &#39;first&#39;:
+        
+
+
+        AI_out = dict({&#39;x&#39;:np.array([]),&#39;y&#39;:np.array([]),&#39;z&#39;:np.array([])})
+        AF_out = dict({&#39;x&#39;:np.array([]),&#39;y&#39;:np.array([]),&#39;z&#39;:np.array([])})
+
+        for comp in [&#39;x&#39;,&#39;y&#39;,&#39;z&#39;]:
+            
+            # eq. 45
+            BF[comp] = F/(np.pi*a**2) * (1 - gp_bis(ksi)) * proj_theta[comp]
+            
+
+            BI[comp] = eps / 2 * (np.log(8/eps) - 1) * B_phia * proj_x[comp]
+
+            B_tot[comp] = BF[comp] + BI[comp]
+
+            T1 = (k - k_solid) * (Ap(k_solid) + \
+                    a**2 * k_solid**3 /( 4 * R * r_p) * App(k_solid))
+
+            T2 = k**3 * (R **2 - r_p**2 + x**2) * Ap(k_solid)/ (4 * R * r_p)
+
+            T3 = x * k**3 / (2*R) * Ap(k_solid)
+
+            # eq. 47
+            AF = zeta * F / (4 * np.pi * r_p) * np.sqrt(R/r_p) * \
+                    (  (A(k_solid) + T1 + T2) * proj_x[comp] + T3 * proj_r_p[comp])
+
+            AF_out[comp] = AF         
+
+            # Checkng if we want to increase only AF or not
+            if only_AF_zeta:
+                zeta = 1
+
+            # eq. 22
+            AI =  zeta * I / ( 2 * np.pi) * np.sqrt(R / r_p) * \
+                    A(k_star) * proj_theta[comp]
+            
+
+            # print(&#39;Setting artificial factor in front of the AI&#39;,end = &#39;\r&#39;)
+
+            # AI = AI / (np.pi/2)
+
+            AI_out[comp] = AI
+
+            A_tot[comp] = AI + AF
+
+
+        if diag:
+            if ret_BI:
+                return AI_out,AF_out,BI
+
+            else:
+                return AI_out,AF_out
+
+        else: 
+            # print(&#39;Here&#39;)
+            return A_tot,density
+
+    elif case == &#39;second&#39;:
+        # Intermediary steps
+
+        # Redefining rho_star and k_star using h sewing function (paragraphs after eq. 70 and
+        # before eq. 74)
+        rho_star = a * (1 + delta * h(ksi))
+
+        k_star = np.sqrt( (r_p * R) / ( r_p * R + rho_star**2 / 4))
+
+
+        Apk_kstar = (3 + 4 * Ap(k_star) * (k-k_star))
+
+        TF1 = (a**2 * k_solid**3)/(4 * R * r_p) * Ap(k_solid)
+
+        TF2 = (np.sign(Apk_kstar) * np.abs(Apk_kstar)**(5/2))/ (30 * np.sqrt(3))
+
+        TF3_1 = (np.sign(Apk_kstar) * np.abs(Apk_kstar)**(3/2))/(12 * np.sqrt(3) * R * r_p)
+
+        TF3_2 =(k**3 * (R**2 - r_p**2 + x**2) - (a**2 * k_solid**3)) * Ap(k_solid) \
+                + a**2 * k_solid**3 * App(k_solid) * (k-k_solid)
+
+        TF3 = TF3_1 * TF3_2
+
+        TF4 = np.sign(Apk_kstar) * np.abs(Apk_kstar)**(3/2) * (x * k**3 * Ap(k_star)) / (6 * np.sqrt(3) * R)
+
+
+        # bla =  np.sqrt(R) / (4* np.pi) * 2 * R
+        # rp_cut = r_p[50,50,:]**(-3/2)
+        # plt.figure(&#39;TF1&#39;,clear = True)
+        # plt.plot(rp_cut* TF1[50,50,:],label = &#39;TF1&#39;)
+
+        # plt.plot(rp_cut* (TF2[50,50,:] - 3/10),label = &#39;TF2&#39;)
+
+        # plt.plot(Ap(k_star[50,50,:]),label = &#39;k_star&#39;)
+
+
+        # plt.plot(rp_cut*r_p[50,50,:],label = &#39;rp&#39;)
+
+        # plt.plot(rp_cut*A(k_star)[50,50,:], label = &#39;A&#39;)
+        # plt.plot(rp_cut*TF3[50,50,:],label = &#39;TF3&#39;)
+
+        # plt.plot(rp_cut*TF4[50,50,:],label = &#39;TF4&#39;)
+
+        # plt.legend()
+
+        #===============
+        # Final formula
+        #===============
+
+        A_tot = dict({&#39;x&#39;:np.array([]),&#39;y&#39;:np.array([]),&#39;z&#39;:np.array([])})
+        AI_out = dict({&#39;x&#39;:np.array([]),&#39;y&#39;:np.array([]),&#39;z&#39;:np.array([])})
+        AF_out = dict({&#39;x&#39;:np.array([]),&#39;y&#39;:np.array([]),&#39;z&#39;:np.array([])})
+
+        for comp in [&#39;x&#39;,&#39;y&#39;,&#39;z&#39;]:
+
+            # eq. 70
+            AF = zeta * F/(4 * np.pi * r_p) * np.sqrt(R/r_p) * \
+                    ( (A(k_solid) + TF1 + TF2  - 3/10 + TF3) * proj_x[comp] 
+                            + TF4 * proj_r_p[comp])
+            AF_out[comp] = AF         
+            
+
+            # Checkng if we want to increase only AF or not
+            if only_AF_zeta:
+                zeta = 1
+
+            # eq. 74
+            AI =  zeta * I / (2 * np.pi) * np.sqrt(R / r_p) * \
+                    (A(k_star) + Ap(k_star) * (k-k_star) + App(k_star)/2 * (k-k_star)**2) \
+                    * proj_theta[comp]
+
+            AI_out[comp] = AI         
+
+            A_tot[comp] = AI + AF
+    else:
+        raise ValueError(&#39;Wrong name of case&#39;)
+
+    if diag:
+        if BI:
+            return AI_out,AF_out,Bf
+        else:
+            return AI_out,AF_out
+    else: 
+        return A_tot,density</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.cart_to_sph"><code class="name flex">
+<span>def <span class="ident">cart_to_sph</span></span>(<span>vcart, xx2, xx3)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def cart_to_sph(vcart,xx2,xx3):
+    
+
+    sinth=np.sin(xx2);
+    costh=np.cos(xx2);
+    sinph=np.sin(xx3);
+    cosph=np.cos(xx3);
+    vsph = [0]*3
+
+    vsph[0] =  sinth*cosph*vcart[0] + sinth*sinph*vcart[1] + costh*vcart[2] ;
+    vsph[1] =  costh*cosph*vcart[0] + costh*sinph*vcart[1] - sinth*vcart[2] ;
+    vsph[2] = -sinph*vcart[0] + cosph*vcart[1] ;
+
+    return vsph</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.compute_Is"><code class="name flex">
+<span>def <span class="ident">compute_Is</span></span>(<span>B_p, R, a)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Compute the shafranov intensity according to Titov et al. 2014 equation 14</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def compute_Is(B_p,R,a):
+    &#39;&#39;&#39; Compute the shafranov intensity according to Titov et al. 2014 equation 14
+    &#39;&#39;&#39;
+
+    # eq. 7 of Titov 2014
+    Is = - (4 * np.pi * R * B_p) / (np.log(8 * R/a) - 3/2 + 1/2)
+
+    return Is</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.cube_rotation"><code class="name flex">
+<span>def <span class="ident">cube_rotation</span></span>(<span>x_comp, y_comp, z_comp, alpha_0, theta_0, phi_0)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Performs the (de)rotation of the components using 3 cubes for each components</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def cube_rotation(x_comp,y_comp,z_comp,alpha_0,theta_0,phi_0):
+    &#39;&#39;&#39;
+    Performs the (de)rotation of the components using 3 cubes for each components
+    &#39;&#39;&#39;
+
+    # Rotation matrix
+    # rot = np.array((
+        # (np.cos(phi) * np.cos(theta) , np.cos(phi) * np.sin(theta) , - np.sin(phi)) ,
+        # (-np.sin(theta)              , np.cos(theta)               , 0            ) ,
+        # (np.sin(phi) * np.cos(theta) , np.sin(phi) * np.sin(theta) , np.cos(phi))))
+
+    # Rotation matrix
+    rot = rotation_matrix(theta_0,phi_0)
+
+
+    R = \
+            rotation_matrix_axes(-alpha_0,&#39;z&#39;) @ \
+            rot
+
+    R = R.T
+    #R = rotation_matrix(alpha,&#39;z&#39;) @ \
+            #rotation_matrix(phi,&#39;y&#39;) @ \
+            #rotation_matrix(theta,&#39;z&#39;) 
+                    
+    new_x_comp = R[0,0] * x_comp + R[0,1] * y_comp +  R[0,2] *z_comp 
+    new_y_comp = R[1,0] * x_comp + R[1,1] * y_comp +  R[1,2] *z_comp 
+    new_z_comp = R[2,0] * x_comp + R[2,1] * y_comp +  R[2,2] *z_comp 
+
+
+    return new_x_comp,new_y_comp,new_z_comp</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.from_lcart_to_gcart"><code class="name flex">
+<span>def <span class="ident">from_lcart_to_gcart</span></span>(<span>case)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Depreciated
+Compute the localisation of the rope in local coordinates.
+xg,yg,zg are the global cartesian coordinates
+x,y,z are the local coordinates</p>
+<p>The idea is : with xg,yg,zg given what is my x,y,z,x_comp,y_comp,z_comp</p>
+<h1 id="input">input:</h1>
+<p>pos_xg/yg/zg is the position in the global cartesian coordinates</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def from_lcart_to_gcart(case):
+    &#39;&#39;&#39; Depreciated
+    Compute the localisation of the rope in local coordinates.
+    xg,yg,zg are the global cartesian coordinates
+    x,y,z are the local coordinates
+
+    The idea is : with xg,yg,zg given what is my x,y,z,x_comp,y_comp,z_comp
+    
+    input:
+    ======
+    pos_xg/yg/zg is the position in the global cartesian coordinates
+    &#39;&#39;&#39;
+    
+    engine = Engine()
+    engine.start()
+    scene = engine.new_scene()
+
+    alpha_0 = 0
+    phi_0 = 0
+    theta_0 = np.pi/2
+
+    N = 100
+    xg = np.linspace(-1,1,N)
+    yg = np.linspace(-1,1,N)
+    zg = np.linspace(-1,1,N)
+
+    #Position of the center of the localisation
+    #pos_xg,pos_yg,pos_zg = N/2,N/2,N/2
+    
+    # R_star = 0.5
+    # Transposition of the position
+    # minus because we are going inside the sphere
+    R_star = 0.7 
+    # position of the thor in the global cartesian system
+    pos_x = R_star * np.sin(theta) * np.cos(phi) 
+    pos_y = R_star * np.sin(theta) * np.sin(phi) 
+    pos_z = R_star * np.cos(theta)
+  
+    # Components of the translated base
+    # local coordinates
+    ax_x = xg - pos_x 
+    ax_y = yg - pos_y
+    ax_z = zg - pos_z
+    
+    pos_x_ind = np.argmin(np.abs(xg - pos_x))
+    pos_y_ind = np.argmin(np.abs(yg - pos_y))
+    pos_z_ind = np.argmin(np.abs(zg - pos_z))
+
+    
+    print(&#39;from lcart to gcart used&#39;)
+
+    # Rotation of the coordinates 
+
+    X,Y,Z = np.meshgrid(xg,yg,zg,indexing = &#39;ij&#39;)
+    # sphere = mv.contour3d(X,Y,Z,R_star * np.sqrt(X**2 + Y**2 + Z**2))
+    axX,axY,axZ = np.meshgrid(ax_x,ax_y,ax_z,indexing = &#39;ij&#39;)
+
+    new_x,new_y,new_z = base_rotation(axX,axY,axZ,alpha_0,theta_0,phi_0)
+    
+
+    mu = 4*np.pi*10**-7
+    B_dipole = set_dipole(mu,X,Y,Z)
+
+    # mv.flow(X,Y,Z,B_dipole[&#39;x&#39;],B_dipole[&#39;y&#39;],B_dipole[&#39;z&#39;])
+    # mv.axes()
+
+
+    # Normalisation in order to have input in SI  
+    R_sol = 7*10**10 # m
+
+    # Magnetic field of the dipole that is perp to the cycle
+
+    B_p = B_dipole[&#39;z&#39;][pos_x_ind,pos_y_ind,pos_z_ind] # Strapping field
+    
+    # TDm setup
+    d = 0 
+    a = 0.05
+    Radii = 0.1
+
+    # Shafranov intensity
+    Is = compute_Is(B_p,mu,Radii,a)
+
+    zeta = 1 
+    I = zeta * Is
+    Delta = 0.1
+
+    # Setting A of TDm in local coordinates 
+    A = cart_TDm_setup(new_x,new_y,new_z,d,a,Radii,I,Delta,case = case)
+    x_comp = A[&#39;x&#39;]
+    y_comp = A[&#39;y&#39;]
+    z_comp = A[&#39;z&#39;]
+
+    # # Setting the localisation in the local coordinates
+    # x_comp,y_comp,z_comp = \
+        # localisation_rope(new_x,new_y,new_z,alpha,theta,phi)
+    
+    # (de)Rotation
+    new_x_comp,new_y_comp,new_z_comp = \
+        cube_rotation(x_comp,y_comp,z_comp,alpha_0,theta_0,phi_0)
+
+    new_A = dict({&#39;x&#39;:new_x_comp,&#39;y&#39;:new_y_comp,&#39;z&#39;:new_z_comp}) 
+    # Computing the magnetic field and the current
+    # B = ASt.ComputeRot(new_x,new_y,new_z,new_A[&#39;x&#39;],new_A[&#39;y&#39;],new_A[&#39;z&#39;])
+
+    # x1 = new_x[0,:,0]
+    # x2 = new_y[:,0,0]
+    # x3 = new_z[0,0,:]
+
+    B = ASt.ComputeRot(xg,yg,zg,new_A[&#39;x&#39;],new_A[&#39;y&#39;],new_A[&#39;z&#39;])
+    
+    # plt.imshow(B[0][:,50,:])
+    # print(B[&#39;x&#39;].max())
+    # Saving to vtk
+    # dict_output = dict({
+        # &#39;x_comp&#39;:np.asfortranarray(x_comp),
+        # &#39;y_comp&#39;:np.asfortranarray(y_comp),
+        # &#39;z_comp&#39;:np.asfortranarray(z_comp)
+        # })
+
+    # outfile = &#39;TDm&#39;
+
+    # xg = np.asfortranarray(xg)
+    # yg = np.asfortranarray(yg)
+    # zg = np.asfortranarray(zg)
+
+    # vtk.hl.gridToVTK(outfile,xg,yg,zg, pointData=dict_output)
+
+    # # new_dict_output = dict({
+        # # &#39;new_x_comp&#39;:np.asfortranarray(new_x_comp),
+        # # &#39;new_y_comp&#39;:np.asfortranarray(new_y_comp),
+        # # &#39;new_z_comp&#39;:np.asfortranarray(new_z_comp)
+        # # })
+
+    # new_dict_output = dict({
+        # &#39;new_x_comp&#39;:np.asfortranarray(B[&#39;x&#39;]),
+        # &#39;new_y_comp&#39;:np.asfortranarray(B[&#39;y&#39;]),
+        # &#39;new_z_comp&#39;:np.asfortranarray(B[&#39;z&#39;])
+        # })
+
+    # new_outfile = &#39;new_TDm&#39;
+
+    # vtk.hl.gridToVTK(new_outfile,xg,yg,zg, pointData=new_dict_output)
+    
+    B_tot = dict({})
+    for i,comp in enumerate(B_dipole.keys()):
+        B_tot[comp] = B[i]#B_dipole[comp] + B[i]
+        
+    # mv.flow(new_x_comp,new_y_comp,new_z_comp)
+    # mv.quiver3d(new_x_comp,new_y_comp,new_z_comp,colormap = &#39;magma&#39;)
+    # mv.quiver3d(B[&#39;x&#39;],B[&#39;y&#39;],B[&#39;z&#39;],colormap = &#39;magma&#39;)
+    # mv.flow(B[&#39;x&#39;],B[&#39;y&#39;],B[&#39;z&#39;],colormap = &#39;magma&#39;)
+    # mv.flow(J[&#39;x&#39;],J[&#39;y&#39;],J[&#39;z&#39;],colormap = &#39;magma&#39;)
+
+    streamline = mv.flow(
+            X,Y,Z,
+            B_tot[&#39;x&#39;],
+            B_tot[&#39;y&#39;],
+            B_tot[&#39;z&#39;],
+            colormap = &#39;magma&#39;,
+            )
+
+    # streamline = mv.flow(X,Y,Z,B[0],B[1],B[2],colormap = &#39;magma&#39;)
+    streamline.seed.widget = streamline.seed.widget_list[2] # 0 : sphere, 2 : plane
+    streamline.stream_tracer.progress = 1.0
+    streamline.stream_tracer.integration_direction = &#39;both&#39;
+    streamline.seed.widget.normal_to_z_axis = True
+    mv.colorbar()
+    mv.axes(extent = (X.min(),X.max(),Y.min(),Y.max(),Z.min(),Z.max()))
+
+
+    if False:
+        streamline = \
+        engine.scenes[0].children[0].children[0].children[0].children[0]
+        streamline.seed.widget = streamline.seed.widget_list[2]
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        # streamline.seed.widget.handle_direction = array([1., 0., 0.])
+        streamline.seed.widget.enabled = False
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        # streamline.seed.widget.handle_direction = array([1., 0., 0.])
+        streamline.seed.widget.interactor = None
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        streamline.seed.widget.normal = array([1., 0., 0.])
+        streamline.seed.widget.origin = array([50.5 , 25.75, 25.75])
+        streamline.seed.widget.point1 = array([50.5 , 75.25, 25.75])
+        streamline.seed.widget.point2 = array([50.5 , 25.75, 75.25])
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        streamline.seed.widget.normal = array([0., 0., 1.])
+        streamline.seed.widget.origin = array([25.75, 25.75, 50.5 ])
+        streamline.seed.widget.point1 = array([75.25, 25.75, 50.5 ])
+        streamline.seed.widget.point2 = array([25.75, 75.25, 50.5 ])
+        streamline.seed.widget.normal_to_z_axis = True
+        streamline.seed.widget.resolution = 20
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        streamline.seed.widget.normal = array([0., 0., 1.])
+        streamline.seed.widget.origin = array([25.75, 25.75, 50.5 ])
+        streamline.seed.widget.point1 = array([75.25, 25.75, 50.5 ])
+        streamline.seed.widget.point2 = array([25.75, 75.25, 50.5 ])
+        streamline.seed.widget.enabled = False
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        streamline.seed.widget.normal = array([0., 0., 1.])
+        streamline.seed.widget.origin = array([25.75, 25.75, 50.5 ])
+        streamline.seed.widget.point1 = array([75.25, 25.75, 50.5 ])
+        streamline.seed.widget.point2 = array([25.75, 75.25, 50.5 ])
+        streamline.seed.widget.enabled = True
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        streamline.seed.widget.normal = array([0., 0., 1.])
+        streamline.seed.widget.origin = array([25.75, 25.75, 50.5 ])
+        streamline.seed.widget.point1 = array([75.25, 25.75, 50.5 ])
+        streamline.seed.widget.point2 = array([25.75, 75.25, 50.5 ])
+        streamline.seed.widget.center = array([50.5, 50.5, 50.5])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([25.75, 50.5 , 25.75])
+        streamline.seed.widget.point1 = array([75.25, 50.5 , 25.75])
+        streamline.seed.widget.point2 = array([25.75, 50.5 , 75.25])
+        streamline.seed.widget.normal_to_y_axis = True
+        scene = engine.scenes[0]
+        scene.scene.camera.position = [48.393592834472656, 63.31793689727783,
+                225.2483545308699]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.0, 1.0, 0.0]
+        scene.scene.camera.clipping_range = [94.70283359008391,
+                275.35281539875973]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [48.393592834472656, 63.31793689727783,
+                193.7698166788601]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.0, 1.0, 0.0]
+        scene.scene.camera.clipping_range = [63.53908111659422,
+                243.40209947896977]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [48.393592834472656, 63.31793689727783,
+                167.75449614000905]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.0, 1.0, 0.0]
+        scene.scene.camera.clipping_range = [37.783913783131666,
+                216.99654913203597]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [46.825577324320015, 86.53295847766863,
+                165.54975833573167]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.0011110205857407897,
+                0.9822837058438225, -0.1873966031361957]
+        scene.scene.camera.clipping_range = [24.33169688805394,
+                235.56041250572883]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [42.50087037573129, 118.14836992844988,
+                154.80338345501858]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.01137249068036417, 0.8966530889707284,
+                -0.4425877364941058]
+        scene.scene.camera.clipping_range = [10.182315151006001,
+                256.58433582988306]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [41.2633986593956, 129.66276086499602,
+                178.09897033002164]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.01137249068036417, 0.8966530889707284,
+                -0.4425877364941058]
+        scene.scene.camera.clipping_range = [35.93748248446848,
+                282.98988617681687]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [39.76605788262941, 143.59517389821684,
+                206.28663044877538]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.01137249068036417, 0.8966530889707284,
+                -0.4425877364941058]
+        scene.scene.camera.clipping_range = [67.1012349579581,
+                314.9406020966067]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [37.95427554274233, 160.45339366841404,
+                240.39369919246738]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.01137249068036417, 0.8966530889707284,
+                -0.4425877364941058]
+        scene.scene.camera.clipping_range = [104.80937545088048,
+                353.6009683595524]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        streamline.seed.widget.center = array([52.19202448, 49.16472415,
+            51.24987253])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([27.44202448, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point1 = array([76.94202448, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point2 = array([27.44202448, 49.16472415,
+            75.99987253])
+        streamline.seed.widget.center = array([52.19202448, 49.16472415,
+            51.24987253])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([27.44202448, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point1 = array([76.94202448, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point2 = array([27.44202448, 49.16472415,
+            75.99987253])
+        streamline.seed.widget.center = array([53.01312066, 49.16472415,
+            57.35626085])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([27.44202448, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point1 = array([78.58421683, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point2 = array([27.44202448, 49.16472415,
+            88.21264916])
+        streamline.seed.widget.center = array([53.01312066, 49.16472415,
+            57.35626085])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([27.44202448, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point1 = array([78.58421683, 49.16472415,
+            26.49987253])
+        streamline.seed.widget.point2 = array([27.44202448, 49.16472415,
+            88.21264916])
+        scene.scene.camera.position = [202.25186936122225, 117.87692858319745,
+                190.55533238253227]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.14147531241395866, 0.8701470485332377,
+                -0.4720475081030175]
+        scene.scene.camera.clipping_range = [83.49906583742481,
+                373.871467159378]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [265.509474089526, 46.6352946103883,
+                71.21120687080304]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.127730232593729, 0.8638832642041235,
+                -0.48722755824109587]
+        scene.scene.camera.clipping_range = [130.10839656536703,
+                324.94291011756053]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [137.953001075165, 111.28490434679145,
+                238.4056395621682]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.2452228632441935, 0.9089971844188196,
+                -0.33703095712557063]
+        scene.scene.camera.clipping_range = [84.41341151064617,
+                367.64717255009424]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        streamline.seed.widget.center = array([45.72549341, 49.16472415,
+            62.4936104 ])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([27.44202448, 49.16472415,
+            36.77457164])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            36.77457164])
+        streamline.seed.widget.point2 = array([27.44202448, 49.16472415,
+            88.21264916])
+        streamline.seed.widget.center = array([45.72549341, 49.16472415,
+            62.4936104 ])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([27.44202448, 49.16472415,
+            36.77457164])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            36.77457164])
+        streamline.seed.widget.point2 = array([27.44202448, 49.16472415,
+            88.21264916])
+        scene.scene.camera.position = [184.80626431925975, 227.92930733940022,
+                -5.723622628415381]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [-0.5213886250492, 0.1808143881749589,
+                -0.83394247925035]
+        scene.scene.camera.clipping_range = [102.36093954446538,
+                376.99784250492667]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        streamline.seed.widget.center = array([50.40747017, 49.16472415,
+            73.44017362])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([36.80597802, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point2 = array([36.80597802, 49.16472415,
+            88.21264916])
+        streamline.seed.widget.center = array([50.40747017, 49.16472415,
+            73.44017362])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([36.80597802, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point2 = array([36.80597802, 49.16472415,
+            88.21264916])
+        scene.scene.camera.position = [161.1313378632223, 199.36039180812276,
+                2.8838851422607163]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [-0.5213886250492, 0.1808143881749589,
+                -0.83394247925035]
+        scene.scene.camera.clipping_range = [59.39957215643646,
+                339.57840518638]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [68.61251333486736, 23.980773215493794,
+                219.7730079556563]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.4464560494384805, 0.8827970109717889,
+                0.1461041865897777]
+        scene.scene.camera.clipping_range = [58.37377025633887,
+                310.24019339880755]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        scene.scene.camera.position = [37.70629931361493, -66.07462493488231,
+                170.52399082527566]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.3229669582863309, 0.648254536232576,
+                0.6895349158013416]
+        scene.scene.camera.clipping_range = [53.81368138006664,
+                323.7897315168627]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()
+        streamline.seed.widget.center = array([50.40747017, 49.16472415,
+            73.44017362])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([36.80597802, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point2 = array([36.80597802, 49.16472415,
+            88.21264916])
+        streamline.seed.widget.enabled = False
+        streamline.seed.widget.resolution = 25
+        streamline.seed.widget.center = array([50.40747017, 49.16472415,
+            73.44017362])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([36.80597802, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point2 = array([36.80597802, 49.16472415,
+            88.21264916])
+        streamline.seed.widget.enabled = True
+        streamline.seed.widget.center = array([50.40747017, 49.16472415,
+            73.44017362])
+        streamline.seed.widget.normal = array([ 0., -1.,  0.])
+        streamline.seed.widget.origin = array([36.80597802, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point1 = array([64.00896233, 49.16472415,
+            58.66769808])
+        streamline.seed.widget.point2 = array([36.80597802, 49.16472415,
+            88.21264916])
+        streamline.seed.widget.enabled = False
+        scene.scene.camera.position = [20.271592295251857, 50.53585782685812,
+                222.59847658107856]
+        scene.scene.camera.focal_point = [48.393592834472656,
+                63.31793689727783, 43.87201738357544]
+        scene.scene.camera.view_angle = 30.0
+        scene.scene.camera.view_up = [0.395936262501626, 0.9094061682964114,
+                0.1273377285044871]
+        scene.scene.camera.clipping_range = [64.32382114763425,
+                303.06495916405197]
+        scene.scene.camera.compute_view_plane_normal()
+        scene.scene.render()</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.localisation_rope"><code class="name flex">
+<span>def <span class="ident">localisation_rope</span></span>(<span>x, y, z, alpha, theta, phi)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>locate the rope in the local coordinate
+TDm must be coded in this function !!!!!
+everything here is in local coordinates</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def localisation_rope(x,y,z,alpha,theta,phi):
+    &#39;&#39;&#39; locate the rope in the local coordinate
+    TDm must be coded in this function !!!!!
+    everything here is in local coordinates
+    &#39;&#39;&#39;
+    
+    # Function of localisation 
+    delta_t = 0.01
+    width = 0.05
+
+    #begin_x = 0.5 * (1 + np.tanh((x + width)/delta_t))
+    #end_x = 1 -(0.5 * (1 + np.tanh((x -  width )/delta_t)))
+    #floc_x =  begin_x * end_x 
+
+    value_x = np.zeros_like(x) #np.sin((2 * np.pi / (2 *width) ) * (x))
+
+    #begin_y = 0.5 * (1 + np.tanh((y + width)/delta_t))
+    #end_y = 1 -(0.5 * (1 + np.tanh((y -  width )/delta_t)))
+    #floc_y =  begin_y * end_y 
+
+    value_y = np.ones_like(y) #np.sin((2 * np.pi / (2 *width)) * (y))
+
+    width_z = 0.01
+    begin_z = 0.5 * (1 + np.tanh((z + width_z)/delta_t))
+    end_z = 1 -(0.5 * (1 + np.tanh((z - width_z) /delta_t)))
+    floc_z = begin_z * end_z 
+
+    value_z = np.zeros_like(z)
+
+    #X,Y = np.meshgrid(x,y,indexing = &#39;ij&#39;)
+    r = np.sqrt(x**2 + y**2) 
+    floc_r = 1 -(0.5 * (1 + np.tanh((r - width)/delta_t)))
+
+    # Initialisation 
+    N = len(x)
+    x_comp = np.zeros((N,N,N))
+    N = 100
+    xg = np.linspace(-1,1,N)
+    yg = np.linspace(-1,1,N)
+    zg = np.linspace(-1,1,N)
+
+    #Position of the center of the localisation
+    #pos_xg,pos_yg,pos_zg = N/2,N/2,N/2
+    
+    R_star = 0.7
+    # Transposition of the position
+    # minus because we are going inside the sphere
+
+    #pos_x = pos_xg - R_star * np.sin(phi) * np.cos(theta) 
+    #pos_y = pos_yg - R_star * np.sin(phi) * np.sin(theta) 
+    #pos_z = pos_zg - R_star * np.cos(phi)
+   
+    x = xg - R_star * np.sin(phi) * np.cos(theta) 
+    y = yg - R_star * np.sin(phi) * np.sin(theta) 
+    z = zg - R_star * np.cos(phi)
+    y_comp = np.zeros((N,N,N))
+    z_comp = np.zeros((N,N,N))
+    # Setting the localisation
+    x_comp = value_x *floc_r* floc_z 
+    y_comp = value_y *floc_r* floc_z  
+    z_comp = value_z *floc_r* floc_z
+
+    #for i in range(0,len(x)) :
+        #for j in range(0,len(y)):
+            #for k in range(0,len(z)): 
+
+                #x_comp[i,j,k] = value_x[i] *floc_r[i,j,k] * floc_z[k] 
+                #y_comp[i,j,k] = value_y[j] *floc_r[i,j,k] * floc_z[k]  
+                #z_comp[i,j,k] = value_z[k] *floc_r[i,j,k] * floc_z[k]
+
+
+
+    return x_comp,y_comp,z_comp</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.rotation_matrix"><code class="name flex">
+<span>def <span class="ident">rotation_matrix</span></span>(<span>theta_0, phi_0)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def rotation_matrix(theta_0,phi_0):
+
+    # https://en.wikipedia.org/wiki/Spherical_coordinate_system
+    rot = np.array((
+        (np.cos(theta_0) * np.cos(phi_0) , np.cos(theta_0) * np.sin(phi_0) , - np.sin(theta_0)) ,
+        (-np.sin(phi_0)                  , np.cos(phi_0)                   , 0                ) ,
+        (np.sin(theta_0) * np.cos(phi_0) , np.sin(theta_0) * np.sin(phi_0) , np.cos(theta_0))))
+
+    return rot</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.rotation_matrix_axes"><code class="name flex">
+<span>def <span class="ident">rotation_matrix_axes</span></span>(<span>alpha, axe)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Compute the rotation of an angle alpha of a 3D vector around the axe
+'axe' which can be x,y,z</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def rotation_matrix_axes(alpha,axe):
+    &#39;&#39;&#39; Compute the rotation of an angle alpha of a 3D vector around the axe
+    &#39;axe&#39; which can be x,y,z
+    &#39;&#39;&#39;
+
+
+
+
+
+    rotation_matrix = dict({
+        &#39;x&#39;: np.array(( ( 1 , 0            , 0            ),
+                        ( 0 , np.cos(alpha),-np.sin(alpha)),
+                        ( 0 , np.sin(alpha), np.cos(alpha))  )),
+
+        &#39;y&#39;: np.array(( ( np.cos(alpha)  , 0  , np.sin(alpha)),
+                        ( 0              , 1  , 0           ),
+                        ( -np.sin(alpha) , 0  , np.cos(alpha))  )),
+
+        &#39;z&#39;: np.array(( ( np.cos(alpha)  , -np.sin(alpha) , 0  ),
+                        ( np.sin(alpha)   , np.cos(alpha)  , 0 ),
+                        ( 0               ,             0  , 1 )  ))  })
+    
+    return rotation_matrix[axe]</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.set_dipole"><code class="name flex">
+<span>def <span class="ident">set_dipole</span></span>(<span>mu, x, y, z)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set the magnetic field of a dipole according to
+<a href="https://ccmc.gsfc.nasa.gov/RoR_WWW/presentations/Dipole.pdf">https://ccmc.gsfc.nasa.gov/RoR_WWW/presentations/Dipole.pdf</a></p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_dipole(mu,x,y,z):
+    &#39;&#39;&#39; Set the magnetic field of a dipole according to
+    https://ccmc.gsfc.nasa.gov/RoR_WWW/presentations/Dipole.pdf
+    &#39;&#39;&#39;
+    
+    M = mu
+    r = np.sqrt(x**2 + y**2 + z**2)
+
+    def Bx_dipole(M,r):                                              
+        return 3 * M * x * z / r**5
+                                                                        
+    def By_dipole(M,r):                                              
+        return 3 * M * y * z / r**5
+    
+    def Bz_dipole(M,r):
+        return M * (3*z**2 - r**2) / r**5
+    
+    return dict({&#39;x&#39;:Bx_dipole(M,r),&#39;y&#39;:By_dipole(M,r),&#39;z&#39;:Bz_dipole(M,r)})</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.set_site_points"><code class="name flex">
+<span>def <span class="ident">set_site_points</span></span>(<span>R, a, d, alpha_0, theta_0, phi_0, R_star, bdirOut)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Set sitepoints from streamlines plotting inside the flux rope for vizualisation
+3 circles at 0.5a, a, 1.5a</p>
+<p>Formatted for the scatter matplotlib function</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def set_site_points(R,a,d,alpha_0,theta_0,phi_0,R_star,bdirOut):
+    &#39;&#39;&#39; Set sitepoints from streamlines plotting inside the flux rope for vizualisation
+    3 circles at 0.5a, a, 1.5a
+
+    Formatted for the scatter matplotlib function 
+    &#39;&#39;&#39;
+
+    # print(&#39;This is deprecated now you should take a look at the version inside
+    # the TDm.py file&#39;)
+
+    # local polar coordinates (rho,theta,x)
+
+    # Number of sitepoints for each circle
+    n_site = 10
+
+    # Theta value of this 5 points around the circle
+    theta_list = np.linspace(0,2 * np.pi, n_site+1) # +1 in order to do not
+    # count the point that is at the same place than the first one
+
+
+    # Position of the circle
+    rho_list = [a/4,a,3*a/2]
+    name_circle = [&#39;0.25a&#39;,&#39;a&#39;,&#39;1.5a&#39;]
+
+    # Number of circle around the center of the thor
+    n_circle = len(rho_list)
+
+
+
+    # Rotation matrix
+    # Here you have to reverse phi and theta
+    rot = rotation_matrix(theta_0,phi_0)
+
+    Rot = \
+            rotation_matrix_axes(-alpha_0,&#39;z&#39;) @ \
+            rot
+
+    Rot = Rot.T
+
+
+    # Generating n_site points around n_circle circle around the axis of the flux
+    # rope
+    circles = dict({})
+    for i in range(n_circle):
+        # Initialisation
+        # rho,theta and cylindrical x coordinates 
+        rho_points = []
+        theta_points = []
+        x_cyl = []
+
+        x_points = []
+        y_points = []
+        z_points = []
+
+        r_points = []
+        theta_cyl_points = []
+        phi_points = []
+
+        # print(name_circle[i],i)
+        circles[name_circle[i]] = dict({})
+        this_circle = circles[name_circle[i]]
+
+        for j in range(n_site):
+
+            rho = rho_list[i]
+            theta = theta_list[j]
+
+            # cylindrical coordinates
+            rho_points.append(rho)
+            theta_cyl_points.append(theta)
+            x_cyl.append(0)
+
+            # local cartesian and putting the circle in the (x,z) plan
+
+            x = np.cos(theta) * rho
+            z = np.sin(theta) * rho + (R - d) 
+            y = 0 
+
+            # Rotation 
+            new_x = Rot[0,0] * x + Rot[0,1] * y +  Rot[0,2] * z
+            new_y = Rot[1,0] * x + Rot[1,1] * y +  Rot[1,2] * z
+            new_z = Rot[2,0] * x + Rot[2,1] * y +  Rot[2,2] * z
+
+            # Components of the translated base
+            # local coordinates
+            ax_x = new_x + R_star * np.sin(theta_0) * np.cos(phi_0) 
+            ax_y = new_y + R_star * np.sin(theta_0) * np.sin(phi_0) 
+            ax_z = new_z + R_star * np.cos(theta_0)
+
+            # Conversion to spheric
+            x_points.append(ax_x)
+            z_points.append(ax_z)
+            y_points.append(ax_y)
+
+            r = np.sqrt(ax_x**2 + ax_y**2 + ax_z**2)
+            theta = np.arccos(ax_z/r) 
+            phi = np.arctan2(ax_y,ax_x)
+
+            r_points.append(r)
+            theta_points.append(theta)
+            phi_points.append(phi)
+
+        this_circle[&#39;r&#39;] = r_points
+        this_circle[&#39;t&#39;] = theta_points
+        this_circle[&#39;p&#39;] = phi_points
+
+        this_circle[&#39;x&#39;] = x_points
+        this_circle[&#39;y&#39;] = y_points
+        this_circle[&#39;z&#39;] = z_points
+
+
+    # Writing points coordinates in txt files
+
+    for i,name_circle in enumerate(circles.keys()):
+        this_circle = circles[name_circle]
+        array_to_write = np.vstack([
+            this_circle[&#39;x&#39;],\
+                    this_circle[&#39;y&#39;],\
+                    this_circle[&#39;z&#39;]
+                    ]).T
+
+        filename = f&#39;{bdirOut}/{name_circle}&#39; + &#39;.txt&#39;
+        f = open(filename,&#39;w&#39;) 
+        # Writing each line 
+        for line in array_to_write:
+            # Line to write
+            to_write = &#39;&#39;
+            for col in line:
+
+                str_col = f&#39;{col:.5f}&#39;
+                to_write += str_col.replace(&#39;.&#39;,&#39;,&#39;) + &#39; &#39;
+
+            to_write += &#39;\n&#39;
+            f.write(to_write)
+
+        f.close()</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.test_rotation"><code class="name flex">
+<span>def <span class="ident">test_rotation</span></span>(<span>)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Tests the cube rotation function</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test_rotation():
+    &#39;&#39;&#39; Tests the cube rotation function 
+    &#39;&#39;&#39;
+
+
+
+
+    #Temporary
+    #-------------------------------------- 
+    
+    # Change here !
+   
+    x = np.linspace(-1,1,100)
+    y = np.linspace(-1,1,99)
+    z = np.linspace(-1,1,101)
+
+
+
+    alpha_0 = 0
+    theta_0 = np.pi/4
+    phi_0   = 0
+
+    # TDm parameters setup
+    case = &#39;second&#39;
+    zeta = 10
+    mu = 0 #4 * np.pi * 10e-7 
+    R_star = 1
+
+    # -------------------------------------- 
+    xx,yy,zz = np.meshgrid(x,y,z,indexing = &#39;ij&#39;)
+    # rr2,tt2 = np.meshgrid(r,theta,indexing = &#39;ij&#39;)
+
+
+    x_comp = np.ones_like(xx)
+    y_comp = np.zeros_like(yy)
+    z_comp = np.zeros_like(zz)
+    
+
+    # Rotation of the composant 
+    # new_x_comp,new_y_comp,new_z_comp = \
+
+    new_A = dict({})
+    new_x_comp,new_y_comp,new_z_comp = \
+            cube_rotation(x_comp,y_comp,z_comp,alpha_0,theta_0,phi_0)
+    dict_output = dict({
+        &#39;new_x_comp&#39;:new_x_comp,
+        &#39;new_y_comp&#39;:new_y_comp,
+        &#39;new_z_comp&#39;:new_z_comp,
+        })
+
+    mv.flow(new_x_comp,new_y_comp,new_z_comp)
+    vectors = mv.quiver3d(new_x_comp,new_y_comp,new_z_comp)
+    mv.axes()
+    vectors.glyph.glyph.range = np.array([0., 1.])
+    # vectors.glyph.glyph.input_connection =
+    # &lt;tvtk.tvtk_classes.algorithm_output.AlgorithmOutput object at
+    # 0x7effcc029af0&gt;
+    vectors.glyph.mask_input_points = True
+    vectors.glyph.mask_points.progress = 1.0
+    vectors.glyph.mask_points.maximum_number_of_points = 1000
+    
+    outfile = &#39;cart_rotation&#39; 
+    x = np.asfortranarray(x)
+    y = np.asfortranarray(y)
+    z = np.asfortranarray(z)
+    vtk.hl.gridToVTK(outfile,x,y,z, pointData=dict_output)</code></pre>
+</details>
+</dd>
+<dt id="setup_TDm.to_spheric"><code class="name flex">
+<span>def <span class="ident">to_spheric</span></span>(<span>A, rr, tt, pph)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Transform each components of the vector potential in spherical system</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def to_spheric(A,rr,tt,pph):
+    &#39;&#39;&#39; Transform each components of the vector potential in spherical system
+    &#39;&#39;&#39;
+
+    A_out = dict({}) 
+    A_out[&#39;r&#39;] = np.sin(tt)*np.cos(pph) * A[&#39;x&#39;] \
+            + np.sin(tt) * np.sin(pph) * A[&#39;y&#39;] \
+            + np.cos(tt) * A[&#39;z&#39;] 
+    A_out[&#39;theta&#39;] = np.cos(tt)*np.cos(pph) * A[&#39;x&#39;] \
+            + np.cos(tt) * np.sin(pph) * A[&#39;y&#39;] \
+            -np.sin(tt) * A[&#39;z&#39;]
+    A_out[&#39;phi&#39;] = -np.sin(pph) * A[&#39;x&#39;] \
+            + np.cos(pph) * A[&#39;y&#39;]
+
+    return A_out</code></pre>
+</details>
+</dd>
+</dl>
+</section>
+<section>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-functions">Functions</a></h3>
+<ul class="">
+<li><code><a title="setup_TDm.TDm_setup" href="#setup_TDm.TDm_setup">TDm_setup</a></code></li>
+<li><code><a title="setup_TDm.base_rotation" href="#setup_TDm.base_rotation">base_rotation</a></code></li>
+<li><code><a title="setup_TDm.between" href="#setup_TDm.between">between</a></code></li>
+<li><code><a title="setup_TDm.cart_TDm_setup" href="#setup_TDm.cart_TDm_setup">cart_TDm_setup</a></code></li>
+<li><code><a title="setup_TDm.cart_to_sph" href="#setup_TDm.cart_to_sph">cart_to_sph</a></code></li>
+<li><code><a title="setup_TDm.compute_Is" href="#setup_TDm.compute_Is">compute_Is</a></code></li>
+<li><code><a title="setup_TDm.cube_rotation" href="#setup_TDm.cube_rotation">cube_rotation</a></code></li>
+<li><code><a title="setup_TDm.from_lcart_to_gcart" href="#setup_TDm.from_lcart_to_gcart">from_lcart_to_gcart</a></code></li>
+<li><code><a title="setup_TDm.localisation_rope" href="#setup_TDm.localisation_rope">localisation_rope</a></code></li>
+<li><code><a title="setup_TDm.rotation_matrix" href="#setup_TDm.rotation_matrix">rotation_matrix</a></code></li>
+<li><code><a title="setup_TDm.rotation_matrix_axes" href="#setup_TDm.rotation_matrix_axes">rotation_matrix_axes</a></code></li>
+<li><code><a title="setup_TDm.set_dipole" href="#setup_TDm.set_dipole">set_dipole</a></code></li>
+<li><code><a title="setup_TDm.set_site_points" href="#setup_TDm.set_site_points">set_site_points</a></code></li>
+<li><code><a title="setup_TDm.test_rotation" href="#setup_TDm.test_rotation">test_rotation</a></code></li>
+<li><code><a title="setup_TDm.to_spheric" href="#setup_TDm.to_spheric">to_spheric</a></code></li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>

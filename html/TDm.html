@@ -1,0 +1,3274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+<meta name="generator" content="pdoc 0.10.0" />
+<title>TDm API documentation</title>
+<meta name="description" content="" />
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/sanitize.min.css" integrity="sha256-PK9q560IAAa6WVRRh76LtCaI8pjTJ2z11v0miyNNjrs=" crossorigin>
+<link rel="preload stylesheet" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/10up-sanitize.css/11.0.1/typography.min.css" integrity="sha256-7l/o7C8jubJiy74VsKTidCy1yBkRtiUGbVkYBylBqUg=" crossorigin>
+<link rel="stylesheet preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/styles/github.min.css" crossorigin>
+<style>:root{--highlight-color:#fe9}.flex{display:flex !important}body{line-height:1.5em}#content{padding:20px}#sidebar{padding:30px;overflow:hidden}#sidebar > *:last-child{margin-bottom:2cm}.http-server-breadcrumbs{font-size:130%;margin:0 0 15px 0}#footer{font-size:.75em;padding:5px 30px;border-top:1px solid #ddd;text-align:right}#footer p{margin:0 0 0 1em;display:inline-block}#footer p:last-child{margin-right:30px}h1,h2,h3,h4,h5{font-weight:300}h1{font-size:2.5em;line-height:1.1em}h2{font-size:1.75em;margin:1em 0 .50em 0}h3{font-size:1.4em;margin:25px 0 10px 0}h4{margin:0;font-size:105%}h1:target,h2:target,h3:target,h4:target,h5:target,h6:target{background:var(--highlight-color);padding:.2em 0}a{color:#058;text-decoration:none;transition:color .3s ease-in-out}a:hover{color:#e82}.title code{font-weight:bold}h2[id^="header-"]{margin-top:2em}.ident{color:#900}pre code{background:#f8f8f8;font-size:.8em;line-height:1.4em}code{background:#f2f2f1;padding:1px 4px;overflow-wrap:break-word}h1 code{background:transparent}pre{background:#f8f8f8;border:0;border-top:1px solid #ccc;border-bottom:1px solid #ccc;margin:1em 0;padding:1ex}#http-server-module-list{display:flex;flex-flow:column}#http-server-module-list div{display:flex}#http-server-module-list dt{min-width:10%}#http-server-module-list p{margin-top:0}.toc ul,#index{list-style-type:none;margin:0;padding:0}#index code{background:transparent}#index h3{border-bottom:1px solid #ddd}#index ul{padding:0}#index h4{margin-top:.6em;font-weight:bold}@media (min-width:200ex){#index .two-column{column-count:2}}@media (min-width:300ex){#index .two-column{column-count:3}}dl{margin-bottom:2em}dl dl:last-child{margin-bottom:4em}dd{margin:0 0 1em 3em}#header-classes + dl > dd{margin-bottom:3em}dd dd{margin-left:2em}dd p{margin:10px 0}.name{background:#eee;font-weight:bold;font-size:.85em;padding:5px 10px;display:inline-block;min-width:40%}.name:hover{background:#e0e0e0}dt:target .name{background:var(--highlight-color)}.name > span:first-child{white-space:nowrap}.name.class > span:nth-child(2){margin-left:.4em}.inherited{color:#999;border-left:5px solid #eee;padding-left:1em}.inheritance em{font-style:normal;font-weight:bold}.desc h2{font-weight:400;font-size:1.25em}.desc h3{font-size:1em}.desc dt code{background:inherit}.source summary,.git-link-div{color:#666;text-align:right;font-weight:400;font-size:.8em;text-transform:uppercase}.source summary > *{white-space:nowrap;cursor:pointer}.git-link{color:inherit;margin-left:1em}.source pre{max-height:500px;overflow:auto;margin:0}.source pre code{font-size:12px;overflow:visible}.hlist{list-style:none}.hlist li{display:inline}.hlist li:after{content:',\2002'}.hlist li:last-child:after{content:none}.hlist .hlist{display:inline;padding-left:1em}img{max-width:100%}td{padding:0 .5em}.admonition{padding:.1em .5em;margin-bottom:1em}.admonition-title{font-weight:bold}.admonition.note,.admonition.info,.admonition.important{background:#aef}.admonition.todo,.admonition.versionadded,.admonition.tip,.admonition.hint{background:#dfd}.admonition.warning,.admonition.versionchanged,.admonition.deprecated{background:#fd4}.admonition.error,.admonition.danger,.admonition.caution{background:lightpink}</style>
+<style media="screen and (min-width: 700px)">@media screen and (min-width:700px){#sidebar{width:30%;height:100vh;overflow:auto;position:sticky;top:0}#content{width:70%;max-width:100ch;padding:3em 4em;border-left:1px solid #ddd}pre code{font-size:1em}.item .name{font-size:1em}main{display:flex;flex-direction:row-reverse;justify-content:flex-end}.toc ul ul,#index ul{padding-left:1.5em}.toc > ul > li{margin-top:.5em}}</style>
+<style media="print">@media print{#sidebar h1{page-break-before:always}.source{display:none}}@media print{*{background:transparent !important;color:#000 !important;box-shadow:none !important;text-shadow:none !important}a[href]:after{content:" (" attr(href) ")";font-size:90%}a[href][title]:after{content:none}abbr[title]:after{content:" (" attr(title) ")"}.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}pre,blockquote{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}tr,img{page-break-inside:avoid}img{max-width:100% !important}@page{margin:0.5cm}p,h2,h3{orphans:3;widows:3}h1,h2,h3,h4,h5,h6{page-break-after:avoid}}</style>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.1/highlight.min.js" integrity="sha256-Uv3H6lx7dJmRfRvH8TH6kJD1TSK1aFcwgx+mdg3epi8=" crossorigin></script>
+<script>window.addEventListener('DOMContentLoaded', () => hljs.initHighlighting())</script>
+</head>
+<body>
+<main>
+<article id="content">
+<header>
+<h1 class="title">Module <code>TDm</code></h1>
+</header>
+<section id="section-intro">
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">##
+
+import h5py as h5
+import sys
+import numpy as np
+from subprocess import call
+import setup_TDm as tools_TDm
+import imp
+from tqdm import tqdm
+imp.reload(tools_TDm)
+import os 
+import pyPLUTO as pp
+import struct
+import os
+
+##
+
+class TDm_object:
+    &#39;&#39;&#39; TODO : you may want to add a function that will create a model of your
+    TDm.conf file
+    &#39;&#39;&#39;
+
+    def __init__(self,case):
+        &#39;&#39;&#39; Initialisation
+        &#39;&#39;&#39; 
+
+        self.is_setup = False
+        self.param_loaded = False
+        self.case = case
+
+    def test(self):
+        &#39;&#39;&#39; Just a test routine
+        &#39;&#39;&#39;
+
+        print(&#39;Hello world&#39;)
+    
+
+    # Import setup parameter
+    def read_TDm_parameter(self,conf_path = &#39;./&#39;):
+        &#39;&#39;&#39; 
+        Put the parameter of the TDm setup into a dictonnary 
+
+        THe conf file has to be named &#34;TDm.config&#34; and at the {conf_path}
+        location which is by default the name of the case 
+        &#39;&#39;&#39;
+        
+        with open(&#39;{}/TDm.config&#39;.format(conf_path),&#39;r&#39;) as f:
+                lines = f.readlines()
+
+        self.setup = dict({})
+       
+        # Loop over lines
+        for l in lines:
+            
+            # This is not a interesting line
+            if l[0] in [&#39;[&#39;,&#39;\n&#39;]:
+                continue
+
+            # Sanity check
+            if len(l.split(&#39; &#39;)) &gt; 2:
+                print(l)
+                raise ValueError(&#34;Too much columns in conf file&#34;)
+
+            name_var = l.split(&#39; &#39;)[0]
+
+            if name_var in [&#39;CASE_TDM&#39;,&#39;GEOMETRY&#39;]:
+                var = str(l.split(&#39; &#39;)[1])
+                var = var.strip(&#39;\n&#39;)
+            else:
+                var = float(l.split(&#39; &#39;)[1])
+
+
+            self.setup[name_var] = var
+        
+        self.param_loaded = True
+        
+        print(f&#39;Reading setup at {conf_path}&#39;)
+
+        print(f&#39;----------------------&#39;)
+        print(f&#39;-------TDm setup------&#39;)
+        print(f&#39;----------------------&#39;)
+
+        for it in self.setup.keys():
+            
+            print(f&#39;{it} : {self.setup[it]}&#39;)
+            print(f&#39;----------------------&#39;)
+
+    
+    def convergent_flow(self,a,R,ar_grid,bdirOut):
+        &#39;&#39;&#39; 
+        Compute a velocity field that converge to the PIL of the FR
+        &#39;&#39;&#39;
+
+        theta = ar_grid[1]
+        phi = ar_grid[2]
+
+        tt,pp = np.meshgrid(theta,phi,indexing=&#39;ij&#39;)
+
+        # Gaussian on theta
+        def gauss_t(xx2,mu_t,s_t):
+            
+            gauss = np.sign(1.57 - xx2) * np.exp(-0.5 * ((xx2 - mu_t)/s_t)**2) \
+                    * 1 / (s_t * np.sqrt(2 * np.pi))
+
+            norm_t  = 1/(s_t * np.sqrt(2*np.pi))
+
+            gauss = gauss / norm_t
+
+            return gauss
+
+        # we normalise the gaussien by it&#39;s value at the mean value so that it is
+        # equal to 1 
+    
+
+
+        def gauss_p(xx3,mu_p,s_p):
+        # Gaussian on phi
+            gauss =  np.exp(-0.5 * ((xx3 - mu_p)/s_p)**2) \
+                    * 1 / (s_p * np.sqrt(2 * np.pi))
+
+            # we normalise the gaussian by it&#39;s value at the mean value so that it is
+            # equal to 1 
+            norm_p  = 1/(s_p * np.sqrt(2*np.pi))
+
+            gauss = gauss / norm_p
+
+            return gauss
+
+            # Params for both gaussian
+            # ==========================
+
+        theta_0 = self.setup[&#34;THETA_0&#34;]
+        phi_0 = self.setup[&#34;PHI_0&#34;]
+
+        mu_p = phi_0
+        s_p = self.setup[&#34;R&#34;] * 0.5
+
+        mu_t =  theta_0
+        s_t = self.setup[&#34;A&#34;] * 1.3
+    
+        UNIT_VELOCITY = 4.367e7 # cm/s
+
+        V0 = 200e5 / UNIT_VELOCITY # 100 km/s
+
+        print(f&#39;Velocity hard coded ({V0:.2f} PLUTO unit)&#39;)
+
+        gauss_tot = V0 * gauss_t(tt,mu_t,s_t) * gauss_p(pp,mu_p,s_p)
+
+        with open(&#39;{}/speed_bc.bin&#39;.format(bdirOut),&#39;wb&#39;) as speed_bc:      
+            for j in range(len(theta)):
+                for k in range(len(phi)):
+                    speed_bc.write(struct.pack(&#39;d&#39;,gauss_tot[j,k]))
+
+
+    def cart_to_sph(vcart,xx2,xx3): 
+
+        sinth=sin(xx2);
+        costh=cos(xx2);
+        sinph=sin(xx3);
+        cosph=cos(xx3);
+        vsph = [0]*3
+
+        vsph[0] =  sinth*cosph*vcart[0] + sinth*sinph*vcart[1] + costh*vcart[2] ;
+        vsph[1] =  costh*cosph*vcart[0] + costh*sinph*vcart[1] - sinth*vcart[2] ;
+        vsph[2] = -sinph*vcart[0] + cosph*vcart[1] ;
+
+        return vsph
+
+    def get_monopoles(self,x1,x2,x3):
+        &#39;&#39;&#39; Add two monopoles above and below the TDm FR with opposite polarity
+        &#39;&#39;&#39;
+
+        tTDm = self.setup[&#39;THETA_0&#39;] 
+        pTDm = self.setup[&#39;PHI_0&#39;] 
+
+        # Setting the grid
+        xx1,xx2,xx3 = np.meshgrid(x1,x2,x3,indexing=&#39;ij&#39;)
+        xx = xx1*np.sin(xx2)*np.cos(xx3);
+        yy = xx1*np.sin(xx2)*np.sin(xx3);
+        zz = xx1*np.cos(xx2);
+            
+        # initialisation
+        Bcart = [0]*3
+        r0=0.9;
+
+        #First monopole
+
+        th0=tTDm+0.2;
+        ph0=pTDm;
+        x0 = r0*np.sin(th0)*np.cos(ph0);
+        y0 = r0*np.sin(th0)*np.sin(ph0);
+        z0 = r0*np.cos(th0);
+        rp = np.sqrt( pow(xx-x0,2)+pow(yy-y0,2)+pow(zz-z0,2));
+        Bcart[0] = - (xx-x0)/pow(rp,3.);
+        Bcart[1] = - (yy-y0)/pow(rp,3.);
+        Bcart[2] = - (zz-z0)/pow(rp,3.);
+
+        B_sph1 = tools_TDm.cart_to_sph(Bcart,xx2,xx3);
+
+        #Second monopole
+
+        th0=tTDm-0.2;
+        ph0=pTDm;
+        x0 = r0*np.sin(th0)*np.cos(ph0);
+        y0 = r0*np.sin(th0)*np.sin(ph0);
+        z0 = r0*np.cos(th0);
+        rp = np.sqrt( pow(xx-x0,2)+pow(yy-y0,2)+pow(zz-z0,2));
+        Bcart[0] =  (xx-x0)/pow(rp,3.);
+        Bcart[1] =  (yy-y0)/pow(rp,3.);
+        Bcart[2] =  (zz-z0)/pow(rp,3.);
+
+        B_sph2 = tools_TDm.cart_to_sph(Bcart,xx2,xx3);
+
+        B_sph = [0]*3
+        for i in range(0,3):
+            B_sph[i] = B_sph1[i] + B_sph2[i]
+        
+        return B_sph
+
+    # =====================================================================
+    def setup_bc(self,B_amb,d,a,R,Delta,case,zeta,R_star,
+            alpha_0,theta_0,phi_0,it,bDirOut,ar_grid,B_grid,prs,only_AF_zeta):
+        &#39;&#39;&#39;
+        setup in binary files the boundary conditions (surface of the sun) for the
+        magnetic field
+        write it in a .bin file
+
+        Sizes of array in each direction (3) are written in bc_sizes.bin and the
+        data is in bc_data.bin
+        &#39;&#39;&#39;
+
+        # Estimation of the ambient magnetic field at the location of the FR
+
+        print(&#34;boundary :d,a,R,Delta,case,zeta,R_star,alpha_0,theta_0,phi_0&#34;,
+                d,a,R,Delta,case,zeta,R_star,alpha_0,theta_0,phi_0)
+        
+
+        r = ar_grid[0]
+        theta = ar_grid[1]
+        phi = ar_grid[2]
+
+        # Getting the grid for the TDm setup
+        dr = r[1] - r[0]
+
+        # We are only interested by r -2dr and r-dr
+        # We add 2 points around these value in order to avoid uncentered derivative
+        # in the curl 
+
+        ghost_r = np.array([r[0]-3*dr,r[0]-2*dr,r[0]-dr,r[0],r[1],r[2],r[3],r[4]])
+        print(ghost_r)
+
+        real_ghost = ghost_r[1:4]
+        r_real_ghost = range(1,4)
+
+        rho_sw = 0
+        # Setting TDm on ghost cell 
+
+        B,density = tools_TDm.TDm_setup(
+                ghost_r,
+                theta,
+                phi,
+                alpha_0,
+                theta_0,
+                phi_0,
+                d,
+                a,
+                R,
+                zeta,
+                B_amb,
+                Delta,
+                case,
+                rho_sw,
+                geometry=&#39;spherical&#39;,
+                R_star = R_star,
+                only_AF_zeta = only_AF_zeta
+                )
+
+        B_r = B[0]
+        B_t = B[1]
+        B_p = B[2]
+
+        B_TD = np.sqrt(B_r[3,...]**2 + B_t[3,...]**2 + B_p[3,...]**2)
+        B_sw = np.sqrt(B_grid[0][0,...]**2 + B_grid[1][0,...]**2 + B_grid[2][0,...]**2)
+
+        ratio = B_TD / B_sw
+
+        flag = (ratio &gt; 0.5).astype(int)
+        
+
+        arrays = dict({
+            &#39;B_r&#39;:B_r,
+            &#39;B_t&#39;:B_t,
+            &#39;B_p&#39;:B_p,
+            &#39;r&#39;:r,
+            &#39;theta&#39;:theta,
+            &#39;phi&#39;:phi
+            })
+
+        print(&#39;Writing bin files&#39;)
+        with open(&#39;{}/flag_bc.bin&#39;.format(bDirOut),&#39;wb&#39;) as flag_bc:      
+            for j in range(len(theta)):
+                for k in range(len(phi)):
+                    flag_bc.write(struct.pack(&#39;i&#39;,flag[j,k]))
+
+        with open(&#39;{}/prs_bc.bin&#39;.format(bDirOut),&#39;wb&#39;) as flag_bc:      
+            for j in range(len(theta)):
+                for k in range(len(phi)):
+                    flag_bc.write(struct.pack(&#39;d&#39;,prs[0,j,k]))
+
+        # We are using 4 array elements in r for TDm_setup to work,
+        # only 2 cells are ghost cells
+        
+        # Saving to binary arrays
+        size_ar = np.array([len(real_ghost),len(theta),len(phi)])
+
+
+        with open(&#39;{}/bc_sizes.bin&#39;.format(bDirOut),&#39;wb&#39;) as f:      
+            for int_value in size_ar:                      
+                f.write(struct.pack(&#39;i&#39;, int_value))  
+
+# with open(&#39;norm.bin&#39;,&#39;wb&#39;) as f_norm:      
+            # for db_value in db_ar:
+                # f_norm.write(struct.pack(&#39;d&#39;, db_value))  
+
+# Generating 3D arrays
+
+# n = len(r) * len(theta) * len(phi)
+# ar = np.arange(0,n,1).reshape(*size_ar)
+# ar_2 = np.arange(n,2*n,1).reshape(*size_ar)
+
+        with open(&#39;{}/bc_data.bin&#39;.format(bDirOut),&#39;wb&#39;) as f_array:
+
+            for i in r_real_ghost:
+                for j in range(len(theta)):
+                    for k in range(len(phi)):
+                        f_array.write(struct.pack(&#39;d&#39;,B_r[i,j,k]))
+
+            for i in r_real_ghost:
+                for j in range(len(theta)):
+                    for k in range(len(phi)):
+                        f_array.write(struct.pack(&#39;d&#39;,B_t[i,j,k]))
+
+            for i in r_real_ghost:
+                for j in range(len(theta)):
+                    for k in range(len(phi)):
+                        f_array.write(struct.pack(&#39;d&#39;,B_p[i,j,k]))
+
+            for i in range(len(real_ghost)):
+                f_array.write(struct.pack(&#39;d&#39;,real_ghost[i]))
+
+            for i in range(len(theta)):
+                f_array.write(struct.pack(&#39;d&#39;,theta[i]))
+            
+            for i in range(len(phi)):
+                f_array.write(struct.pack(&#39;d&#39;,phi[i]))
+
+        # with open(&#39;{}/surface.bin&#39;.format(bDirOut),&#39;wb&#39;) as f_array:
+
+            # for j in range(len(theta)):
+                # for k in range(len(phi)):
+                    # f_array.write(struct.pack(&#39;d&#39;,B_r_s[j,k]))
+
+            # for j in range(len(theta)):
+                # for k in range(len(phi)):
+                    # f_array.write(struct.pack(&#39;d&#39;,B_t_s[j,k]))
+
+            # for j in range(len(theta)):
+                # for k in range(len(phi)):
+                    # f_array.write(struct.pack(&#39;d&#39;,B_p_s[j,k]))
+
+
+
+    def add_density(self,new_r,new_theta,new_phi):
+        &#39;&#39;&#39; Add density close to the feet of the TDm
+        &#39;&#39;&#39;
+
+
+        alpha_0 = self.setup[&#39;ALPHA_0&#39;]
+        theta_0 = self.setup[&#39;THETA_0&#39;]
+        phi_0   = self.setup[&#39;PHI_0&#39;]
+
+        # TDm parameters setup
+        d = self.setup[&#39;D&#39;]
+        a = self.setup[&#39;A&#39;]
+        R = self.setup[&#39;R&#39;]
+        Delta = self.setup[&#39;DELTA&#39;]
+        case = self.setup[&#39;CASE_TDM&#39;] 
+        zeta = self.setup[&#39;ZETA&#39;] 
+
+        t_MC = theta_0
+        p_MC = phi_0 
+
+        # Width of the tanh**2
+        width = 1.2 * a
+        width_r = 0.05
+
+        rr,tt,pp = np.meshgrid(new_r,new_theta,new_phi,indexing=&#39;ij&#39;)
+        
+        # angle between the point at (t_MC,p_MC) and one at the foot
+        Rsol = 1
+        alpha2 = np.arcsin(R/Rsol * np.sqrt(1-(d**2/R**2)))
+    
+        # Position of each foot    
+        p_foot1  = p_MC - alpha2 # Position in phi of the first foot
+        p_foot2  = p_MC + alpha2 # Position in phi of the first foot
+        
+
+        # Localisation using theta
+        tanh_theta = np.tanh((tt-t_MC)/width)
+        tanh_theta2 = tanh_theta**2
+        
+        # Localisation using phi
+        tanh_phi = np.tanh((pp-p_foot1)/width) *np.tanh((pp-p_foot2)/width) # 2 foots
+        tanh_phi2 = tanh_phi**2
+        
+        # Localisation using r
+
+        tanh_r = np.tanh(((rr-1)/width_r))
+        tanh_r2 = tanh_r**2
+
+        # loc = 1 at the center of the foot and close to the surface
+        loc = (1-tanh_phi2) * (1-tanh_theta2) * (1-tanh_r2)
+
+        # We want to have a density around 100 at the center of the foot
+
+        rho_in_FR = loc*100
+
+        return rho_in_FR
+
+
+    # -------------------------------------------------------------------
+    def add_magnetic_structure(self,iteration,filetype=&#39;chk&#39;,SolO=False):
+        &#39;&#39;&#39; 
+        Add the magnetic structure to an existing hdf5 files
+        &#39;&#39;&#39;
+        
+        print(&#39;Spherical geometry is hard coded in tools_TDm.TDm_setup&#39;)
+
+        originals_dir = os.environ[&#39;TDM_ORIGINALS&#39;]
+
+        if SolO:
+            originals_dir += &#39;SolO/&#39;
+
+            print(&#39;----------------&#39;)
+            print(&#39;   SolO case    &#39;)
+            print(&#39;----------------&#39;)
+
+
+        # Directory where the filed to be modified is
+        bdirIn=originals_dir        
+        print(&#39;ori_dir = &#39;,bdirIn)
+
+        # Directory where to put the modified file
+        # Setting to current directory  
+        cwd = os.getcwd()
+        bdirOut=f&#39;{cwd}/&#39;
+
+
+        # ############## #
+        # TDm parameters #
+        # ############## #
+        
+        # alpha_0 = 0
+        # theta_0 = np.pi/2
+        # phi_0   = np.pi/2
+        
+        # d = 0.25
+        # a = 0.4
+        # R = 0.5 
+        # Delta = 0.04
+        # case = &#39;second&#39;
+        # zeta = 1
+        # R_star = 1
+        # Position of the FR
+
+        self.read_TDm_parameter()
+
+        
+        alpha_0 = self.setup[&#39;ALPHA_0&#39;]
+        theta_0 = self.setup[&#39;THETA_0&#39;]
+        phi_0   = self.setup[&#39;PHI_0&#39;]
+
+        # TDm parameters setup
+        d = self.setup[&#39;D&#39;]
+        a = self.setup[&#39;A&#39;]
+        R = self.setup[&#39;R&#39;]
+        Delta = self.setup[&#39;DELTA&#39;]
+        case = self.setup[&#39;CASE_TDM&#39;] 
+        zeta = self.setup[&#39;ZETA&#39;] 
+
+
+        # In PLUTO the star always have a radius = 1
+        R_star = 1
+
+        Gamma = 1.05
+        # Limit in radii in order to avoid overflow far from the FR
+        # r_lim = 200
+        # print(f&#39;r_lim set to {r_lim}&#39;)
+
+##
+
+################## the rest is automated, see on the &#39;Modify PRIMITIVE variables here&#39; flag for modification 
+
+# Dictionnary for the equivalence between the conservative and primitive
+# variable Cons
+
+        dict_equi_ConsToPrim = dict({
+            &#39;Density&#39;:&#39;rho&#39;,
+            &#39;X-momentum&#39;:&#39;vx1&#39;,
+            &#39;Y-momentum&#39;:&#39;vx2&#39;,
+            &#39;Z-momentum&#39;:&#39;vx3&#39;,
+            &#39;X-magnfield&#39;:&#39;bx1&#39;,
+            &#39;Y-magnfield&#39;:&#39;bx2&#39;,
+            &#39;Z-magnfield&#39;:&#39;bx3&#39;,
+            &#39;energy-density&#39;:&#39;prs&#39;,
+            &#39;psi_glm&#39;:&#39;psi_glm&#39;
+            })
+
+
+        for loading_file in [filetype]:
+
+            call(&#34;mkdir -p &#34;+bdirOut,shell=True)
+            FileIn  = bdirIn+&#34;{}.{:04d}.hdf5&#34;.format(loading_file,iteration)
+            FileOut = bdirOut+&#34;{}.{:04d}.hdf5&#34;.format(loading_file,iteration)
+            call(&#34;cp &#34;+FileIn+&#34; &#34;+FileOut,shell=True)
+
+### Primitive variables (with div_cleaning) are, in order of storage:
+###      rho, vr, vt, vp, br, bt, bp, prs, psi_glm
+###
+### Conservative variables are, in order of storage:
+###      rho, rho.vr, rho.vt, rho.vp, br, bt, bp, E, psi_glm
+###
+### with
+###      E = (1/2).(vr**2+vt**2+vp**2) + (1/2).(br**2+bt**2+bp**2) + rho.e
+###
+### and rho.e depends on the equation of state. In our case, it is
+###      rho.e = prs / (Gamma-1)
+###
+### with Gamma set in pluto.ini (usually Gamma=1.05 in our polytropic models)
+
+            def PrimToCons(Prim,Gamma=1.05):
+                &#39;&#39;&#39; Primitive to Conservative variables
+                &#39;&#39;&#39;
+
+                Cons=np.zeros_like(Prim)
+                Cons[:,:,:,0] = Prim[:,:,:,0] # rho
+
+                if Prim.shape[-1] == 9:
+
+                    Cons[:,:,:,-1] = Prim[:,:,:,-1] # psi_glm
+
+                for i in range(3):
+
+                    Cons[:,:,:,i+1] = Prim[:,:,:,0]*Prim[:,:,:,i+1] # rho.v
+                    Cons[:,:,:,i+4] = Prim[:,:,:,i+4] # B
+                    Cons[:,:,:,7] = 0.5*Prim[:,:,:,0]*\
+                        (Prim[:,:,:,1]**2+Prim[:,:,:,2]**2+Prim[:,:,:,3]**2) + \
+                                0.5*(Prim[:,:,:,4]**2+Prim[:,:,:,5]**2+Prim[:,:,:,6]**2) + \
+                                Prim[:,:,:,7]/(Gamma-1)
+
+                return Cons
+            
+
+
+            def ConsToPrim(Cons,Gamma=1.05):
+                &#39;&#39;&#39; Conservative to Primitives variables
+                &#39;&#39;&#39;
+
+                Prim=np.zeros_like(Cons)
+                Prim[:,:,:,0] = Cons[:,:,:,0] # rho
+
+                if Cons.shape[-1] == 9:
+
+                    Prim[:,:,:,-1] = Cons[:,:,:,-1] # psi_glm
+
+                for i in range(3):
+
+                    Prim[:,:,:,i+1] = Cons[:,:,:,i+1]/Cons[:,:,:,0] # v
+                    Prim[:,:,:,i+4] = Cons[:,:,:,i+4] # B
+                    Prim[:,:,:,7] = (Cons[:,:,:,7] - 0.5*Prim[:,:,:,0]* \
+                        (Prim[:,:,:,1]**2+Prim[:,:,:,2]**2+Prim[:,:,:,3]**2) -\
+                        0.5*(Prim[:,:,:,4]**2+Prim[:,:,:,5]**2+Prim[:,:,:,6]**2))*(Gamma-1)
+
+                return Prim
+            
+            print(&#39;Loading {}.{:04d}.hdf5&#39;.format(loading_file,iteration))
+            fp = h5.File(FileOut,&#39;r+&#39;)
+
+            Dvars = []
+            for iv in range(fp.attrs.get(&#39;num_components&#39;)):
+                Dvars.append(fp.attrs.get(&#39;component_&#39;+str(iv)).decode())
+
+            if loading_file == &#39;chk&#39;: 
+                list_var = []
+
+                for var in Dvars:
+                    list_var.append(dict_equi_ConsToPrim[var])
+
+            else: 
+                list_var = Dvars
+
+            
+            dir_grid = &#39;{}/&#39;.format(case)
+            path_grid = &#39;{}/grid_{}.npy&#39;.format(bdirIn,iteration)
+
+
+            print(path_grid) 
+
+            # In order to avoid huge file loading the grid can be saved in a npy file 
+            # Checking if the grid of the original hdf5 file has been already
+            # saved
+
+            if os.path.exists(path_grid):
+
+                ar_grid = np.load(path_grid,allow_pickle=True)
+                case_loaded = False
+
+            else:
+
+                print(&#39;{} does not exists creating it&#39;.format(path_grid))
+                # Loading the grid of the case that we will modify
+                # However, modifications are not not thanks to the D
+                # (pyPLUTO) object. There are done directly in the hdf5
+                # file later in the code 
+                D = pp.pload(
+                        iteration,
+                        w_dir=bdirIn,
+                        level=-1,
+                        # x1range=[1,r_lim],
+                        datatype=&#39;hdf5&#39;,
+                        filetype=&#39;chk&#39;
+                        )
+
+                case_loaded = True
+                ar_grid = np.array([D.x1,D.x2,D.x3])
+
+
+
+
+                np.save(path_grid,ar_grid)
+
+            
+            # Getting r, theta and phi from ar_grid
+            r = ar_grid[0]
+            theta = ar_grid[1]
+            phi = ar_grid[2]
+
+            # Getting the magnetic field of the dipole a the place of the flux rope
+            pos_tube_r = np.argmin(np.abs(r - (R - d + a + R_star)))
+            pos_tube_t = np.argmin(np.abs(theta - theta_0))
+            pos_tube_p = np.argmin(np.abs(phi - phi_0))
+            
+            print(&#39;B amb is taken a R - d + a&#39;)
+            # path_B_grid = &#39;grid_B_{}.npy&#39;.format(iteration)
+            path_B_grid = &#39;{}/grid_B_{}.npy&#39;.format(bdirIn,iteration)
+            path_prs_grid = &#39;{}/grid_prs_{}.npy&#39;.format(bdirIn,iteration)
+            
+            print(path_B_grid) 
+
+            # Checking if the B_grid already exists
+            if os.path.exists(path_B_grid):
+
+                print(&#39;{} already exists&#39;.format(path_B_grid))
+
+                B_grid = np.load(path_B_grid,allow_pickle=True)
+
+            # If it does not then check if we have already loaded the
+            # original case 
+            else:
+                
+                print(&#39;{} does not exists creating it&#39;.format(path_B_grid))
+                if case_loaded:
+
+                    # Case already loaded, no need to reload
+                    B_grid = np.array([
+                        getattr(D,&#39;X-magnfield&#39;),
+                        getattr(D,&#39;Y-magnfield&#39;),
+                        getattr(D,&#39;Z-magnfield&#39;),
+                        ])
+                    
+
+                else:
+                    # Loading the B grid of the case that we will modify
+                    # However, modifications are not not thanks to the D
+                    # (pyPLUTO) object. There are done directly in the hdf5
+                    # file later in the code 
+                    D = pp.pload(
+                            iteration,
+                            w_dir=bdirIn,
+                            level=-1,
+                            # x1range=[1,r_lim],
+                            datatype=&#39;hdf5&#39;,
+                            filetype=&#39;chk&#39;
+                            )
+                        
+                    B_grid = np.array([
+                        getattr(D,&#39;X-magnfield&#39;),
+                        getattr(D,&#39;Y-magnfield&#39;),
+                        getattr(D,&#39;Z-magnfield&#39;),
+                        ])
+                    
+                    print(&#39;Saving&#39;)
+                    # Saving
+                    np.save(
+                            path_B_grid,
+                            B_grid
+                            )
+                
+
+
+
+            # Checking if the prs_grid already exists
+            if os.path.exists(path_prs_grid):
+
+                prs_grid = np.load(path_prs_grid,allow_pickle=True)
+
+            # If it does not then check if we have already loaded the
+            # original case 
+            else:
+                prs_grid = np.zeros_like(B_grid[0]) 
+
+                # I don&#39;t think I need the pressure anymore
+                #print(&#39;{} does not exists creating it&#39;.format(path_B_grid))
+                #if case_loaded:
+
+                #    # Case already loaded, no need to reload
+                #    prs_grid = D.prs
+                #    
+
+                #else:
+                #    # Loading the prs grid of the case that we will modify
+                #    # getting the pressure state of the first layers
+
+                #    D = pp.pload(
+                #            iteration,
+                #            w_dir=bdirIn,
+                #            level=-1,
+                #            x1range=[1,1.3],
+                #            datatype=&#39;hdf5&#39;,
+                #            )
+                #        
+                #    prs_grid = D.prs
+                #    
+                #    print(&#39;Saving&#39;)
+                #    # Saving
+                #    np.save(
+                #            path_prs_grid,
+                #            prs_grid
+                #            )
+            
+
+            path_monop = f&#39;{bdirIn}/monopole_grid.npy&#39;
+
+            #Location of the file containing the monopole
+            monopoles = False
+            if monopoles: 
+
+                if os.path.exists(path_monop):
+
+                    B_sph = np.load(path_monop,allow_pickle=True)
+                    B_grid[0] += B_sph[0] 
+                    B_grid[1] += B_sph[1] 
+                    B_grid[2] += B_sph[2] 
+
+                else:
+
+                    raise ValueError(f&#34;{path_monop} doesn&#39;t exists&#34;)
+
+            # import matplotlib as mpl
+            # mpl.use(&#39;Agg&#39;)
+            # import matplotlib.pyplot as plt
+
+            # plt.figure()
+            # plt.imshow(B_grid[0][18,...])
+            # plt.colorbar()
+            # plt.savefig(&#39;B_grid.png&#39;)
+
+            # plt.figure()
+            # plt.imshow(getattr(D,&#39;X-magnfield&#39;)[18,...])
+            # plt.colorbar()
+            # plt.savefig(&#39;D_grid.png&#39;)
+
+            # Ambient magnetic field of the solar wind
+            B_amb = np.sqrt(
+                  B_grid[0][pos_tube_r,pos_tube_t,pos_tube_p]**2 \
+                + B_grid[1][pos_tube_r,pos_tube_t,pos_tube_p]**2 \
+                + B_grid[2][pos_tube_r,pos_tube_t,pos_tube_p]**2
+                )
+            
+
+            print(f&#39;B_amb is at {B_amb}&#39;)
+            # print(f&#39;B_amb_D is at {B_amb_D}&#39;)
+
+
+
+            print(pos_tube_r,pos_tube_t,pos_tube_p)
+
+            only_AF_zeta = False
+            if only_AF_zeta:
+                print(&#39;Increasing only AF by zeta in bc&#39;)
+
+            # Setting boundary condition 
+            self.setup_bc(B_amb,d,a,R,Delta,case,zeta,R_star,
+                    alpha_0,theta_0,phi_0,
+                    iteration,
+                    bdirOut,
+                    ar_grid,
+                    B_grid,
+                    prs_grid,
+                    only_AF_zeta
+                    )
+            
+            # Constructing the converging flow
+            self.convergent_flow(a,R,ar_grid,bdirOut)
+
+            # Setting the site points for streamplot
+            tools_TDm.set_site_points(R,a,d,alpha_0,theta_0,phi_0,R_star,bdirOut)
+            
+            # Getting the index of B parameters
+            Brvar = list_var.index(&#39;bx1&#39;)
+            Btvar = list_var.index(&#39;bx2&#39;)
+            Bpvar = list_var.index(&#39;bx3&#39;)
+            Rhovar = list_var.index(&#39;rho&#39;)
+            Prsvar = list_var.index(&#39;prs&#39;)
+
+            print(list_var) 
+
+
+            # Number of parameters
+            nvar = len(list_var)
+
+            # I can now modify the OutFile
+            # Read the file
+            # Loop over the data to be modified
+            nlev = fp.attrs.get(&#39;num_levels&#39;)
+            dim = fp[&#39;Chombo_global&#39;].attrs.get(&#39;SpaceDim&#39;)
+            
+            # Loop over the different level
+            for i in tqdm(range(nlev),desc=&#39;level&#39;):
+
+                fl = fp[&#34;level_{:d}&#34;.format(i)]
+                data = fl[&#39;data:datatype=0&#39;]
+                boxes = fl[&#39;boxes&#39;]
+                nbox = len(boxes[&#39;lo_i&#39;])
+                x1b = fl.attrs.get(&#39;domBeg1&#39;)
+
+                if (dim == 1):
+                    x2b = 0
+                else:
+                    x2b = fl.attrs.get(&#39;domBeg2&#39;)
+
+                if (dim == 1 or dim == 2):
+                    x3b = 0
+                else:
+                    x3b = fl.attrs.get(&#39;domBeg3&#39;)
+
+                dx = fl.attrs.get(&#39;dx&#39;)
+                logr = fl.attrs.get(&#39;logr&#39;)
+                ystr = 1. ; zstr = 1. 
+
+                if (dim &gt;= 2):
+                    ystr = fl.attrs.get(&#39;g_x2stretch&#39;)
+
+                if (dim == 3):
+                    zstr = fl.attrs.get(&#39;g_x3stretch&#39;)
+                
+                ncount=0
+                for j in tqdm(range(nbox),desc=&#39;box&#39;): # loop on all boxes of a given level
+
+                    ib = boxes[j][&#39;lo_i&#39;] ; ie = boxes[j][&#39;hi_i&#39;] ; nbx = ie-ib+1
+                    jb = 0 ; je = 0 ; nby = 1
+                    kb = 0 ; ke = 0 ; nbz = 1
+
+                    if (dim &gt; 1):
+                        jb = boxes[j][&#39;lo_j&#39;] 
+                        je = boxes[j][&#39;hi_j&#39;] 
+                        nby = je-jb+1
+
+                    if (dim &gt; 2):
+                        kb = boxes[j][&#39;lo_k&#39;] 
+                        ke = boxes[j][&#39;hi_k&#39;] 
+                        nbz = ke-kb+1
+
+                    szb = nbx*nby*nbz*nvar
+                    q=data[ncount:ncount+szb].reshape((nvar,nbz,nby,nbx)).T
+
+                    # q has the variables in a table [nx_loc,ny_loc,nz_loc,nvar]
+                    # x1,x2,x3 are the local space dimensions
+                    if logr == 0:
+                        x1 = x1b + (ib+np.array(range(nbx))+0.5)*dx
+
+                    else:
+                        x1 = x1b*(np.exp((ib+np.array(range(nbx))+1)*dx)\
+                                +np.exp((ib+np.array(range(nbx)))*dx))*0.5
+
+                    x2 = x2b + (jb+np.array(range(nby))+0.5)*dx*ystr
+                    x3 = x3b + (kb+np.array(range(nbz))+0.5)*dx*zstr
+
+                    # First get primitive variables
+                    qold=q.copy()
+                    
+                    # Perform the transformation only if needed
+                    if filetype == &#39;chk&#39;:
+                        Prim = ConsToPrim(q) 
+
+                    #######################################################################
+                    ######################## Modify PRIMITIVE variables here
+                    #######################################################################
+                    # ivar  = list_var.index(&#39;rho&#39;)
+                    # indx = np.where((x1 &gt; 10.) &amp; (x1 &lt; 14.))[0]
+                    # Prim[indx,:,:,ivar] = 10.*Prim[indx,:,:,ivar] # rho * 10 example
+
+                    
+                    # theta = np.linspace(eps,np.pi-eps,100)
+                    # phi = np.linspace(0,2*np.pi,100)
+                    # We are taking mu*I instead of just I
+                    x1_m = x1
+                    n_x1 = len(x1_m)
+                    n_x2 = len(x2)
+                    n_x3 = len(x3)
+
+                    # Inserting a new point at the beginning and the end of
+                    # the patch in order to compute well the curl because 
+                    # of decentered derivatives
+                    
+                    # Compute dr,dtheta and dphi at each extremities of the patch
+                    # Beginnings
+                    drb     = x1_m[1]  - x1_m[0]
+                    dthetab = x2[1]    - x2[0]
+                    dphib   = x3[1]    - x3[0]
+
+                    # Ends
+                    dre     = x1_m[-1] - x1_m[-2]
+                    dthetae = x2[-1]   - x2[-2]
+                    dphie   = x3[-1]   - x3[-2]
+                    
+                    # Compute new points
+                    rb_point     = [x1_m[0]  - 2*drb,     x1_m[0] - drb]
+                    thetab_point = [x2[0]    - 2*dthetab, x2[0] - dthetab]
+                    phib_point   = [x3[0]    - 2*dphib,   x3[0] - dphib]
+
+                    
+                    re_point     = [x1_m[-1] + dre,     x1_m[-1] + 2*dre]
+                    thetae_point = [x2[-1]   + dthetae, x2[-1] + 2*dthetae]
+                    phie_point   = [x3[-1]   + dphie,   x3[-1] + 2*dphie]
+
+                    # Add them and prepare slice to remove this points before
+                    # adding the TDm
+
+                    new_r     = np.append(rb_point,x1_m)
+                    slice_r = slice(2,-2)
+                
+                    new_theta = np.append(thetab_point,x2)
+                    slice_theta = slice(2,-2)
+                
+                    new_phi   = np.append(phib_point,x3)
+                    slice_phi = slice(2,-2)
+
+                    new_r     = np.append(new_r,re_point)
+                    new_theta = np.append(new_theta,thetae_point)
+                    new_phi   = np.append(new_phi,phie_point)
+                   
+
+
+
+                    if monopoles:
+                        # Filling the Mag
+
+
+                        B_mon = self.get_monopoles(new_r,new_theta,new_phi)
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Brvar] += B_mon[0][slice_r,slice_theta,slice_phi]
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Btvar] += B_mon[1][slice_r,slice_theta,slice_phi]
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Bpvar] += B_mon[2][slice_r,slice_theta,slice_phi]
+
+                        
+                            
+
+                    rho_sw = Prim[0:n_x1,0:n_x2,0:n_x3,Rhovar]
+
+                    # print(&#34;--------------&#34;)
+                    # print(new_r.shape)
+                    # print(rho_sw.shape)
+                    # print(&#34;--------------&#34;)
+
+
+                    # Computing the magnetic structure
+                    # TODO put every set_TDm functions in the TDm_object class
+                    # as a daughter class tools_TDm for example ? 
+                    B_sph,density = tools_TDm.TDm_setup( 
+                            new_r,
+                            new_theta,
+                            new_phi,
+                            alpha_0,
+                            theta_0,
+                            phi_0,
+                            d,
+                            a,
+                            R,
+                            zeta,
+                            B_amb,
+                            Delta,
+                            case,
+                            rho_sw,
+                            geometry=&#39;spherical&#39;,
+                            R_star = R_star,
+                            only_AF_zeta = only_AF_zeta
+                            )
+                    
+                    # if P_Mei.max() != 0.0:
+                        # print(&#39;P_Mei max:&#39;,P_Mei.max())
+
+                    foot_density = False
+                    if foot_density:
+                        rho = self.add_density(new_r,new_theta,new_phi)
+                        # adding density 
+                        # rho
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Rhovar] += rho[slice_r,slice_theta,slice_phi]
+
+                    # Adding pressure inspired by Mei &amp; Keppens 2018
+                    #Prim[0:n_x1,0:n_x2,0:n_x3,Prsvar] += \
+                    #P_Mei[slice_r,slice_theta,slice_phi]/(Gamma-1)
+                    
+                    # Adding density along the flux rope
+                    density_fr = False
+                    if density_fr:
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Rhovar] = \
+                        density
+
+                    #max_prim = Prim[0:n_x1,0:n_x2,0:n_x3,Prsvar].max()
+
+                    #if max_prim &gt;1:
+                    #    print(max_prim)
+
+                    # Filling the Mag
+                    Prim[0:n_x1,0:n_x2,0:n_x3,Brvar] += B_sph[0][slice_r,slice_theta,slice_phi]
+                    Prim[0:n_x1,0:n_x2,0:n_x3,Btvar] += B_sph[1][slice_r,slice_theta,slice_phi]
+                    Prim[0:n_x1,0:n_x2,0:n_x3,Bpvar] += B_sph[2][slice_r,slice_theta,slice_phi]
+
+
+                        
+                    
+                    # This is were the TDm model would be called, 
+                    # based on the local x1,x2,x3 spherical grid
+                    #######################################################################
+                    # Go back to conservative
+                    q=PrimToCons(Prim)
+                    # print(np.nanmax(np.abs((qold-q)/qold)[:,:,:,7])) 
+                    # This as validated up to machine precision ;)
+                    #######################################################################
+                    # Back to data, this directly modifies the hdf5 file
+                    data[ncount:ncount+szb] = q.T.flatten()
+                    ncount = ncount+szb
+                    
+            # Close File
+            fp.close()
+
+    </code></pre>
+</details>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+</section>
+<section>
+<h2 class="section-title" id="header-classes">Classes</h2>
+<dl>
+<dt id="TDm.TDm_object"><code class="flex name class">
+<span>class <span class="ident">TDm_object</span></span>
+<span>(</span><span>case)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>TODO : you may want to add a function that will create a model of your
+TDm.conf file</p>
+<p>Initialisation</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">class TDm_object:
+    &#39;&#39;&#39; TODO : you may want to add a function that will create a model of your
+    TDm.conf file
+    &#39;&#39;&#39;
+
+    def __init__(self,case):
+        &#39;&#39;&#39; Initialisation
+        &#39;&#39;&#39; 
+
+        self.is_setup = False
+        self.param_loaded = False
+        self.case = case
+
+    def test(self):
+        &#39;&#39;&#39; Just a test routine
+        &#39;&#39;&#39;
+
+        print(&#39;Hello world&#39;)
+    
+
+    # Import setup parameter
+    def read_TDm_parameter(self,conf_path = &#39;./&#39;):
+        &#39;&#39;&#39; 
+        Put the parameter of the TDm setup into a dictonnary 
+
+        THe conf file has to be named &#34;TDm.config&#34; and at the {conf_path}
+        location which is by default the name of the case 
+        &#39;&#39;&#39;
+        
+        with open(&#39;{}/TDm.config&#39;.format(conf_path),&#39;r&#39;) as f:
+                lines = f.readlines()
+
+        self.setup = dict({})
+       
+        # Loop over lines
+        for l in lines:
+            
+            # This is not a interesting line
+            if l[0] in [&#39;[&#39;,&#39;\n&#39;]:
+                continue
+
+            # Sanity check
+            if len(l.split(&#39; &#39;)) &gt; 2:
+                print(l)
+                raise ValueError(&#34;Too much columns in conf file&#34;)
+
+            name_var = l.split(&#39; &#39;)[0]
+
+            if name_var in [&#39;CASE_TDM&#39;,&#39;GEOMETRY&#39;]:
+                var = str(l.split(&#39; &#39;)[1])
+                var = var.strip(&#39;\n&#39;)
+            else:
+                var = float(l.split(&#39; &#39;)[1])
+
+
+            self.setup[name_var] = var
+        
+        self.param_loaded = True
+        
+        print(f&#39;Reading setup at {conf_path}&#39;)
+
+        print(f&#39;----------------------&#39;)
+        print(f&#39;-------TDm setup------&#39;)
+        print(f&#39;----------------------&#39;)
+
+        for it in self.setup.keys():
+            
+            print(f&#39;{it} : {self.setup[it]}&#39;)
+            print(f&#39;----------------------&#39;)
+
+    
+    def convergent_flow(self,a,R,ar_grid,bdirOut):
+        &#39;&#39;&#39; 
+        Compute a velocity field that converge to the PIL of the FR
+        &#39;&#39;&#39;
+
+        theta = ar_grid[1]
+        phi = ar_grid[2]
+
+        tt,pp = np.meshgrid(theta,phi,indexing=&#39;ij&#39;)
+
+        # Gaussian on theta
+        def gauss_t(xx2,mu_t,s_t):
+            
+            gauss = np.sign(1.57 - xx2) * np.exp(-0.5 * ((xx2 - mu_t)/s_t)**2) \
+                    * 1 / (s_t * np.sqrt(2 * np.pi))
+
+            norm_t  = 1/(s_t * np.sqrt(2*np.pi))
+
+            gauss = gauss / norm_t
+
+            return gauss
+
+        # we normalise the gaussien by it&#39;s value at the mean value so that it is
+        # equal to 1 
+    
+
+
+        def gauss_p(xx3,mu_p,s_p):
+        # Gaussian on phi
+            gauss =  np.exp(-0.5 * ((xx3 - mu_p)/s_p)**2) \
+                    * 1 / (s_p * np.sqrt(2 * np.pi))
+
+            # we normalise the gaussian by it&#39;s value at the mean value so that it is
+            # equal to 1 
+            norm_p  = 1/(s_p * np.sqrt(2*np.pi))
+
+            gauss = gauss / norm_p
+
+            return gauss
+
+            # Params for both gaussian
+            # ==========================
+
+        theta_0 = self.setup[&#34;THETA_0&#34;]
+        phi_0 = self.setup[&#34;PHI_0&#34;]
+
+        mu_p = phi_0
+        s_p = self.setup[&#34;R&#34;] * 0.5
+
+        mu_t =  theta_0
+        s_t = self.setup[&#34;A&#34;] * 1.3
+    
+        UNIT_VELOCITY = 4.367e7 # cm/s
+
+        V0 = 200e5 / UNIT_VELOCITY # 100 km/s
+
+        print(f&#39;Velocity hard coded ({V0:.2f} PLUTO unit)&#39;)
+
+        gauss_tot = V0 * gauss_t(tt,mu_t,s_t) * gauss_p(pp,mu_p,s_p)
+
+        with open(&#39;{}/speed_bc.bin&#39;.format(bdirOut),&#39;wb&#39;) as speed_bc:      
+            for j in range(len(theta)):
+                for k in range(len(phi)):
+                    speed_bc.write(struct.pack(&#39;d&#39;,gauss_tot[j,k]))
+
+
+    def cart_to_sph(vcart,xx2,xx3): 
+
+        sinth=sin(xx2);
+        costh=cos(xx2);
+        sinph=sin(xx3);
+        cosph=cos(xx3);
+        vsph = [0]*3
+
+        vsph[0] =  sinth*cosph*vcart[0] + sinth*sinph*vcart[1] + costh*vcart[2] ;
+        vsph[1] =  costh*cosph*vcart[0] + costh*sinph*vcart[1] - sinth*vcart[2] ;
+        vsph[2] = -sinph*vcart[0] + cosph*vcart[1] ;
+
+        return vsph
+
+    def get_monopoles(self,x1,x2,x3):
+        &#39;&#39;&#39; Add two monopoles above and below the TDm FR with opposite polarity
+        &#39;&#39;&#39;
+
+        tTDm = self.setup[&#39;THETA_0&#39;] 
+        pTDm = self.setup[&#39;PHI_0&#39;] 
+
+        # Setting the grid
+        xx1,xx2,xx3 = np.meshgrid(x1,x2,x3,indexing=&#39;ij&#39;)
+        xx = xx1*np.sin(xx2)*np.cos(xx3);
+        yy = xx1*np.sin(xx2)*np.sin(xx3);
+        zz = xx1*np.cos(xx2);
+            
+        # initialisation
+        Bcart = [0]*3
+        r0=0.9;
+
+        #First monopole
+
+        th0=tTDm+0.2;
+        ph0=pTDm;
+        x0 = r0*np.sin(th0)*np.cos(ph0);
+        y0 = r0*np.sin(th0)*np.sin(ph0);
+        z0 = r0*np.cos(th0);
+        rp = np.sqrt( pow(xx-x0,2)+pow(yy-y0,2)+pow(zz-z0,2));
+        Bcart[0] = - (xx-x0)/pow(rp,3.);
+        Bcart[1] = - (yy-y0)/pow(rp,3.);
+        Bcart[2] = - (zz-z0)/pow(rp,3.);
+
+        B_sph1 = tools_TDm.cart_to_sph(Bcart,xx2,xx3);
+
+        #Second monopole
+
+        th0=tTDm-0.2;
+        ph0=pTDm;
+        x0 = r0*np.sin(th0)*np.cos(ph0);
+        y0 = r0*np.sin(th0)*np.sin(ph0);
+        z0 = r0*np.cos(th0);
+        rp = np.sqrt( pow(xx-x0,2)+pow(yy-y0,2)+pow(zz-z0,2));
+        Bcart[0] =  (xx-x0)/pow(rp,3.);
+        Bcart[1] =  (yy-y0)/pow(rp,3.);
+        Bcart[2] =  (zz-z0)/pow(rp,3.);
+
+        B_sph2 = tools_TDm.cart_to_sph(Bcart,xx2,xx3);
+
+        B_sph = [0]*3
+        for i in range(0,3):
+            B_sph[i] = B_sph1[i] + B_sph2[i]
+        
+        return B_sph
+
+    # =====================================================================
+    def setup_bc(self,B_amb,d,a,R,Delta,case,zeta,R_star,
+            alpha_0,theta_0,phi_0,it,bDirOut,ar_grid,B_grid,prs,only_AF_zeta):
+        &#39;&#39;&#39;
+        setup in binary files the boundary conditions (surface of the sun) for the
+        magnetic field
+        write it in a .bin file
+
+        Sizes of array in each direction (3) are written in bc_sizes.bin and the
+        data is in bc_data.bin
+        &#39;&#39;&#39;
+
+        # Estimation of the ambient magnetic field at the location of the FR
+
+        print(&#34;boundary :d,a,R,Delta,case,zeta,R_star,alpha_0,theta_0,phi_0&#34;,
+                d,a,R,Delta,case,zeta,R_star,alpha_0,theta_0,phi_0)
+        
+
+        r = ar_grid[0]
+        theta = ar_grid[1]
+        phi = ar_grid[2]
+
+        # Getting the grid for the TDm setup
+        dr = r[1] - r[0]
+
+        # We are only interested by r -2dr and r-dr
+        # We add 2 points around these value in order to avoid uncentered derivative
+        # in the curl 
+
+        ghost_r = np.array([r[0]-3*dr,r[0]-2*dr,r[0]-dr,r[0],r[1],r[2],r[3],r[4]])
+        print(ghost_r)
+
+        real_ghost = ghost_r[1:4]
+        r_real_ghost = range(1,4)
+
+        rho_sw = 0
+        # Setting TDm on ghost cell 
+
+        B,density = tools_TDm.TDm_setup(
+                ghost_r,
+                theta,
+                phi,
+                alpha_0,
+                theta_0,
+                phi_0,
+                d,
+                a,
+                R,
+                zeta,
+                B_amb,
+                Delta,
+                case,
+                rho_sw,
+                geometry=&#39;spherical&#39;,
+                R_star = R_star,
+                only_AF_zeta = only_AF_zeta
+                )
+
+        B_r = B[0]
+        B_t = B[1]
+        B_p = B[2]
+
+        B_TD = np.sqrt(B_r[3,...]**2 + B_t[3,...]**2 + B_p[3,...]**2)
+        B_sw = np.sqrt(B_grid[0][0,...]**2 + B_grid[1][0,...]**2 + B_grid[2][0,...]**2)
+
+        ratio = B_TD / B_sw
+
+        flag = (ratio &gt; 0.5).astype(int)
+        
+
+        arrays = dict({
+            &#39;B_r&#39;:B_r,
+            &#39;B_t&#39;:B_t,
+            &#39;B_p&#39;:B_p,
+            &#39;r&#39;:r,
+            &#39;theta&#39;:theta,
+            &#39;phi&#39;:phi
+            })
+
+        print(&#39;Writing bin files&#39;)
+        with open(&#39;{}/flag_bc.bin&#39;.format(bDirOut),&#39;wb&#39;) as flag_bc:      
+            for j in range(len(theta)):
+                for k in range(len(phi)):
+                    flag_bc.write(struct.pack(&#39;i&#39;,flag[j,k]))
+
+        with open(&#39;{}/prs_bc.bin&#39;.format(bDirOut),&#39;wb&#39;) as flag_bc:      
+            for j in range(len(theta)):
+                for k in range(len(phi)):
+                    flag_bc.write(struct.pack(&#39;d&#39;,prs[0,j,k]))
+
+        # We are using 4 array elements in r for TDm_setup to work,
+        # only 2 cells are ghost cells
+        
+        # Saving to binary arrays
+        size_ar = np.array([len(real_ghost),len(theta),len(phi)])
+
+
+        with open(&#39;{}/bc_sizes.bin&#39;.format(bDirOut),&#39;wb&#39;) as f:      
+            for int_value in size_ar:                      
+                f.write(struct.pack(&#39;i&#39;, int_value))  
+
+# with open(&#39;norm.bin&#39;,&#39;wb&#39;) as f_norm:      
+            # for db_value in db_ar:
+                # f_norm.write(struct.pack(&#39;d&#39;, db_value))  
+
+# Generating 3D arrays
+
+# n = len(r) * len(theta) * len(phi)
+# ar = np.arange(0,n,1).reshape(*size_ar)
+# ar_2 = np.arange(n,2*n,1).reshape(*size_ar)
+
+        with open(&#39;{}/bc_data.bin&#39;.format(bDirOut),&#39;wb&#39;) as f_array:
+
+            for i in r_real_ghost:
+                for j in range(len(theta)):
+                    for k in range(len(phi)):
+                        f_array.write(struct.pack(&#39;d&#39;,B_r[i,j,k]))
+
+            for i in r_real_ghost:
+                for j in range(len(theta)):
+                    for k in range(len(phi)):
+                        f_array.write(struct.pack(&#39;d&#39;,B_t[i,j,k]))
+
+            for i in r_real_ghost:
+                for j in range(len(theta)):
+                    for k in range(len(phi)):
+                        f_array.write(struct.pack(&#39;d&#39;,B_p[i,j,k]))
+
+            for i in range(len(real_ghost)):
+                f_array.write(struct.pack(&#39;d&#39;,real_ghost[i]))
+
+            for i in range(len(theta)):
+                f_array.write(struct.pack(&#39;d&#39;,theta[i]))
+            
+            for i in range(len(phi)):
+                f_array.write(struct.pack(&#39;d&#39;,phi[i]))
+
+        # with open(&#39;{}/surface.bin&#39;.format(bDirOut),&#39;wb&#39;) as f_array:
+
+            # for j in range(len(theta)):
+                # for k in range(len(phi)):
+                    # f_array.write(struct.pack(&#39;d&#39;,B_r_s[j,k]))
+
+            # for j in range(len(theta)):
+                # for k in range(len(phi)):
+                    # f_array.write(struct.pack(&#39;d&#39;,B_t_s[j,k]))
+
+            # for j in range(len(theta)):
+                # for k in range(len(phi)):
+                    # f_array.write(struct.pack(&#39;d&#39;,B_p_s[j,k]))
+
+
+
+    def add_density(self,new_r,new_theta,new_phi):
+        &#39;&#39;&#39; Add density close to the feet of the TDm
+        &#39;&#39;&#39;
+
+
+        alpha_0 = self.setup[&#39;ALPHA_0&#39;]
+        theta_0 = self.setup[&#39;THETA_0&#39;]
+        phi_0   = self.setup[&#39;PHI_0&#39;]
+
+        # TDm parameters setup
+        d = self.setup[&#39;D&#39;]
+        a = self.setup[&#39;A&#39;]
+        R = self.setup[&#39;R&#39;]
+        Delta = self.setup[&#39;DELTA&#39;]
+        case = self.setup[&#39;CASE_TDM&#39;] 
+        zeta = self.setup[&#39;ZETA&#39;] 
+
+        t_MC = theta_0
+        p_MC = phi_0 
+
+        # Width of the tanh**2
+        width = 1.2 * a
+        width_r = 0.05
+
+        rr,tt,pp = np.meshgrid(new_r,new_theta,new_phi,indexing=&#39;ij&#39;)
+        
+        # angle between the point at (t_MC,p_MC) and one at the foot
+        Rsol = 1
+        alpha2 = np.arcsin(R/Rsol * np.sqrt(1-(d**2/R**2)))
+    
+        # Position of each foot    
+        p_foot1  = p_MC - alpha2 # Position in phi of the first foot
+        p_foot2  = p_MC + alpha2 # Position in phi of the first foot
+        
+
+        # Localisation using theta
+        tanh_theta = np.tanh((tt-t_MC)/width)
+        tanh_theta2 = tanh_theta**2
+        
+        # Localisation using phi
+        tanh_phi = np.tanh((pp-p_foot1)/width) *np.tanh((pp-p_foot2)/width) # 2 foots
+        tanh_phi2 = tanh_phi**2
+        
+        # Localisation using r
+
+        tanh_r = np.tanh(((rr-1)/width_r))
+        tanh_r2 = tanh_r**2
+
+        # loc = 1 at the center of the foot and close to the surface
+        loc = (1-tanh_phi2) * (1-tanh_theta2) * (1-tanh_r2)
+
+        # We want to have a density around 100 at the center of the foot
+
+        rho_in_FR = loc*100
+
+        return rho_in_FR
+
+
+    # -------------------------------------------------------------------
+    def add_magnetic_structure(self,iteration,filetype=&#39;chk&#39;,SolO=False):
+        &#39;&#39;&#39; 
+        Add the magnetic structure to an existing hdf5 files
+        &#39;&#39;&#39;
+        
+        print(&#39;Spherical geometry is hard coded in tools_TDm.TDm_setup&#39;)
+
+        originals_dir = os.environ[&#39;TDM_ORIGINALS&#39;]
+
+        if SolO:
+            originals_dir += &#39;SolO/&#39;
+
+            print(&#39;----------------&#39;)
+            print(&#39;   SolO case    &#39;)
+            print(&#39;----------------&#39;)
+
+
+        # Directory where the filed to be modified is
+        bdirIn=originals_dir        
+        print(&#39;ori_dir = &#39;,bdirIn)
+
+        # Directory where to put the modified file
+        # Setting to current directory  
+        cwd = os.getcwd()
+        bdirOut=f&#39;{cwd}/&#39;
+
+
+        # ############## #
+        # TDm parameters #
+        # ############## #
+        
+        # alpha_0 = 0
+        # theta_0 = np.pi/2
+        # phi_0   = np.pi/2
+        
+        # d = 0.25
+        # a = 0.4
+        # R = 0.5 
+        # Delta = 0.04
+        # case = &#39;second&#39;
+        # zeta = 1
+        # R_star = 1
+        # Position of the FR
+
+        self.read_TDm_parameter()
+
+        
+        alpha_0 = self.setup[&#39;ALPHA_0&#39;]
+        theta_0 = self.setup[&#39;THETA_0&#39;]
+        phi_0   = self.setup[&#39;PHI_0&#39;]
+
+        # TDm parameters setup
+        d = self.setup[&#39;D&#39;]
+        a = self.setup[&#39;A&#39;]
+        R = self.setup[&#39;R&#39;]
+        Delta = self.setup[&#39;DELTA&#39;]
+        case = self.setup[&#39;CASE_TDM&#39;] 
+        zeta = self.setup[&#39;ZETA&#39;] 
+
+
+        # In PLUTO the star always have a radius = 1
+        R_star = 1
+
+        Gamma = 1.05
+        # Limit in radii in order to avoid overflow far from the FR
+        # r_lim = 200
+        # print(f&#39;r_lim set to {r_lim}&#39;)
+
+##
+
+################## the rest is automated, see on the &#39;Modify PRIMITIVE variables here&#39; flag for modification 
+
+# Dictionnary for the equivalence between the conservative and primitive
+# variable Cons
+
+        dict_equi_ConsToPrim = dict({
+            &#39;Density&#39;:&#39;rho&#39;,
+            &#39;X-momentum&#39;:&#39;vx1&#39;,
+            &#39;Y-momentum&#39;:&#39;vx2&#39;,
+            &#39;Z-momentum&#39;:&#39;vx3&#39;,
+            &#39;X-magnfield&#39;:&#39;bx1&#39;,
+            &#39;Y-magnfield&#39;:&#39;bx2&#39;,
+            &#39;Z-magnfield&#39;:&#39;bx3&#39;,
+            &#39;energy-density&#39;:&#39;prs&#39;,
+            &#39;psi_glm&#39;:&#39;psi_glm&#39;
+            })
+
+
+        for loading_file in [filetype]:
+
+            call(&#34;mkdir -p &#34;+bdirOut,shell=True)
+            FileIn  = bdirIn+&#34;{}.{:04d}.hdf5&#34;.format(loading_file,iteration)
+            FileOut = bdirOut+&#34;{}.{:04d}.hdf5&#34;.format(loading_file,iteration)
+            call(&#34;cp &#34;+FileIn+&#34; &#34;+FileOut,shell=True)
+
+### Primitive variables (with div_cleaning) are, in order of storage:
+###      rho, vr, vt, vp, br, bt, bp, prs, psi_glm
+###
+### Conservative variables are, in order of storage:
+###      rho, rho.vr, rho.vt, rho.vp, br, bt, bp, E, psi_glm
+###
+### with
+###      E = (1/2).(vr**2+vt**2+vp**2) + (1/2).(br**2+bt**2+bp**2) + rho.e
+###
+### and rho.e depends on the equation of state. In our case, it is
+###      rho.e = prs / (Gamma-1)
+###
+### with Gamma set in pluto.ini (usually Gamma=1.05 in our polytropic models)
+
+            def PrimToCons(Prim,Gamma=1.05):
+                &#39;&#39;&#39; Primitive to Conservative variables
+                &#39;&#39;&#39;
+
+                Cons=np.zeros_like(Prim)
+                Cons[:,:,:,0] = Prim[:,:,:,0] # rho
+
+                if Prim.shape[-1] == 9:
+
+                    Cons[:,:,:,-1] = Prim[:,:,:,-1] # psi_glm
+
+                for i in range(3):
+
+                    Cons[:,:,:,i+1] = Prim[:,:,:,0]*Prim[:,:,:,i+1] # rho.v
+                    Cons[:,:,:,i+4] = Prim[:,:,:,i+4] # B
+                    Cons[:,:,:,7] = 0.5*Prim[:,:,:,0]*\
+                        (Prim[:,:,:,1]**2+Prim[:,:,:,2]**2+Prim[:,:,:,3]**2) + \
+                                0.5*(Prim[:,:,:,4]**2+Prim[:,:,:,5]**2+Prim[:,:,:,6]**2) + \
+                                Prim[:,:,:,7]/(Gamma-1)
+
+                return Cons
+            
+
+
+            def ConsToPrim(Cons,Gamma=1.05):
+                &#39;&#39;&#39; Conservative to Primitives variables
+                &#39;&#39;&#39;
+
+                Prim=np.zeros_like(Cons)
+                Prim[:,:,:,0] = Cons[:,:,:,0] # rho
+
+                if Cons.shape[-1] == 9:
+
+                    Prim[:,:,:,-1] = Cons[:,:,:,-1] # psi_glm
+
+                for i in range(3):
+
+                    Prim[:,:,:,i+1] = Cons[:,:,:,i+1]/Cons[:,:,:,0] # v
+                    Prim[:,:,:,i+4] = Cons[:,:,:,i+4] # B
+                    Prim[:,:,:,7] = (Cons[:,:,:,7] - 0.5*Prim[:,:,:,0]* \
+                        (Prim[:,:,:,1]**2+Prim[:,:,:,2]**2+Prim[:,:,:,3]**2) -\
+                        0.5*(Prim[:,:,:,4]**2+Prim[:,:,:,5]**2+Prim[:,:,:,6]**2))*(Gamma-1)
+
+                return Prim
+            
+            print(&#39;Loading {}.{:04d}.hdf5&#39;.format(loading_file,iteration))
+            fp = h5.File(FileOut,&#39;r+&#39;)
+
+            Dvars = []
+            for iv in range(fp.attrs.get(&#39;num_components&#39;)):
+                Dvars.append(fp.attrs.get(&#39;component_&#39;+str(iv)).decode())
+
+            if loading_file == &#39;chk&#39;: 
+                list_var = []
+
+                for var in Dvars:
+                    list_var.append(dict_equi_ConsToPrim[var])
+
+            else: 
+                list_var = Dvars
+
+            
+            dir_grid = &#39;{}/&#39;.format(case)
+            path_grid = &#39;{}/grid_{}.npy&#39;.format(bdirIn,iteration)
+
+
+            print(path_grid) 
+
+            # In order to avoid huge file loading the grid can be saved in a npy file 
+            # Checking if the grid of the original hdf5 file has been already
+            # saved
+
+            if os.path.exists(path_grid):
+
+                ar_grid = np.load(path_grid,allow_pickle=True)
+                case_loaded = False
+
+            else:
+
+                print(&#39;{} does not exists creating it&#39;.format(path_grid))
+                # Loading the grid of the case that we will modify
+                # However, modifications are not not thanks to the D
+                # (pyPLUTO) object. There are done directly in the hdf5
+                # file later in the code 
+                D = pp.pload(
+                        iteration,
+                        w_dir=bdirIn,
+                        level=-1,
+                        # x1range=[1,r_lim],
+                        datatype=&#39;hdf5&#39;,
+                        filetype=&#39;chk&#39;
+                        )
+
+                case_loaded = True
+                ar_grid = np.array([D.x1,D.x2,D.x3])
+
+
+
+
+                np.save(path_grid,ar_grid)
+
+            
+            # Getting r, theta and phi from ar_grid
+            r = ar_grid[0]
+            theta = ar_grid[1]
+            phi = ar_grid[2]
+
+            # Getting the magnetic field of the dipole a the place of the flux rope
+            pos_tube_r = np.argmin(np.abs(r - (R - d + a + R_star)))
+            pos_tube_t = np.argmin(np.abs(theta - theta_0))
+            pos_tube_p = np.argmin(np.abs(phi - phi_0))
+            
+            print(&#39;B amb is taken a R - d + a&#39;)
+            # path_B_grid = &#39;grid_B_{}.npy&#39;.format(iteration)
+            path_B_grid = &#39;{}/grid_B_{}.npy&#39;.format(bdirIn,iteration)
+            path_prs_grid = &#39;{}/grid_prs_{}.npy&#39;.format(bdirIn,iteration)
+            
+            print(path_B_grid) 
+
+            # Checking if the B_grid already exists
+            if os.path.exists(path_B_grid):
+
+                print(&#39;{} already exists&#39;.format(path_B_grid))
+
+                B_grid = np.load(path_B_grid,allow_pickle=True)
+
+            # If it does not then check if we have already loaded the
+            # original case 
+            else:
+                
+                print(&#39;{} does not exists creating it&#39;.format(path_B_grid))
+                if case_loaded:
+
+                    # Case already loaded, no need to reload
+                    B_grid = np.array([
+                        getattr(D,&#39;X-magnfield&#39;),
+                        getattr(D,&#39;Y-magnfield&#39;),
+                        getattr(D,&#39;Z-magnfield&#39;),
+                        ])
+                    
+
+                else:
+                    # Loading the B grid of the case that we will modify
+                    # However, modifications are not not thanks to the D
+                    # (pyPLUTO) object. There are done directly in the hdf5
+                    # file later in the code 
+                    D = pp.pload(
+                            iteration,
+                            w_dir=bdirIn,
+                            level=-1,
+                            # x1range=[1,r_lim],
+                            datatype=&#39;hdf5&#39;,
+                            filetype=&#39;chk&#39;
+                            )
+                        
+                    B_grid = np.array([
+                        getattr(D,&#39;X-magnfield&#39;),
+                        getattr(D,&#39;Y-magnfield&#39;),
+                        getattr(D,&#39;Z-magnfield&#39;),
+                        ])
+                    
+                    print(&#39;Saving&#39;)
+                    # Saving
+                    np.save(
+                            path_B_grid,
+                            B_grid
+                            )
+                
+
+
+
+            # Checking if the prs_grid already exists
+            if os.path.exists(path_prs_grid):
+
+                prs_grid = np.load(path_prs_grid,allow_pickle=True)
+
+            # If it does not then check if we have already loaded the
+            # original case 
+            else:
+                prs_grid = np.zeros_like(B_grid[0]) 
+
+                # I don&#39;t think I need the pressure anymore
+                #print(&#39;{} does not exists creating it&#39;.format(path_B_grid))
+                #if case_loaded:
+
+                #    # Case already loaded, no need to reload
+                #    prs_grid = D.prs
+                #    
+
+                #else:
+                #    # Loading the prs grid of the case that we will modify
+                #    # getting the pressure state of the first layers
+
+                #    D = pp.pload(
+                #            iteration,
+                #            w_dir=bdirIn,
+                #            level=-1,
+                #            x1range=[1,1.3],
+                #            datatype=&#39;hdf5&#39;,
+                #            )
+                #        
+                #    prs_grid = D.prs
+                #    
+                #    print(&#39;Saving&#39;)
+                #    # Saving
+                #    np.save(
+                #            path_prs_grid,
+                #            prs_grid
+                #            )
+            
+
+            path_monop = f&#39;{bdirIn}/monopole_grid.npy&#39;
+
+            #Location of the file containing the monopole
+            monopoles = False
+            if monopoles: 
+
+                if os.path.exists(path_monop):
+
+                    B_sph = np.load(path_monop,allow_pickle=True)
+                    B_grid[0] += B_sph[0] 
+                    B_grid[1] += B_sph[1] 
+                    B_grid[2] += B_sph[2] 
+
+                else:
+
+                    raise ValueError(f&#34;{path_monop} doesn&#39;t exists&#34;)
+
+            # import matplotlib as mpl
+            # mpl.use(&#39;Agg&#39;)
+            # import matplotlib.pyplot as plt
+
+            # plt.figure()
+            # plt.imshow(B_grid[0][18,...])
+            # plt.colorbar()
+            # plt.savefig(&#39;B_grid.png&#39;)
+
+            # plt.figure()
+            # plt.imshow(getattr(D,&#39;X-magnfield&#39;)[18,...])
+            # plt.colorbar()
+            # plt.savefig(&#39;D_grid.png&#39;)
+
+            # Ambient magnetic field of the solar wind
+            B_amb = np.sqrt(
+                  B_grid[0][pos_tube_r,pos_tube_t,pos_tube_p]**2 \
+                + B_grid[1][pos_tube_r,pos_tube_t,pos_tube_p]**2 \
+                + B_grid[2][pos_tube_r,pos_tube_t,pos_tube_p]**2
+                )
+            
+
+            print(f&#39;B_amb is at {B_amb}&#39;)
+            # print(f&#39;B_amb_D is at {B_amb_D}&#39;)
+
+
+
+            print(pos_tube_r,pos_tube_t,pos_tube_p)
+
+            only_AF_zeta = False
+            if only_AF_zeta:
+                print(&#39;Increasing only AF by zeta in bc&#39;)
+
+            # Setting boundary condition 
+            self.setup_bc(B_amb,d,a,R,Delta,case,zeta,R_star,
+                    alpha_0,theta_0,phi_0,
+                    iteration,
+                    bdirOut,
+                    ar_grid,
+                    B_grid,
+                    prs_grid,
+                    only_AF_zeta
+                    )
+            
+            # Constructing the converging flow
+            self.convergent_flow(a,R,ar_grid,bdirOut)
+
+            # Setting the site points for streamplot
+            tools_TDm.set_site_points(R,a,d,alpha_0,theta_0,phi_0,R_star,bdirOut)
+            
+            # Getting the index of B parameters
+            Brvar = list_var.index(&#39;bx1&#39;)
+            Btvar = list_var.index(&#39;bx2&#39;)
+            Bpvar = list_var.index(&#39;bx3&#39;)
+            Rhovar = list_var.index(&#39;rho&#39;)
+            Prsvar = list_var.index(&#39;prs&#39;)
+
+            print(list_var) 
+
+
+            # Number of parameters
+            nvar = len(list_var)
+
+            # I can now modify the OutFile
+            # Read the file
+            # Loop over the data to be modified
+            nlev = fp.attrs.get(&#39;num_levels&#39;)
+            dim = fp[&#39;Chombo_global&#39;].attrs.get(&#39;SpaceDim&#39;)
+            
+            # Loop over the different level
+            for i in tqdm(range(nlev),desc=&#39;level&#39;):
+
+                fl = fp[&#34;level_{:d}&#34;.format(i)]
+                data = fl[&#39;data:datatype=0&#39;]
+                boxes = fl[&#39;boxes&#39;]
+                nbox = len(boxes[&#39;lo_i&#39;])
+                x1b = fl.attrs.get(&#39;domBeg1&#39;)
+
+                if (dim == 1):
+                    x2b = 0
+                else:
+                    x2b = fl.attrs.get(&#39;domBeg2&#39;)
+
+                if (dim == 1 or dim == 2):
+                    x3b = 0
+                else:
+                    x3b = fl.attrs.get(&#39;domBeg3&#39;)
+
+                dx = fl.attrs.get(&#39;dx&#39;)
+                logr = fl.attrs.get(&#39;logr&#39;)
+                ystr = 1. ; zstr = 1. 
+
+                if (dim &gt;= 2):
+                    ystr = fl.attrs.get(&#39;g_x2stretch&#39;)
+
+                if (dim == 3):
+                    zstr = fl.attrs.get(&#39;g_x3stretch&#39;)
+                
+                ncount=0
+                for j in tqdm(range(nbox),desc=&#39;box&#39;): # loop on all boxes of a given level
+
+                    ib = boxes[j][&#39;lo_i&#39;] ; ie = boxes[j][&#39;hi_i&#39;] ; nbx = ie-ib+1
+                    jb = 0 ; je = 0 ; nby = 1
+                    kb = 0 ; ke = 0 ; nbz = 1
+
+                    if (dim &gt; 1):
+                        jb = boxes[j][&#39;lo_j&#39;] 
+                        je = boxes[j][&#39;hi_j&#39;] 
+                        nby = je-jb+1
+
+                    if (dim &gt; 2):
+                        kb = boxes[j][&#39;lo_k&#39;] 
+                        ke = boxes[j][&#39;hi_k&#39;] 
+                        nbz = ke-kb+1
+
+                    szb = nbx*nby*nbz*nvar
+                    q=data[ncount:ncount+szb].reshape((nvar,nbz,nby,nbx)).T
+
+                    # q has the variables in a table [nx_loc,ny_loc,nz_loc,nvar]
+                    # x1,x2,x3 are the local space dimensions
+                    if logr == 0:
+                        x1 = x1b + (ib+np.array(range(nbx))+0.5)*dx
+
+                    else:
+                        x1 = x1b*(np.exp((ib+np.array(range(nbx))+1)*dx)\
+                                +np.exp((ib+np.array(range(nbx)))*dx))*0.5
+
+                    x2 = x2b + (jb+np.array(range(nby))+0.5)*dx*ystr
+                    x3 = x3b + (kb+np.array(range(nbz))+0.5)*dx*zstr
+
+                    # First get primitive variables
+                    qold=q.copy()
+                    
+                    # Perform the transformation only if needed
+                    if filetype == &#39;chk&#39;:
+                        Prim = ConsToPrim(q) 
+
+                    #######################################################################
+                    ######################## Modify PRIMITIVE variables here
+                    #######################################################################
+                    # ivar  = list_var.index(&#39;rho&#39;)
+                    # indx = np.where((x1 &gt; 10.) &amp; (x1 &lt; 14.))[0]
+                    # Prim[indx,:,:,ivar] = 10.*Prim[indx,:,:,ivar] # rho * 10 example
+
+                    
+                    # theta = np.linspace(eps,np.pi-eps,100)
+                    # phi = np.linspace(0,2*np.pi,100)
+                    # We are taking mu*I instead of just I
+                    x1_m = x1
+                    n_x1 = len(x1_m)
+                    n_x2 = len(x2)
+                    n_x3 = len(x3)
+
+                    # Inserting a new point at the beginning and the end of
+                    # the patch in order to compute well the curl because 
+                    # of decentered derivatives
+                    
+                    # Compute dr,dtheta and dphi at each extremities of the patch
+                    # Beginnings
+                    drb     = x1_m[1]  - x1_m[0]
+                    dthetab = x2[1]    - x2[0]
+                    dphib   = x3[1]    - x3[0]
+
+                    # Ends
+                    dre     = x1_m[-1] - x1_m[-2]
+                    dthetae = x2[-1]   - x2[-2]
+                    dphie   = x3[-1]   - x3[-2]
+                    
+                    # Compute new points
+                    rb_point     = [x1_m[0]  - 2*drb,     x1_m[0] - drb]
+                    thetab_point = [x2[0]    - 2*dthetab, x2[0] - dthetab]
+                    phib_point   = [x3[0]    - 2*dphib,   x3[0] - dphib]
+
+                    
+                    re_point     = [x1_m[-1] + dre,     x1_m[-1] + 2*dre]
+                    thetae_point = [x2[-1]   + dthetae, x2[-1] + 2*dthetae]
+                    phie_point   = [x3[-1]   + dphie,   x3[-1] + 2*dphie]
+
+                    # Add them and prepare slice to remove this points before
+                    # adding the TDm
+
+                    new_r     = np.append(rb_point,x1_m)
+                    slice_r = slice(2,-2)
+                
+                    new_theta = np.append(thetab_point,x2)
+                    slice_theta = slice(2,-2)
+                
+                    new_phi   = np.append(phib_point,x3)
+                    slice_phi = slice(2,-2)
+
+                    new_r     = np.append(new_r,re_point)
+                    new_theta = np.append(new_theta,thetae_point)
+                    new_phi   = np.append(new_phi,phie_point)
+                   
+
+
+
+                    if monopoles:
+                        # Filling the Mag
+
+
+                        B_mon = self.get_monopoles(new_r,new_theta,new_phi)
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Brvar] += B_mon[0][slice_r,slice_theta,slice_phi]
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Btvar] += B_mon[1][slice_r,slice_theta,slice_phi]
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Bpvar] += B_mon[2][slice_r,slice_theta,slice_phi]
+
+                        
+                            
+
+                    rho_sw = Prim[0:n_x1,0:n_x2,0:n_x3,Rhovar]
+
+                    # print(&#34;--------------&#34;)
+                    # print(new_r.shape)
+                    # print(rho_sw.shape)
+                    # print(&#34;--------------&#34;)
+
+
+                    # Computing the magnetic structure
+                    # TODO put every set_TDm functions in the TDm_object class
+                    # as a daughter class tools_TDm for example ? 
+                    B_sph,density = tools_TDm.TDm_setup( 
+                            new_r,
+                            new_theta,
+                            new_phi,
+                            alpha_0,
+                            theta_0,
+                            phi_0,
+                            d,
+                            a,
+                            R,
+                            zeta,
+                            B_amb,
+                            Delta,
+                            case,
+                            rho_sw,
+                            geometry=&#39;spherical&#39;,
+                            R_star = R_star,
+                            only_AF_zeta = only_AF_zeta
+                            )
+                    
+                    # if P_Mei.max() != 0.0:
+                        # print(&#39;P_Mei max:&#39;,P_Mei.max())
+
+                    foot_density = False
+                    if foot_density:
+                        rho = self.add_density(new_r,new_theta,new_phi)
+                        # adding density 
+                        # rho
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Rhovar] += rho[slice_r,slice_theta,slice_phi]
+
+                    # Adding pressure inspired by Mei &amp; Keppens 2018
+                    #Prim[0:n_x1,0:n_x2,0:n_x3,Prsvar] += \
+                    #P_Mei[slice_r,slice_theta,slice_phi]/(Gamma-1)
+                    
+                    # Adding density along the flux rope
+                    density_fr = False
+                    if density_fr:
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Rhovar] = \
+                        density
+
+                    #max_prim = Prim[0:n_x1,0:n_x2,0:n_x3,Prsvar].max()
+
+                    #if max_prim &gt;1:
+                    #    print(max_prim)
+
+                    # Filling the Mag
+                    Prim[0:n_x1,0:n_x2,0:n_x3,Brvar] += B_sph[0][slice_r,slice_theta,slice_phi]
+                    Prim[0:n_x1,0:n_x2,0:n_x3,Btvar] += B_sph[1][slice_r,slice_theta,slice_phi]
+                    Prim[0:n_x1,0:n_x2,0:n_x3,Bpvar] += B_sph[2][slice_r,slice_theta,slice_phi]
+
+
+                        
+                    
+                    # This is were the TDm model would be called, 
+                    # based on the local x1,x2,x3 spherical grid
+                    #######################################################################
+                    # Go back to conservative
+                    q=PrimToCons(Prim)
+                    # print(np.nanmax(np.abs((qold-q)/qold)[:,:,:,7])) 
+                    # This as validated up to machine precision ;)
+                    #######################################################################
+                    # Back to data, this directly modifies the hdf5 file
+                    data[ncount:ncount+szb] = q.T.flatten()
+                    ncount = ncount+szb
+                    
+            # Close File
+            fp.close()</code></pre>
+</details>
+<h3>Methods</h3>
+<dl>
+<dt id="TDm.TDm_object.add_density"><code class="name flex">
+<span>def <span class="ident">add_density</span></span>(<span>self, new_r, new_theta, new_phi)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add density close to the feet of the TDm</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def add_density(self,new_r,new_theta,new_phi):
+    &#39;&#39;&#39; Add density close to the feet of the TDm
+    &#39;&#39;&#39;
+
+
+    alpha_0 = self.setup[&#39;ALPHA_0&#39;]
+    theta_0 = self.setup[&#39;THETA_0&#39;]
+    phi_0   = self.setup[&#39;PHI_0&#39;]
+
+    # TDm parameters setup
+    d = self.setup[&#39;D&#39;]
+    a = self.setup[&#39;A&#39;]
+    R = self.setup[&#39;R&#39;]
+    Delta = self.setup[&#39;DELTA&#39;]
+    case = self.setup[&#39;CASE_TDM&#39;] 
+    zeta = self.setup[&#39;ZETA&#39;] 
+
+    t_MC = theta_0
+    p_MC = phi_0 
+
+    # Width of the tanh**2
+    width = 1.2 * a
+    width_r = 0.05
+
+    rr,tt,pp = np.meshgrid(new_r,new_theta,new_phi,indexing=&#39;ij&#39;)
+    
+    # angle between the point at (t_MC,p_MC) and one at the foot
+    Rsol = 1
+    alpha2 = np.arcsin(R/Rsol * np.sqrt(1-(d**2/R**2)))
+
+    # Position of each foot    
+    p_foot1  = p_MC - alpha2 # Position in phi of the first foot
+    p_foot2  = p_MC + alpha2 # Position in phi of the first foot
+    
+
+    # Localisation using theta
+    tanh_theta = np.tanh((tt-t_MC)/width)
+    tanh_theta2 = tanh_theta**2
+    
+    # Localisation using phi
+    tanh_phi = np.tanh((pp-p_foot1)/width) *np.tanh((pp-p_foot2)/width) # 2 foots
+    tanh_phi2 = tanh_phi**2
+    
+    # Localisation using r
+
+    tanh_r = np.tanh(((rr-1)/width_r))
+    tanh_r2 = tanh_r**2
+
+    # loc = 1 at the center of the foot and close to the surface
+    loc = (1-tanh_phi2) * (1-tanh_theta2) * (1-tanh_r2)
+
+    # We want to have a density around 100 at the center of the foot
+
+    rho_in_FR = loc*100
+
+    return rho_in_FR</code></pre>
+</details>
+</dd>
+<dt id="TDm.TDm_object.add_magnetic_structure"><code class="name flex">
+<span>def <span class="ident">add_magnetic_structure</span></span>(<span>self, iteration, filetype='chk', SolO=False)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add the magnetic structure to an existing hdf5 files</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">    def add_magnetic_structure(self,iteration,filetype=&#39;chk&#39;,SolO=False):
+        &#39;&#39;&#39; 
+        Add the magnetic structure to an existing hdf5 files
+        &#39;&#39;&#39;
+        
+        print(&#39;Spherical geometry is hard coded in tools_TDm.TDm_setup&#39;)
+
+        originals_dir = os.environ[&#39;TDM_ORIGINALS&#39;]
+
+        if SolO:
+            originals_dir += &#39;SolO/&#39;
+
+            print(&#39;----------------&#39;)
+            print(&#39;   SolO case    &#39;)
+            print(&#39;----------------&#39;)
+
+
+        # Directory where the filed to be modified is
+        bdirIn=originals_dir        
+        print(&#39;ori_dir = &#39;,bdirIn)
+
+        # Directory where to put the modified file
+        # Setting to current directory  
+        cwd = os.getcwd()
+        bdirOut=f&#39;{cwd}/&#39;
+
+
+        # ############## #
+        # TDm parameters #
+        # ############## #
+        
+        # alpha_0 = 0
+        # theta_0 = np.pi/2
+        # phi_0   = np.pi/2
+        
+        # d = 0.25
+        # a = 0.4
+        # R = 0.5 
+        # Delta = 0.04
+        # case = &#39;second&#39;
+        # zeta = 1
+        # R_star = 1
+        # Position of the FR
+
+        self.read_TDm_parameter()
+
+        
+        alpha_0 = self.setup[&#39;ALPHA_0&#39;]
+        theta_0 = self.setup[&#39;THETA_0&#39;]
+        phi_0   = self.setup[&#39;PHI_0&#39;]
+
+        # TDm parameters setup
+        d = self.setup[&#39;D&#39;]
+        a = self.setup[&#39;A&#39;]
+        R = self.setup[&#39;R&#39;]
+        Delta = self.setup[&#39;DELTA&#39;]
+        case = self.setup[&#39;CASE_TDM&#39;] 
+        zeta = self.setup[&#39;ZETA&#39;] 
+
+
+        # In PLUTO the star always have a radius = 1
+        R_star = 1
+
+        Gamma = 1.05
+        # Limit in radii in order to avoid overflow far from the FR
+        # r_lim = 200
+        # print(f&#39;r_lim set to {r_lim}&#39;)
+
+##
+
+################## the rest is automated, see on the &#39;Modify PRIMITIVE variables here&#39; flag for modification 
+
+# Dictionnary for the equivalence between the conservative and primitive
+# variable Cons
+
+        dict_equi_ConsToPrim = dict({
+            &#39;Density&#39;:&#39;rho&#39;,
+            &#39;X-momentum&#39;:&#39;vx1&#39;,
+            &#39;Y-momentum&#39;:&#39;vx2&#39;,
+            &#39;Z-momentum&#39;:&#39;vx3&#39;,
+            &#39;X-magnfield&#39;:&#39;bx1&#39;,
+            &#39;Y-magnfield&#39;:&#39;bx2&#39;,
+            &#39;Z-magnfield&#39;:&#39;bx3&#39;,
+            &#39;energy-density&#39;:&#39;prs&#39;,
+            &#39;psi_glm&#39;:&#39;psi_glm&#39;
+            })
+
+
+        for loading_file in [filetype]:
+
+            call(&#34;mkdir -p &#34;+bdirOut,shell=True)
+            FileIn  = bdirIn+&#34;{}.{:04d}.hdf5&#34;.format(loading_file,iteration)
+            FileOut = bdirOut+&#34;{}.{:04d}.hdf5&#34;.format(loading_file,iteration)
+            call(&#34;cp &#34;+FileIn+&#34; &#34;+FileOut,shell=True)
+
+### Primitive variables (with div_cleaning) are, in order of storage:
+###      rho, vr, vt, vp, br, bt, bp, prs, psi_glm
+###
+### Conservative variables are, in order of storage:
+###      rho, rho.vr, rho.vt, rho.vp, br, bt, bp, E, psi_glm
+###
+### with
+###      E = (1/2).(vr**2+vt**2+vp**2) + (1/2).(br**2+bt**2+bp**2) + rho.e
+###
+### and rho.e depends on the equation of state. In our case, it is
+###      rho.e = prs / (Gamma-1)
+###
+### with Gamma set in pluto.ini (usually Gamma=1.05 in our polytropic models)
+
+            def PrimToCons(Prim,Gamma=1.05):
+                &#39;&#39;&#39; Primitive to Conservative variables
+                &#39;&#39;&#39;
+
+                Cons=np.zeros_like(Prim)
+                Cons[:,:,:,0] = Prim[:,:,:,0] # rho
+
+                if Prim.shape[-1] == 9:
+
+                    Cons[:,:,:,-1] = Prim[:,:,:,-1] # psi_glm
+
+                for i in range(3):
+
+                    Cons[:,:,:,i+1] = Prim[:,:,:,0]*Prim[:,:,:,i+1] # rho.v
+                    Cons[:,:,:,i+4] = Prim[:,:,:,i+4] # B
+                    Cons[:,:,:,7] = 0.5*Prim[:,:,:,0]*\
+                        (Prim[:,:,:,1]**2+Prim[:,:,:,2]**2+Prim[:,:,:,3]**2) + \
+                                0.5*(Prim[:,:,:,4]**2+Prim[:,:,:,5]**2+Prim[:,:,:,6]**2) + \
+                                Prim[:,:,:,7]/(Gamma-1)
+
+                return Cons
+            
+
+
+            def ConsToPrim(Cons,Gamma=1.05):
+                &#39;&#39;&#39; Conservative to Primitives variables
+                &#39;&#39;&#39;
+
+                Prim=np.zeros_like(Cons)
+                Prim[:,:,:,0] = Cons[:,:,:,0] # rho
+
+                if Cons.shape[-1] == 9:
+
+                    Prim[:,:,:,-1] = Cons[:,:,:,-1] # psi_glm
+
+                for i in range(3):
+
+                    Prim[:,:,:,i+1] = Cons[:,:,:,i+1]/Cons[:,:,:,0] # v
+                    Prim[:,:,:,i+4] = Cons[:,:,:,i+4] # B
+                    Prim[:,:,:,7] = (Cons[:,:,:,7] - 0.5*Prim[:,:,:,0]* \
+                        (Prim[:,:,:,1]**2+Prim[:,:,:,2]**2+Prim[:,:,:,3]**2) -\
+                        0.5*(Prim[:,:,:,4]**2+Prim[:,:,:,5]**2+Prim[:,:,:,6]**2))*(Gamma-1)
+
+                return Prim
+            
+            print(&#39;Loading {}.{:04d}.hdf5&#39;.format(loading_file,iteration))
+            fp = h5.File(FileOut,&#39;r+&#39;)
+
+            Dvars = []
+            for iv in range(fp.attrs.get(&#39;num_components&#39;)):
+                Dvars.append(fp.attrs.get(&#39;component_&#39;+str(iv)).decode())
+
+            if loading_file == &#39;chk&#39;: 
+                list_var = []
+
+                for var in Dvars:
+                    list_var.append(dict_equi_ConsToPrim[var])
+
+            else: 
+                list_var = Dvars
+
+            
+            dir_grid = &#39;{}/&#39;.format(case)
+            path_grid = &#39;{}/grid_{}.npy&#39;.format(bdirIn,iteration)
+
+
+            print(path_grid) 
+
+            # In order to avoid huge file loading the grid can be saved in a npy file 
+            # Checking if the grid of the original hdf5 file has been already
+            # saved
+
+            if os.path.exists(path_grid):
+
+                ar_grid = np.load(path_grid,allow_pickle=True)
+                case_loaded = False
+
+            else:
+
+                print(&#39;{} does not exists creating it&#39;.format(path_grid))
+                # Loading the grid of the case that we will modify
+                # However, modifications are not not thanks to the D
+                # (pyPLUTO) object. There are done directly in the hdf5
+                # file later in the code 
+                D = pp.pload(
+                        iteration,
+                        w_dir=bdirIn,
+                        level=-1,
+                        # x1range=[1,r_lim],
+                        datatype=&#39;hdf5&#39;,
+                        filetype=&#39;chk&#39;
+                        )
+
+                case_loaded = True
+                ar_grid = np.array([D.x1,D.x2,D.x3])
+
+
+
+
+                np.save(path_grid,ar_grid)
+
+            
+            # Getting r, theta and phi from ar_grid
+            r = ar_grid[0]
+            theta = ar_grid[1]
+            phi = ar_grid[2]
+
+            # Getting the magnetic field of the dipole a the place of the flux rope
+            pos_tube_r = np.argmin(np.abs(r - (R - d + a + R_star)))
+            pos_tube_t = np.argmin(np.abs(theta - theta_0))
+            pos_tube_p = np.argmin(np.abs(phi - phi_0))
+            
+            print(&#39;B amb is taken a R - d + a&#39;)
+            # path_B_grid = &#39;grid_B_{}.npy&#39;.format(iteration)
+            path_B_grid = &#39;{}/grid_B_{}.npy&#39;.format(bdirIn,iteration)
+            path_prs_grid = &#39;{}/grid_prs_{}.npy&#39;.format(bdirIn,iteration)
+            
+            print(path_B_grid) 
+
+            # Checking if the B_grid already exists
+            if os.path.exists(path_B_grid):
+
+                print(&#39;{} already exists&#39;.format(path_B_grid))
+
+                B_grid = np.load(path_B_grid,allow_pickle=True)
+
+            # If it does not then check if we have already loaded the
+            # original case 
+            else:
+                
+                print(&#39;{} does not exists creating it&#39;.format(path_B_grid))
+                if case_loaded:
+
+                    # Case already loaded, no need to reload
+                    B_grid = np.array([
+                        getattr(D,&#39;X-magnfield&#39;),
+                        getattr(D,&#39;Y-magnfield&#39;),
+                        getattr(D,&#39;Z-magnfield&#39;),
+                        ])
+                    
+
+                else:
+                    # Loading the B grid of the case that we will modify
+                    # However, modifications are not not thanks to the D
+                    # (pyPLUTO) object. There are done directly in the hdf5
+                    # file later in the code 
+                    D = pp.pload(
+                            iteration,
+                            w_dir=bdirIn,
+                            level=-1,
+                            # x1range=[1,r_lim],
+                            datatype=&#39;hdf5&#39;,
+                            filetype=&#39;chk&#39;
+                            )
+                        
+                    B_grid = np.array([
+                        getattr(D,&#39;X-magnfield&#39;),
+                        getattr(D,&#39;Y-magnfield&#39;),
+                        getattr(D,&#39;Z-magnfield&#39;),
+                        ])
+                    
+                    print(&#39;Saving&#39;)
+                    # Saving
+                    np.save(
+                            path_B_grid,
+                            B_grid
+                            )
+                
+
+
+
+            # Checking if the prs_grid already exists
+            if os.path.exists(path_prs_grid):
+
+                prs_grid = np.load(path_prs_grid,allow_pickle=True)
+
+            # If it does not then check if we have already loaded the
+            # original case 
+            else:
+                prs_grid = np.zeros_like(B_grid[0]) 
+
+                # I don&#39;t think I need the pressure anymore
+                #print(&#39;{} does not exists creating it&#39;.format(path_B_grid))
+                #if case_loaded:
+
+                #    # Case already loaded, no need to reload
+                #    prs_grid = D.prs
+                #    
+
+                #else:
+                #    # Loading the prs grid of the case that we will modify
+                #    # getting the pressure state of the first layers
+
+                #    D = pp.pload(
+                #            iteration,
+                #            w_dir=bdirIn,
+                #            level=-1,
+                #            x1range=[1,1.3],
+                #            datatype=&#39;hdf5&#39;,
+                #            )
+                #        
+                #    prs_grid = D.prs
+                #    
+                #    print(&#39;Saving&#39;)
+                #    # Saving
+                #    np.save(
+                #            path_prs_grid,
+                #            prs_grid
+                #            )
+            
+
+            path_monop = f&#39;{bdirIn}/monopole_grid.npy&#39;
+
+            #Location of the file containing the monopole
+            monopoles = False
+            if monopoles: 
+
+                if os.path.exists(path_monop):
+
+                    B_sph = np.load(path_monop,allow_pickle=True)
+                    B_grid[0] += B_sph[0] 
+                    B_grid[1] += B_sph[1] 
+                    B_grid[2] += B_sph[2] 
+
+                else:
+
+                    raise ValueError(f&#34;{path_monop} doesn&#39;t exists&#34;)
+
+            # import matplotlib as mpl
+            # mpl.use(&#39;Agg&#39;)
+            # import matplotlib.pyplot as plt
+
+            # plt.figure()
+            # plt.imshow(B_grid[0][18,...])
+            # plt.colorbar()
+            # plt.savefig(&#39;B_grid.png&#39;)
+
+            # plt.figure()
+            # plt.imshow(getattr(D,&#39;X-magnfield&#39;)[18,...])
+            # plt.colorbar()
+            # plt.savefig(&#39;D_grid.png&#39;)
+
+            # Ambient magnetic field of the solar wind
+            B_amb = np.sqrt(
+                  B_grid[0][pos_tube_r,pos_tube_t,pos_tube_p]**2 \
+                + B_grid[1][pos_tube_r,pos_tube_t,pos_tube_p]**2 \
+                + B_grid[2][pos_tube_r,pos_tube_t,pos_tube_p]**2
+                )
+            
+
+            print(f&#39;B_amb is at {B_amb}&#39;)
+            # print(f&#39;B_amb_D is at {B_amb_D}&#39;)
+
+
+
+            print(pos_tube_r,pos_tube_t,pos_tube_p)
+
+            only_AF_zeta = False
+            if only_AF_zeta:
+                print(&#39;Increasing only AF by zeta in bc&#39;)
+
+            # Setting boundary condition 
+            self.setup_bc(B_amb,d,a,R,Delta,case,zeta,R_star,
+                    alpha_0,theta_0,phi_0,
+                    iteration,
+                    bdirOut,
+                    ar_grid,
+                    B_grid,
+                    prs_grid,
+                    only_AF_zeta
+                    )
+            
+            # Constructing the converging flow
+            self.convergent_flow(a,R,ar_grid,bdirOut)
+
+            # Setting the site points for streamplot
+            tools_TDm.set_site_points(R,a,d,alpha_0,theta_0,phi_0,R_star,bdirOut)
+            
+            # Getting the index of B parameters
+            Brvar = list_var.index(&#39;bx1&#39;)
+            Btvar = list_var.index(&#39;bx2&#39;)
+            Bpvar = list_var.index(&#39;bx3&#39;)
+            Rhovar = list_var.index(&#39;rho&#39;)
+            Prsvar = list_var.index(&#39;prs&#39;)
+
+            print(list_var) 
+
+
+            # Number of parameters
+            nvar = len(list_var)
+
+            # I can now modify the OutFile
+            # Read the file
+            # Loop over the data to be modified
+            nlev = fp.attrs.get(&#39;num_levels&#39;)
+            dim = fp[&#39;Chombo_global&#39;].attrs.get(&#39;SpaceDim&#39;)
+            
+            # Loop over the different level
+            for i in tqdm(range(nlev),desc=&#39;level&#39;):
+
+                fl = fp[&#34;level_{:d}&#34;.format(i)]
+                data = fl[&#39;data:datatype=0&#39;]
+                boxes = fl[&#39;boxes&#39;]
+                nbox = len(boxes[&#39;lo_i&#39;])
+                x1b = fl.attrs.get(&#39;domBeg1&#39;)
+
+                if (dim == 1):
+                    x2b = 0
+                else:
+                    x2b = fl.attrs.get(&#39;domBeg2&#39;)
+
+                if (dim == 1 or dim == 2):
+                    x3b = 0
+                else:
+                    x3b = fl.attrs.get(&#39;domBeg3&#39;)
+
+                dx = fl.attrs.get(&#39;dx&#39;)
+                logr = fl.attrs.get(&#39;logr&#39;)
+                ystr = 1. ; zstr = 1. 
+
+                if (dim &gt;= 2):
+                    ystr = fl.attrs.get(&#39;g_x2stretch&#39;)
+
+                if (dim == 3):
+                    zstr = fl.attrs.get(&#39;g_x3stretch&#39;)
+                
+                ncount=0
+                for j in tqdm(range(nbox),desc=&#39;box&#39;): # loop on all boxes of a given level
+
+                    ib = boxes[j][&#39;lo_i&#39;] ; ie = boxes[j][&#39;hi_i&#39;] ; nbx = ie-ib+1
+                    jb = 0 ; je = 0 ; nby = 1
+                    kb = 0 ; ke = 0 ; nbz = 1
+
+                    if (dim &gt; 1):
+                        jb = boxes[j][&#39;lo_j&#39;] 
+                        je = boxes[j][&#39;hi_j&#39;] 
+                        nby = je-jb+1
+
+                    if (dim &gt; 2):
+                        kb = boxes[j][&#39;lo_k&#39;] 
+                        ke = boxes[j][&#39;hi_k&#39;] 
+                        nbz = ke-kb+1
+
+                    szb = nbx*nby*nbz*nvar
+                    q=data[ncount:ncount+szb].reshape((nvar,nbz,nby,nbx)).T
+
+                    # q has the variables in a table [nx_loc,ny_loc,nz_loc,nvar]
+                    # x1,x2,x3 are the local space dimensions
+                    if logr == 0:
+                        x1 = x1b + (ib+np.array(range(nbx))+0.5)*dx
+
+                    else:
+                        x1 = x1b*(np.exp((ib+np.array(range(nbx))+1)*dx)\
+                                +np.exp((ib+np.array(range(nbx)))*dx))*0.5
+
+                    x2 = x2b + (jb+np.array(range(nby))+0.5)*dx*ystr
+                    x3 = x3b + (kb+np.array(range(nbz))+0.5)*dx*zstr
+
+                    # First get primitive variables
+                    qold=q.copy()
+                    
+                    # Perform the transformation only if needed
+                    if filetype == &#39;chk&#39;:
+                        Prim = ConsToPrim(q) 
+
+                    #######################################################################
+                    ######################## Modify PRIMITIVE variables here
+                    #######################################################################
+                    # ivar  = list_var.index(&#39;rho&#39;)
+                    # indx = np.where((x1 &gt; 10.) &amp; (x1 &lt; 14.))[0]
+                    # Prim[indx,:,:,ivar] = 10.*Prim[indx,:,:,ivar] # rho * 10 example
+
+                    
+                    # theta = np.linspace(eps,np.pi-eps,100)
+                    # phi = np.linspace(0,2*np.pi,100)
+                    # We are taking mu*I instead of just I
+                    x1_m = x1
+                    n_x1 = len(x1_m)
+                    n_x2 = len(x2)
+                    n_x3 = len(x3)
+
+                    # Inserting a new point at the beginning and the end of
+                    # the patch in order to compute well the curl because 
+                    # of decentered derivatives
+                    
+                    # Compute dr,dtheta and dphi at each extremities of the patch
+                    # Beginnings
+                    drb     = x1_m[1]  - x1_m[0]
+                    dthetab = x2[1]    - x2[0]
+                    dphib   = x3[1]    - x3[0]
+
+                    # Ends
+                    dre     = x1_m[-1] - x1_m[-2]
+                    dthetae = x2[-1]   - x2[-2]
+                    dphie   = x3[-1]   - x3[-2]
+                    
+                    # Compute new points
+                    rb_point     = [x1_m[0]  - 2*drb,     x1_m[0] - drb]
+                    thetab_point = [x2[0]    - 2*dthetab, x2[0] - dthetab]
+                    phib_point   = [x3[0]    - 2*dphib,   x3[0] - dphib]
+
+                    
+                    re_point     = [x1_m[-1] + dre,     x1_m[-1] + 2*dre]
+                    thetae_point = [x2[-1]   + dthetae, x2[-1] + 2*dthetae]
+                    phie_point   = [x3[-1]   + dphie,   x3[-1] + 2*dphie]
+
+                    # Add them and prepare slice to remove this points before
+                    # adding the TDm
+
+                    new_r     = np.append(rb_point,x1_m)
+                    slice_r = slice(2,-2)
+                
+                    new_theta = np.append(thetab_point,x2)
+                    slice_theta = slice(2,-2)
+                
+                    new_phi   = np.append(phib_point,x3)
+                    slice_phi = slice(2,-2)
+
+                    new_r     = np.append(new_r,re_point)
+                    new_theta = np.append(new_theta,thetae_point)
+                    new_phi   = np.append(new_phi,phie_point)
+                   
+
+
+
+                    if monopoles:
+                        # Filling the Mag
+
+
+                        B_mon = self.get_monopoles(new_r,new_theta,new_phi)
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Brvar] += B_mon[0][slice_r,slice_theta,slice_phi]
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Btvar] += B_mon[1][slice_r,slice_theta,slice_phi]
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Bpvar] += B_mon[2][slice_r,slice_theta,slice_phi]
+
+                        
+                            
+
+                    rho_sw = Prim[0:n_x1,0:n_x2,0:n_x3,Rhovar]
+
+                    # print(&#34;--------------&#34;)
+                    # print(new_r.shape)
+                    # print(rho_sw.shape)
+                    # print(&#34;--------------&#34;)
+
+
+                    # Computing the magnetic structure
+                    # TODO put every set_TDm functions in the TDm_object class
+                    # as a daughter class tools_TDm for example ? 
+                    B_sph,density = tools_TDm.TDm_setup( 
+                            new_r,
+                            new_theta,
+                            new_phi,
+                            alpha_0,
+                            theta_0,
+                            phi_0,
+                            d,
+                            a,
+                            R,
+                            zeta,
+                            B_amb,
+                            Delta,
+                            case,
+                            rho_sw,
+                            geometry=&#39;spherical&#39;,
+                            R_star = R_star,
+                            only_AF_zeta = only_AF_zeta
+                            )
+                    
+                    # if P_Mei.max() != 0.0:
+                        # print(&#39;P_Mei max:&#39;,P_Mei.max())
+
+                    foot_density = False
+                    if foot_density:
+                        rho = self.add_density(new_r,new_theta,new_phi)
+                        # adding density 
+                        # rho
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Rhovar] += rho[slice_r,slice_theta,slice_phi]
+
+                    # Adding pressure inspired by Mei &amp; Keppens 2018
+                    #Prim[0:n_x1,0:n_x2,0:n_x3,Prsvar] += \
+                    #P_Mei[slice_r,slice_theta,slice_phi]/(Gamma-1)
+                    
+                    # Adding density along the flux rope
+                    density_fr = False
+                    if density_fr:
+                        Prim[0:n_x1,0:n_x2,0:n_x3,Rhovar] = \
+                        density
+
+                    #max_prim = Prim[0:n_x1,0:n_x2,0:n_x3,Prsvar].max()
+
+                    #if max_prim &gt;1:
+                    #    print(max_prim)
+
+                    # Filling the Mag
+                    Prim[0:n_x1,0:n_x2,0:n_x3,Brvar] += B_sph[0][slice_r,slice_theta,slice_phi]
+                    Prim[0:n_x1,0:n_x2,0:n_x3,Btvar] += B_sph[1][slice_r,slice_theta,slice_phi]
+                    Prim[0:n_x1,0:n_x2,0:n_x3,Bpvar] += B_sph[2][slice_r,slice_theta,slice_phi]
+
+
+                        
+                    
+                    # This is were the TDm model would be called, 
+                    # based on the local x1,x2,x3 spherical grid
+                    #######################################################################
+                    # Go back to conservative
+                    q=PrimToCons(Prim)
+                    # print(np.nanmax(np.abs((qold-q)/qold)[:,:,:,7])) 
+                    # This as validated up to machine precision ;)
+                    #######################################################################
+                    # Back to data, this directly modifies the hdf5 file
+                    data[ncount:ncount+szb] = q.T.flatten()
+                    ncount = ncount+szb
+                    
+            # Close File
+            fp.close()</code></pre>
+</details>
+</dd>
+<dt id="TDm.TDm_object.cart_to_sph"><code class="name flex">
+<span>def <span class="ident">cart_to_sph</span></span>(<span>vcart, xx2, xx3)</span>
+</code></dt>
+<dd>
+<div class="desc"></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def cart_to_sph(vcart,xx2,xx3): 
+
+    sinth=sin(xx2);
+    costh=cos(xx2);
+    sinph=sin(xx3);
+    cosph=cos(xx3);
+    vsph = [0]*3
+
+    vsph[0] =  sinth*cosph*vcart[0] + sinth*sinph*vcart[1] + costh*vcart[2] ;
+    vsph[1] =  costh*cosph*vcart[0] + costh*sinph*vcart[1] - sinth*vcart[2] ;
+    vsph[2] = -sinph*vcart[0] + cosph*vcart[1] ;
+
+    return vsph</code></pre>
+</details>
+</dd>
+<dt id="TDm.TDm_object.convergent_flow"><code class="name flex">
+<span>def <span class="ident">convergent_flow</span></span>(<span>self, a, R, ar_grid, bdirOut)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Compute a velocity field that converge to the PIL of the FR</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def convergent_flow(self,a,R,ar_grid,bdirOut):
+    &#39;&#39;&#39; 
+    Compute a velocity field that converge to the PIL of the FR
+    &#39;&#39;&#39;
+
+    theta = ar_grid[1]
+    phi = ar_grid[2]
+
+    tt,pp = np.meshgrid(theta,phi,indexing=&#39;ij&#39;)
+
+    # Gaussian on theta
+    def gauss_t(xx2,mu_t,s_t):
+        
+        gauss = np.sign(1.57 - xx2) * np.exp(-0.5 * ((xx2 - mu_t)/s_t)**2) \
+                * 1 / (s_t * np.sqrt(2 * np.pi))
+
+        norm_t  = 1/(s_t * np.sqrt(2*np.pi))
+
+        gauss = gauss / norm_t
+
+        return gauss
+
+    # we normalise the gaussien by it&#39;s value at the mean value so that it is
+    # equal to 1 
+
+
+
+    def gauss_p(xx3,mu_p,s_p):
+    # Gaussian on phi
+        gauss =  np.exp(-0.5 * ((xx3 - mu_p)/s_p)**2) \
+                * 1 / (s_p * np.sqrt(2 * np.pi))
+
+        # we normalise the gaussian by it&#39;s value at the mean value so that it is
+        # equal to 1 
+        norm_p  = 1/(s_p * np.sqrt(2*np.pi))
+
+        gauss = gauss / norm_p
+
+        return gauss
+
+        # Params for both gaussian
+        # ==========================
+
+    theta_0 = self.setup[&#34;THETA_0&#34;]
+    phi_0 = self.setup[&#34;PHI_0&#34;]
+
+    mu_p = phi_0
+    s_p = self.setup[&#34;R&#34;] * 0.5
+
+    mu_t =  theta_0
+    s_t = self.setup[&#34;A&#34;] * 1.3
+
+    UNIT_VELOCITY = 4.367e7 # cm/s
+
+    V0 = 200e5 / UNIT_VELOCITY # 100 km/s
+
+    print(f&#39;Velocity hard coded ({V0:.2f} PLUTO unit)&#39;)
+
+    gauss_tot = V0 * gauss_t(tt,mu_t,s_t) * gauss_p(pp,mu_p,s_p)
+
+    with open(&#39;{}/speed_bc.bin&#39;.format(bdirOut),&#39;wb&#39;) as speed_bc:      
+        for j in range(len(theta)):
+            for k in range(len(phi)):
+                speed_bc.write(struct.pack(&#39;d&#39;,gauss_tot[j,k]))</code></pre>
+</details>
+</dd>
+<dt id="TDm.TDm_object.get_monopoles"><code class="name flex">
+<span>def <span class="ident">get_monopoles</span></span>(<span>self, x1, x2, x3)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Add two monopoles above and below the TDm FR with opposite polarity</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def get_monopoles(self,x1,x2,x3):
+    &#39;&#39;&#39; Add two monopoles above and below the TDm FR with opposite polarity
+    &#39;&#39;&#39;
+
+    tTDm = self.setup[&#39;THETA_0&#39;] 
+    pTDm = self.setup[&#39;PHI_0&#39;] 
+
+    # Setting the grid
+    xx1,xx2,xx3 = np.meshgrid(x1,x2,x3,indexing=&#39;ij&#39;)
+    xx = xx1*np.sin(xx2)*np.cos(xx3);
+    yy = xx1*np.sin(xx2)*np.sin(xx3);
+    zz = xx1*np.cos(xx2);
+        
+    # initialisation
+    Bcart = [0]*3
+    r0=0.9;
+
+    #First monopole
+
+    th0=tTDm+0.2;
+    ph0=pTDm;
+    x0 = r0*np.sin(th0)*np.cos(ph0);
+    y0 = r0*np.sin(th0)*np.sin(ph0);
+    z0 = r0*np.cos(th0);
+    rp = np.sqrt( pow(xx-x0,2)+pow(yy-y0,2)+pow(zz-z0,2));
+    Bcart[0] = - (xx-x0)/pow(rp,3.);
+    Bcart[1] = - (yy-y0)/pow(rp,3.);
+    Bcart[2] = - (zz-z0)/pow(rp,3.);
+
+    B_sph1 = tools_TDm.cart_to_sph(Bcart,xx2,xx3);
+
+    #Second monopole
+
+    th0=tTDm-0.2;
+    ph0=pTDm;
+    x0 = r0*np.sin(th0)*np.cos(ph0);
+    y0 = r0*np.sin(th0)*np.sin(ph0);
+    z0 = r0*np.cos(th0);
+    rp = np.sqrt( pow(xx-x0,2)+pow(yy-y0,2)+pow(zz-z0,2));
+    Bcart[0] =  (xx-x0)/pow(rp,3.);
+    Bcart[1] =  (yy-y0)/pow(rp,3.);
+    Bcart[2] =  (zz-z0)/pow(rp,3.);
+
+    B_sph2 = tools_TDm.cart_to_sph(Bcart,xx2,xx3);
+
+    B_sph = [0]*3
+    for i in range(0,3):
+        B_sph[i] = B_sph1[i] + B_sph2[i]
+    
+    return B_sph</code></pre>
+</details>
+</dd>
+<dt id="TDm.TDm_object.read_TDm_parameter"><code class="name flex">
+<span>def <span class="ident">read_TDm_parameter</span></span>(<span>self, conf_path='./')</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Put the parameter of the TDm setup into a dictonnary </p>
+<p>THe conf file has to be named "TDm.config" and at the {conf_path}
+location which is by default the name of the case</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def read_TDm_parameter(self,conf_path = &#39;./&#39;):
+    &#39;&#39;&#39; 
+    Put the parameter of the TDm setup into a dictonnary 
+
+    THe conf file has to be named &#34;TDm.config&#34; and at the {conf_path}
+    location which is by default the name of the case 
+    &#39;&#39;&#39;
+    
+    with open(&#39;{}/TDm.config&#39;.format(conf_path),&#39;r&#39;) as f:
+            lines = f.readlines()
+
+    self.setup = dict({})
+   
+    # Loop over lines
+    for l in lines:
+        
+        # This is not a interesting line
+        if l[0] in [&#39;[&#39;,&#39;\n&#39;]:
+            continue
+
+        # Sanity check
+        if len(l.split(&#39; &#39;)) &gt; 2:
+            print(l)
+            raise ValueError(&#34;Too much columns in conf file&#34;)
+
+        name_var = l.split(&#39; &#39;)[0]
+
+        if name_var in [&#39;CASE_TDM&#39;,&#39;GEOMETRY&#39;]:
+            var = str(l.split(&#39; &#39;)[1])
+            var = var.strip(&#39;\n&#39;)
+        else:
+            var = float(l.split(&#39; &#39;)[1])
+
+
+        self.setup[name_var] = var
+    
+    self.param_loaded = True
+    
+    print(f&#39;Reading setup at {conf_path}&#39;)
+
+    print(f&#39;----------------------&#39;)
+    print(f&#39;-------TDm setup------&#39;)
+    print(f&#39;----------------------&#39;)
+
+    for it in self.setup.keys():
+        
+        print(f&#39;{it} : {self.setup[it]}&#39;)
+        print(f&#39;----------------------&#39;)</code></pre>
+</details>
+</dd>
+<dt id="TDm.TDm_object.setup_bc"><code class="name flex">
+<span>def <span class="ident">setup_bc</span></span>(<span>self, B_amb, d, a, R, Delta, case, zeta, R_star, alpha_0, theta_0, phi_0, it, bDirOut, ar_grid, B_grid, prs, only_AF_zeta)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>setup in binary files the boundary conditions (surface of the sun) for the
+magnetic field
+write it in a .bin file</p>
+<p>Sizes of array in each direction (3) are written in bc_sizes.bin and the
+data is in bc_data.bin</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">    def setup_bc(self,B_amb,d,a,R,Delta,case,zeta,R_star,
+            alpha_0,theta_0,phi_0,it,bDirOut,ar_grid,B_grid,prs,only_AF_zeta):
+        &#39;&#39;&#39;
+        setup in binary files the boundary conditions (surface of the sun) for the
+        magnetic field
+        write it in a .bin file
+
+        Sizes of array in each direction (3) are written in bc_sizes.bin and the
+        data is in bc_data.bin
+        &#39;&#39;&#39;
+
+        # Estimation of the ambient magnetic field at the location of the FR
+
+        print(&#34;boundary :d,a,R,Delta,case,zeta,R_star,alpha_0,theta_0,phi_0&#34;,
+                d,a,R,Delta,case,zeta,R_star,alpha_0,theta_0,phi_0)
+        
+
+        r = ar_grid[0]
+        theta = ar_grid[1]
+        phi = ar_grid[2]
+
+        # Getting the grid for the TDm setup
+        dr = r[1] - r[0]
+
+        # We are only interested by r -2dr and r-dr
+        # We add 2 points around these value in order to avoid uncentered derivative
+        # in the curl 
+
+        ghost_r = np.array([r[0]-3*dr,r[0]-2*dr,r[0]-dr,r[0],r[1],r[2],r[3],r[4]])
+        print(ghost_r)
+
+        real_ghost = ghost_r[1:4]
+        r_real_ghost = range(1,4)
+
+        rho_sw = 0
+        # Setting TDm on ghost cell 
+
+        B,density = tools_TDm.TDm_setup(
+                ghost_r,
+                theta,
+                phi,
+                alpha_0,
+                theta_0,
+                phi_0,
+                d,
+                a,
+                R,
+                zeta,
+                B_amb,
+                Delta,
+                case,
+                rho_sw,
+                geometry=&#39;spherical&#39;,
+                R_star = R_star,
+                only_AF_zeta = only_AF_zeta
+                )
+
+        B_r = B[0]
+        B_t = B[1]
+        B_p = B[2]
+
+        B_TD = np.sqrt(B_r[3,...]**2 + B_t[3,...]**2 + B_p[3,...]**2)
+        B_sw = np.sqrt(B_grid[0][0,...]**2 + B_grid[1][0,...]**2 + B_grid[2][0,...]**2)
+
+        ratio = B_TD / B_sw
+
+        flag = (ratio &gt; 0.5).astype(int)
+        
+
+        arrays = dict({
+            &#39;B_r&#39;:B_r,
+            &#39;B_t&#39;:B_t,
+            &#39;B_p&#39;:B_p,
+            &#39;r&#39;:r,
+            &#39;theta&#39;:theta,
+            &#39;phi&#39;:phi
+            })
+
+        print(&#39;Writing bin files&#39;)
+        with open(&#39;{}/flag_bc.bin&#39;.format(bDirOut),&#39;wb&#39;) as flag_bc:      
+            for j in range(len(theta)):
+                for k in range(len(phi)):
+                    flag_bc.write(struct.pack(&#39;i&#39;,flag[j,k]))
+
+        with open(&#39;{}/prs_bc.bin&#39;.format(bDirOut),&#39;wb&#39;) as flag_bc:      
+            for j in range(len(theta)):
+                for k in range(len(phi)):
+                    flag_bc.write(struct.pack(&#39;d&#39;,prs[0,j,k]))
+
+        # We are using 4 array elements in r for TDm_setup to work,
+        # only 2 cells are ghost cells
+        
+        # Saving to binary arrays
+        size_ar = np.array([len(real_ghost),len(theta),len(phi)])
+
+
+        with open(&#39;{}/bc_sizes.bin&#39;.format(bDirOut),&#39;wb&#39;) as f:      
+            for int_value in size_ar:                      
+                f.write(struct.pack(&#39;i&#39;, int_value))  
+
+# with open(&#39;norm.bin&#39;,&#39;wb&#39;) as f_norm:      
+            # for db_value in db_ar:
+                # f_norm.write(struct.pack(&#39;d&#39;, db_value))  
+
+# Generating 3D arrays
+
+# n = len(r) * len(theta) * len(phi)
+# ar = np.arange(0,n,1).reshape(*size_ar)
+# ar_2 = np.arange(n,2*n,1).reshape(*size_ar)
+
+        with open(&#39;{}/bc_data.bin&#39;.format(bDirOut),&#39;wb&#39;) as f_array:
+
+            for i in r_real_ghost:
+                for j in range(len(theta)):
+                    for k in range(len(phi)):
+                        f_array.write(struct.pack(&#39;d&#39;,B_r[i,j,k]))
+
+            for i in r_real_ghost:
+                for j in range(len(theta)):
+                    for k in range(len(phi)):
+                        f_array.write(struct.pack(&#39;d&#39;,B_t[i,j,k]))
+
+            for i in r_real_ghost:
+                for j in range(len(theta)):
+                    for k in range(len(phi)):
+                        f_array.write(struct.pack(&#39;d&#39;,B_p[i,j,k]))
+
+            for i in range(len(real_ghost)):
+                f_array.write(struct.pack(&#39;d&#39;,real_ghost[i]))
+
+            for i in range(len(theta)):
+                f_array.write(struct.pack(&#39;d&#39;,theta[i]))
+            
+            for i in range(len(phi)):
+                f_array.write(struct.pack(&#39;d&#39;,phi[i]))</code></pre>
+</details>
+</dd>
+<dt id="TDm.TDm_object.test"><code class="name flex">
+<span>def <span class="ident">test</span></span>(<span>self)</span>
+</code></dt>
+<dd>
+<div class="desc"><p>Just a test routine</p></div>
+<details class="source">
+<summary>
+<span>Expand source code</span>
+</summary>
+<pre><code class="python">def test(self):
+    &#39;&#39;&#39; Just a test routine
+    &#39;&#39;&#39;
+
+    print(&#39;Hello world&#39;)</code></pre>
+</details>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</article>
+<nav id="sidebar">
+<h1>Index</h1>
+<div class="toc">
+<ul></ul>
+</div>
+<ul id="index">
+<li><h3><a href="#header-classes">Classes</a></h3>
+<ul>
+<li>
+<h4><code><a title="TDm.TDm_object" href="#TDm.TDm_object">TDm_object</a></code></h4>
+<ul class="">
+<li><code><a title="TDm.TDm_object.add_density" href="#TDm.TDm_object.add_density">add_density</a></code></li>
+<li><code><a title="TDm.TDm_object.add_magnetic_structure" href="#TDm.TDm_object.add_magnetic_structure">add_magnetic_structure</a></code></li>
+<li><code><a title="TDm.TDm_object.cart_to_sph" href="#TDm.TDm_object.cart_to_sph">cart_to_sph</a></code></li>
+<li><code><a title="TDm.TDm_object.convergent_flow" href="#TDm.TDm_object.convergent_flow">convergent_flow</a></code></li>
+<li><code><a title="TDm.TDm_object.get_monopoles" href="#TDm.TDm_object.get_monopoles">get_monopoles</a></code></li>
+<li><code><a title="TDm.TDm_object.read_TDm_parameter" href="#TDm.TDm_object.read_TDm_parameter">read_TDm_parameter</a></code></li>
+<li><code><a title="TDm.TDm_object.setup_bc" href="#TDm.TDm_object.setup_bc">setup_bc</a></code></li>
+<li><code><a title="TDm.TDm_object.test" href="#TDm.TDm_object.test">test</a></code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</nav>
+</main>
+<footer id="footer">
+<p>Generated by <a href="https://pdoc3.github.io/pdoc" title="pdoc: Python API documentation generator"><cite>pdoc</cite> 0.10.0</a>.</p>
+</footer>
+</body>
+</html>
