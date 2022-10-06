@@ -970,7 +970,7 @@ class TDm_object:
         print('Interpolation...')
         
 
-        x1 = np.logspace(0, np.log10(20), nb_r)
+        x1 = np.logspace(0, np.log10(25), nb_r)
         x2 = np.linspace(eps, np.pi-eps, nb_th)
         x3 = np.linspace(eps, 2.0*np.pi-eps, nb_phi)
         

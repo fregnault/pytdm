@@ -15,7 +15,7 @@ TDm = TDm_class.TDm_object(case)
 
 
 filename = 'corona-flow0-P' # prefix of CF files
-filedir = '~/data/EUHFORIA/originals/originals_dip/' # Location of CF files
+filedir = '/home/fregnault/data/Simulation/TDm_EUHFORIA/originals/dipole_5/' # Location of CF files
 
 print('Taking dipole as original')
 
