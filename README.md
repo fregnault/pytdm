@@ -28,8 +28,7 @@ bash executable (or the python module) works.
 
 ```
 git clone https://github.com/fregnault/pyTDm.git
-export PATH=$PATH:/path/to/pyTDm/bin (for the bash executable)
-export PYTHONPATH=$PYTHONPATH:/path/to/pyTDm/src (for the python module)
+pip install .
 ```
 
 # Basic usage
