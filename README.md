@@ -19,9 +19,13 @@ in the most efficient way.
 
 # Installation
 
+You need to add to your `.bashrc` (or `.bash_profile` or `.zshrc`) so that the
+bash executable (or the python module) works. 
+
 ```
 git clone https://github.com/fregnault/pyTDm.git
-export PATH=$PATH:/where/the/pyTDm/is
+export PATH=$PATH:/path/to/pyTDm/bin (for the bash executable)
+export PYTHONPATH=$PYTHONPATH:/path/to/pyTDm/src (for the python module)
 ```
 
 # Basic usage
@@ -31,11 +35,11 @@ The `init_TDm.py` file is an executable that can be used in the following way
 Let `originals_dir` be the directory where you have the datafile to which to want
 to add the TDm. 
     
-    - Put the original data (without the TDm) in a given directory
+1. Put the original data (without the TDm) in a given directory
 
-    - Create a directory where you want the datafile with the TDm to be
+2. Create a directory where you want the datafile with the TDm to be
 
-    - Run `init_TDm.py` to add the TDm
+3. Run `init_TDm.py` to add the TDm
 
 ## Python (recommended)
 
