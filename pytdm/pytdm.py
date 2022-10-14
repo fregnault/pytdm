@@ -46,7 +46,7 @@ class TDm:
         ''' Representation of the TDm object
         '''
 
-        description = f'TDm flux rope {name}'
+        description = f'TDm flux rope {self.name}'
             
         if self.param_loaded == True:
             for it in self.setup.keys():
