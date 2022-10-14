@@ -325,7 +325,7 @@ class TDm:
         
         print('Spherical geometry is hard coded in formula_TDm.TDm_setup')
 
-        originals_dir = os.environ['TDM_ORIGINALS']
+        # originals_dir = os.environ['TDM_ORIGINALS']
 
         # Directory where the filed to be modified is
         bdirIn=originals_dir        
