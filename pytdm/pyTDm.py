@@ -22,7 +22,7 @@ import pandas as pd
 
 ##
 
-class TDm_object:
+class TDm:
     ''' TODO : you may want to add a function that will create a model of your
     TDm.conf file
     '''
@@ -111,8 +111,8 @@ class TDm_object:
         ''' Add two monopoles above and below the TDm FR with opposite polarity
         '''
 
-        tTDm = self.setup['THETA_0'] 
-        pTDm = self.setup['PHI_0'] 
+        tTDm = self.setup['X_1'] 
+        pTDm = self.setup['X_2'] 
 
         # Setting the grid
         xx1,xx2,xx3 = np.meshgrid(x1,x2,x3,indexing='ij')
@@ -328,8 +328,8 @@ class TDm_object:
         self.read_TDm_parameter()
         
         alpha_0 = self.setup['ALPHA_0']
-        theta_0 = self.setup['THETA_0']
-        phi_0   = self.setup['PHI_0']
+        theta_0 = self.setup['X1']
+        phi_0   = self.setup['X2']
 
         # TDm parameters setup
         d = self.setup['D']
@@ -789,8 +789,8 @@ class TDm_object:
         self.read_TDm_parameter()
         
         alpha_0 = self.setup['ALPHA_0']
-        theta_0 = self.setup['THETA_0']
-        phi_0   = self.setup['PHI_0']
+        theta_0 = self.setup['X_1']
+        phi_0   = self.setup['X_2']
 
         # TDm parameters setup
         d = self.setup['D']
@@ -936,8 +936,8 @@ class TDm_object:
         # Estimating the B_amb
          
         r0 = 1 + self.setup['R'] - self.setup['D'] # Height at which B_amb is measured
-        t0 = self.setup['THETA_0']
-        p0 = self.setup['PHI_0']
+        t0 = self.setup['X_1']
+        p0 = self.setup['X_2']
     
 
         # x0 = r0 * np.cos(p0) * np.sin(t0)
@@ -1064,8 +1064,8 @@ class TDm_object:
             # Params for both gaussian
             # ==========================
 
-        theta_0 = self.setup["THETA_0"]
-        phi_0 = self.setup["PHI_0"]
+        theta_0 = self.setup["X_1"]
+        phi_0 = self.setup["X_2"]
 
         mu_p = phi_0
         s_p = self.setup["R"] * 0.5
