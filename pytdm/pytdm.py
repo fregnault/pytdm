@@ -123,8 +123,8 @@ class TDm:
         ''' Add two monopoles above and below the TDm FR with opposite polarity
         '''
 
-        tTDm = self.setup['X_1'] 
-        pTDm = self.setup['X_2'] 
+        tTDm = self.setup['THETA_0'] 
+        pTDm = self.setup['PHI_0'] 
 
         # Setting the grid
         xx1,xx2,xx3 = np.meshgrid(x1,x2,x3,indexing='ij')
@@ -340,8 +340,8 @@ class TDm:
         self.read_TDm_parameter()
         
         alpha_0 = self.setup['ALPHA_0']
-        theta_0 = self.setup['X_1']
-        phi_0   = self.setup['X_2']
+        theta_0 = self.setup['THETA_0']
+        phi_0   = self.setup['PHI_0']
 
         # TDm parameters setup
         d = self.setup['D']
@@ -801,8 +801,8 @@ class TDm:
         self.read_TDm_parameter()
         
         alpha_0 = self.setup['ALPHA_0']
-        theta_0 = self.setup['X_1']
-        phi_0   = self.setup['X_2']
+        theta_0 = self.setup['THETA_0']
+        phi_0   = self.setup['PHI_0']
 
         # TDm parameters setup
         d = self.setup['D']
@@ -948,8 +948,8 @@ class TDm:
         # Estimating the B_amb
          
         r0 = 1 + self.setup['R'] - self.setup['D'] # Height at which B_amb is measured
-        t0 = self.setup['X_1']
-        p0 = self.setup['X_2']
+        t0 = self.setup['THETA_0']
+        p0 = self.setup['PHI_0']
     
 
         # x0 = r0 * np.cos(p0) * np.sin(t0)
@@ -1076,8 +1076,8 @@ class TDm:
             # Params for both gaussian
             # ==========================
 
-        theta_0 = self.setup["X_1"]
-        phi_0 = self.setup["X_2"]
+        theta_0 = self.setup["THETA_0"]
+        phi_0 = self.setup["PHI_0"]
 
         mu_p = phi_0
         s_p = self.setup["R"] * 0.5
