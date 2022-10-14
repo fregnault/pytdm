@@ -5,6 +5,6 @@ __pycache__/
     *.py[cod]
     *$py.class
 
-examples/data/pluto_amr/
+pytdm/examples/data/pluto_amr/
 
-examples/data/coconut/
+pytdm/examples/data/coconut/
