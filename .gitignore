@@ -8,3 +8,8 @@ __pycache__/
 pytdm/examples/data/pluto_amr/
 
 pytdm/examples/data/coconut/
+
+
+pytdm/examples/pluto_amr/*
+!pytdm/examples/pluto_amr/setup_pluto_amr.py
+!pytdm/examples/pluto_amr/TDm.config
