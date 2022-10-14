@@ -771,7 +771,7 @@ class TDm:
 
     
 
-    def add_tdm_coconut(self,iteration,filename,geometry='spherical',ori_dir=False):
+    def add_TDm_coconut(self,iteration,filename,geometry='spherical',ori_dir=False):
         ''' 
         Add the TDm flux rope to the coconut simulation
         '''
