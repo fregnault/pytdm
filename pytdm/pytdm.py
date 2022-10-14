@@ -304,7 +304,7 @@ class TDm:
 
 
     # -------------------------------------------------------------------
-    def add_TDm_pluto_amr(self,iteration,originals_dir,filetype='chk',geometry='spherical'):
+    def add_TDm_pluto_amr(self,iteration,originals_dir,out_dir='./',filetype='chk',geometry='spherical'):
         ''' 
         Add the magnetic structure to an existing hdf5 files
 
@@ -323,7 +323,7 @@ class TDm:
         as output of the magnetic field
         '''
         
-        print('Spherical geometry is hard coded in formula_TDm.TDm_setup')
+        # print('Spherical geometry is hard coded in formula_TDm.TDm_setup')
 
         # originals_dir = os.environ['TDM_ORIGINALS']
 

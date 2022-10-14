@@ -675,17 +675,17 @@ class pload(object):
                 q1 = np.zeros((cie0-cib0+1, cje0-cjb0+1, cke0-ckb0+1,nvar))
                 q1 = q[cib0:cie0+1,cjb0:cje0+1,ckb0:cke0+1,:]
                 
-                if j == 0:
-                    print('q[0,0,0,0]',q[0,0,0,0])
-                    print(f'Center is {centre}')
-                    # print('q[0,0,0,1]',q[0,0,0,1])
-                    # print('q[0,0,0,2]',q[0,0,0,2])
-                    # print('q[0,0,0,3]',q[0,0,0,3])
-                    # print('q[0,0,0,4]',q[0,0,0,4])
-                    print('x0 = ',x1b+dx*(ib0))
-                    print('y0 = ',x2b+dx*(jb0))
-                    print('z0 = ',x3b+dx*(kb0))
-                    # breakpoint()
+                # if j == 0:
+                    # print('q[0,0,0,0]',q[0,0,0,0])
+                    # print(f'Center is {centre}')
+                    # # print('q[0,0,0,1]',q[0,0,0,1])
+                    # # print('q[0,0,0,2]',q[0,0,0,2])
+                    # # print('q[0,0,0,3]',q[0,0,0,3])
+                    # # print('q[0,0,0,4]',q[0,0,0,4])
+                    # print('x0 = ',x1b+dx*(ib0))
+                    # print('y0 = ',x2b+dx*(jb0))
+                    # print('z0 = ',x3b+dx*(kb0))
+                    # # breakpoint()
                     
 
                 if not noload:
