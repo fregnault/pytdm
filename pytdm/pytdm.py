@@ -42,6 +42,16 @@ class TDm:
         self.param_loaded = False
         self.case = case
 
+	def __repr__(self):
+
+        description = f'TDm flux rope {name}'
+			
+        if self.param_loaded = True
+            for it in self.setup.keys():
+                description += f'{it} : {self.setup[it]}')
+
+        return  description
+
     # Import setup parameter
     def read_TDm_parameter(self,conf_path = './'):
         ''' 
