@@ -6,7 +6,7 @@ from . import formula_TDm
 import imp
 from tqdm import tqdm
 import os 
-import pyPLUTO as pp
+from . from . import pyPLUTO as pp
 import struct
 
 import h5py as h5
