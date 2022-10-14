@@ -27,7 +27,7 @@ class TDm:
     TDm.conf file
     '''
 
-    def __init__(self,case):
+    def __init__(self,name):
         ''' Initialisation
         ''' 
         
@@ -40,7 +40,7 @@ class TDm:
 
         self.is_setup = False
         self.param_loaded = False
-        self.case = case
+        self.name = name
 
     def __repr__(self):
         ''' Representation of the TDm object
@@ -60,7 +60,7 @@ class TDm:
         Put the parameter of the TDm setup into a dictonnary 
 
         The conf file has to be named "TDm.config" and at the {conf_path}
-        location which is by default the name of the case 
+        location which is by default the name of the TDm 
         '''
         
         with open('{}/TDm.config'.format(conf_path),'r') as f:
