@@ -1,3 +1,7 @@
+![version](https://img.shields.io/badge/version-1.0.0-red)
+![pythonversion](https://img.shields.io/badge/Python-3.7+-red)
+
+
 # pyTDm
 
 
