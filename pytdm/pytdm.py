@@ -340,8 +340,8 @@ class TDm:
         self.read_TDm_parameter()
         
         alpha_0 = self.setup['ALPHA_0']
-        theta_0 = self.setup['X1']
-        phi_0   = self.setup['X2']
+        theta_0 = self.setup['X_1']
+        phi_0   = self.setup['X_2']
 
         # TDm parameters setup
         d = self.setup['D']
