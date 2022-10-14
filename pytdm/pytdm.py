@@ -42,12 +42,15 @@ class TDm:
         self.param_loaded = False
         self.case = case
 
-	def __repr__(self):
+    def __repr__(self):
+        ''' Representation of the TDm object
+        '''
+
         description = f'TDm flux rope {name}'
             
-        if self.param_loaded = True
+        if self.param_loaded == True:
             for it in self.setup.keys():
-                description += f'{it} : {self.setup[it]}')
+                description += f'{it} : {self.setup[it]}'
 
         return  description
 
