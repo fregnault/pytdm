@@ -7,8 +7,7 @@ import math
 import os
 import matplotlib.pyplot as plt 
 import imp
-import utils
-
+from . import utils
 ##
 
 def compute_Is(B_p,R,a):
@@ -498,15 +497,4 @@ def TDm_setup(x1,x2,x3,alpha_0,theta_0,phi_0,d,a,R,zeta,B_p,Delta,case,geometry)
 
     return B_out
 
-if __name__ == '__main__':
-
-    
-    pass    
-    
-    
-    
-    
-    
-    
-    
 ##

@@ -1,19 +1,18 @@
 ##
-from pyevtk.hl import gridToVTK
-import h5py as h5
 import sys
 import numpy as np
 from subprocess import call
-import setup_TDm as tools_TDm
+from . import formula_TDm
 import imp
 from tqdm import tqdm
-imp.reload(tools_TDm)
 import os 
 import pyPLUTO as pp
 import struct
 
-# loading EiUHFORIA 
+import h5py as h5
 
+# For loading EUHFORIA 
+from pyevtk.hl import gridToVTK
 import pyvista as pyv
 from vtk.util.numpy_support import vtk_to_numpy
 from scipy.interpolate import griddata
@@ -33,8 +32,9 @@ class TDm_object:
         ''' 
         
         print('Welcome to pyTDm')
-        print('Warning this is an alpha release')
+        # print('Warning this is an alpha release')
         print('If you have any questions regarding this please')
+
         print('contact : fl.regnault@gmail.com')
 
 
@@ -42,19 +42,12 @@ class TDm_object:
         self.param_loaded = False
         self.case = case
 
-    def test(self):
-        ''' Just a test routine
-        '''
-
-        print('Hello world')
-    
-
     # Import setup parameter
     def read_TDm_parameter(self,conf_path = './'):
         ''' 
         Put the parameter of the TDm setup into a dictonnary 
 
-        THe conf file has to be named "TDm.config" and at the {conf_path}
+        The conf file has to be named "TDm.config" and at the {conf_path}
         location which is by default the name of the case 
         '''
         
@@ -100,76 +93,6 @@ class TDm_object:
             print(f'----------------------')
 
     
-    def convergent_flow(self,a,R,ar_grid,bdirOut):
-        ''' 
-        Compute a velocity field that converge to the PIL of the FR
-        '''
-
-        theta = ar_grid[1]
-        phi = ar_grid[2]
-
-        tt,pp = np.meshgrid(theta,phi,indexing='ij')
-
-        def gauss_t(xx2,mu_t,s_t):
-            ''' 
-            Gaussian on theta
-            '''
-            
-            gauss = np.sign(1.57 - xx2) * np.exp(-0.5 * ((xx2 - mu_t)/s_t)**2) \
-                    * 1 / (s_t * np.sqrt(2 * np.pi))
-
-            norm_t  = 1/(s_t * np.sqrt(2*np.pi))
-
-            gauss = gauss / norm_t
-
-            return gauss
-
-        # we normalise the gaussien by it's value at the mean value so that it is
-        # equal to 1 
-    
-
-
-        def gauss_p(xx3,mu_p,s_p):
-            '''
-            Gaussian on phi
-            '''
-            gauss =  np.exp(-0.5 * ((xx3 - mu_p)/s_p)**2) \
-                    * 1 / (s_p * np.sqrt(2 * np.pi))
-
-            # we normalise the gaussian by it's value at the mean value so that it is
-            # equal to 1 
-            norm_p  = 1/(s_p * np.sqrt(2*np.pi))
-
-            gauss = gauss / norm_p
-
-            return gauss
-
-            # Params for both gaussian
-            # ==========================
-
-        theta_0 = self.setup["THETA_0"]
-        phi_0 = self.setup["PHI_0"]
-
-        mu_p = phi_0
-        s_p = self.setup["R"] * 0.5
-
-        mu_t =  theta_0
-        s_t = self.setup["A"] * 1.3
-    
-        UNIT_VELOCITY = 4.367e7 # cm/s
-
-        V0 = 200e5 / UNIT_VELOCITY # 100 km/s
-
-        print(f'Velocity hard coded ({V0:.2f} PLUTO unit)')
-
-        gauss_tot = V0 * gauss_t(tt,mu_t,s_t) * gauss_p(pp,mu_p,s_p)
-
-        with open('{}/speed_bc.bin'.format(bdirOut),'wb') as speed_bc:      
-            for j in range(len(theta)):
-                for k in range(len(phi)):
-                    speed_bc.write(struct.pack('d',gauss_tot[j,k]))
-
-
     def cart_to_sph(vcart,xx2,xx3): 
 
         sinth=sin(xx2);
@@ -213,7 +136,7 @@ class TDm_object:
         Bcart[1] = - (yy-y0)/pow(rp,3.);
         Bcart[2] = - (zz-z0)/pow(rp,3.);
 
-        B_sph1 = tools_TDm.cart_to_sph(Bcart,xx2,xx3);
+        B_sph1 = formula_TDm.cart_to_sph(Bcart,xx2,xx3);
 
         #Second monopole
 
@@ -227,7 +150,7 @@ class TDm_object:
         Bcart[1] =  (yy-y0)/pow(rp,3.);
         Bcart[2] =  (zz-z0)/pow(rp,3.);
 
-        B_sph2 = tools_TDm.cart_to_sph(Bcart,xx2,xx3);
+        B_sph2 = formula_TDm.cart_to_sph(Bcart,xx2,xx3);
 
         B_sph = [0]*3
         for i in range(0,3):
@@ -266,7 +189,7 @@ class TDm_object:
         r_real_ghost = range(1,4)
 
         # Setting TDm on ghost cell 
-        B = tools_TDm.TDm_setup(
+        B = formula_TDm.TDm_setup(
                 ghost_r,
                 theta,
                 phi,
@@ -369,12 +292,26 @@ class TDm_object:
 
 
     # -------------------------------------------------------------------
-    def add_magnetic_structure(self,iteration,filetype='chk',geometry='spherical'):
+    def add_TDm_pluto(self,iteration,originals_dir,filetype='chk',geometry='spherical'):
         ''' 
         Add the magnetic structure to an existing hdf5 files
+
+        Inputs
+        ======
+        iteration: iteration of the PLUTO file at which we want to add the TDm
+        
+        originals_dir: path of the directory containing the data to which we
+        add the TDm (and the other necessary file to read it, ie grid.out for
+        PLUTO AMR file)
+
+        filetype: 'chk' (default) or 'data', type of PLUTO file to which we want to add
+        the TDm
+        
+        geometry: 'spherical' (default) or 'cartesian', type of geometry to use
+        as output of the magnetic field
         '''
         
-        print('Spherical geometry is hard coded in tools_TDm.TDm_setup')
+        print('Spherical geometry is hard coded in formula_TDm.TDm_setup')
 
         originals_dir = os.environ['TDM_ORIGINALS']
 
@@ -406,7 +343,7 @@ class TDm_object:
         # In PLUTO the star always have a radius = 1
         R_star = 1
 
-        Gamma = 1.05
+        # Gamma = 1.05
 
         ##
 
@@ -625,7 +562,7 @@ class TDm_object:
                 )
             
 
-            print(f'B_amb is at {B_amb}')
+            print(f'B_amb is {B_amb}')
             # print(f'B_amb_D is at {B_amb_D}')
 
 
@@ -784,7 +721,7 @@ class TDm_object:
                     rho_sw = Prim[0:n_x1,0:n_x2,0:n_x3,Rhovar]
 
                     # Computing the magnetic structure
-                    B_sph = tools_TDm.TDm_setup( 
+                    B_sph = formula_TDm.TDm_setup( 
                             new_r,
                             new_theta,
                             new_phi,
@@ -822,12 +759,12 @@ class TDm_object:
 
     
 
-    def add_flux_rope_EUHFORIA(self,iteration,filename,geometry='spherical',ori_dir=False):
+    def add_tdm_coconut(self,iteration,filename,geometry='spherical',ori_dir=False):
         ''' 
-        Add the magnetic structure to an existing hdf5 files
+        Add the TDm flux rope to the coconut simulation
         '''
         
-        print('Spherical geometry is hard coded in tools_TDm.TDm_setup')
+        print('Spherical geometry is hard coded in formula_TDm.TDm_setup')
 
 
         print('')
@@ -1024,7 +961,7 @@ class TDm_object:
 
 
         # Computing the flux rope magnetic field
-        B_cart = tools_TDm.TDm_setup( 
+        B_cart = formula_TDm.TDm_setup( 
                 x1,
                 x2,
                 x3,
@@ -1079,5 +1016,75 @@ class TDm_object:
                     'B_TDm' :(B_cart[0],B_cart[1],B_cart[2])
                     }
                 )
+
+    def convergent_flow(self,a,R,ar_grid,bdirOut):
+        ''' 
+        Compute a velocity field that converge to the PIL of the FR
+        '''
+
+        theta = ar_grid[1]
+        phi = ar_grid[2]
+
+        tt,pp = np.meshgrid(theta,phi,indexing='ij')
+
+        def gauss_t(xx2,mu_t,s_t):
+            ''' 
+            Gaussian on theta
+            '''
+            
+            gauss = np.sign(1.57 - xx2) * np.exp(-0.5 * ((xx2 - mu_t)/s_t)**2) \
+                    * 1 / (s_t * np.sqrt(2 * np.pi))
+
+            norm_t  = 1/(s_t * np.sqrt(2*np.pi))
+
+            gauss = gauss / norm_t
+
+            return gauss
+
+        # we normalise the gaussien by it's value at the mean value so that it is
+        # equal to 1 
+    
+
+
+        def gauss_p(xx3,mu_p,s_p):
+            '''
+            Gaussian on phi
+            '''
+            gauss =  np.exp(-0.5 * ((xx3 - mu_p)/s_p)**2) \
+                    * 1 / (s_p * np.sqrt(2 * np.pi))
+
+            # we normalise the gaussian by it's value at the mean value so that it is
+            # equal to 1 
+            norm_p  = 1/(s_p * np.sqrt(2*np.pi))
+
+            gauss = gauss / norm_p
+
+            return gauss
+
+            # Params for both gaussian
+            # ==========================
+
+        theta_0 = self.setup["THETA_0"]
+        phi_0 = self.setup["PHI_0"]
+
+        mu_p = phi_0
+        s_p = self.setup["R"] * 0.5
+
+        mu_t =  theta_0
+        s_t = self.setup["A"] * 1.3
+    
+        UNIT_VELOCITY = 4.367e7 # cm/s
+
+        V0 = 200e5 / UNIT_VELOCITY # 100 km/s
+
+        print(f'Velocity hard coded ({V0:.2f} PLUTO unit)')
+
+        gauss_tot = V0 * gauss_t(tt,mu_t,s_t) * gauss_p(pp,mu_p,s_p)
+
+        with open('{}/speed_bc.bin'.format(bdirOut),'wb') as speed_bc:      
+            for j in range(len(theta)):
+                for k in range(len(phi)):
+                    speed_bc.write(struct.pack('d',gauss_tot[j,k]))
+
 
 

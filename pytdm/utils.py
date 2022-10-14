@@ -32,9 +32,6 @@ def nufd1(x):
     return D
 
 
-
-
-
 def ComputeRot(x1,x2,x3,var1,var2,var3,geom='cartesian'):
     ''' Compute the rotation of the [var1,var2,var3] vector
     Author : Antoine Strugarek (CEA)
