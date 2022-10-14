@@ -19,7 +19,7 @@ setuptools.setup(
     long_description_content_type='text/markdown',
     url='https://github.com/fregnault/pyTDm.git',
     packages=setuptools.find_packages(),
-    package_data=package_data,
+    # package_data=package_data,
     python_requires='>=3.7',
     setup_requires=['wheel'],
     install_requires=requirements,
