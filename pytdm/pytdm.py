@@ -304,7 +304,7 @@ class TDm:
 
 
     # -------------------------------------------------------------------
-    def add_TDm_pluto(self,iteration,originals_dir,filetype='chk',geometry='spherical'):
+    def add_TDm_pluto_amr(self,iteration,originals_dir,filetype='chk',geometry='spherical'):
         ''' 
         Add the magnetic structure to an existing hdf5 files
 
