@@ -46,3 +46,6 @@ see the [pluto_amr](https://github.com/fregnault/pytdm/tree/main/pytdm/examples/
 # Acknowlegdments
 
 The `pyPLUTO.py` was written by A. Strugarek, B. Perri and V. Réville.
+
+A. Strugarek significantly contributed to the writing and reviewing of this
+python module.
