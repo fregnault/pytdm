@@ -23,8 +23,6 @@ in the most efficient way.
 
 # Installation
 
-You need to add to your `.bashrc` (or `.bash_profile` or `.zshrc`) so that the
-bash executable (or the python module) works. 
 
 ```
 git clone https://github.com/fregnault/pyTDm.git
@@ -33,22 +31,5 @@ pip install .
 
 # Basic usage
 
-## Bash executable
-The `init_TDm.py` file is an executable that can be used in the following way
-Let `originals_dir` be the directory where you have the datafile to which to want
-to add the TDm. 
-    
-1. Put the original data (without the TDm) in a given directory
-
-2. Create a directory where you want the datafile with the TDm to be
-
-3. Run `init_TDm.py` to add the TDm
-
-## Python (recommended)
-
-A more flexible way would be to load the `pyTDm` module and then add the
-magnetic structure in your data (that would have been already loaded) with python script.
-
-To have a example you can have a look at the `init_TDm.py` file which does the
-basic task.
-
+To see an example of the insertion of a TDm flux rope in a PLUTO AMR datafile
+see the [examples](https://github.com/fregnault/pytdm/tree/main/pytdm/examples/pluto_amr) directory.
