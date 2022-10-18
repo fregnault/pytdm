@@ -244,7 +244,7 @@ class TDm:
             'phi':phi
             })
 
-        print('Writing bin files')
+        # print('Writing bin files')
         with open('{}/flag_bc.bin'.format(bDirOut),'wb') as flag_bc:      
             for j in range(len(theta)):
                 for k in range(len(phi)):
@@ -464,7 +464,7 @@ class TDm:
             path_grid = '{}/grid_{}.npy'.format(bdirIn,iteration)
 
 
-            print(path_grid) 
+            # print(path_grid) 
 
             # In order to avoid huge file loading the grid can be saved in a npy file 
             # Checking if the grid of the original hdf5 file has been already
@@ -509,12 +509,12 @@ class TDm:
             pos_tube_t = np.argmin(np.abs(theta - theta_0))
             pos_tube_p = np.argmin(np.abs(phi - phi_0))
             
-            print('B amb is taken a R - d + a')
+            print('Bperp is taken a R - d + a')
             # path_B_grid = 'grid_B_{}.npy'.format(iteration)
             path_B_grid = '{}/grid_B_{}.npy'.format(bdirIn,iteration)
             path_prs_grid = '{}/grid_prs_{}.npy'.format(bdirIn,iteration)
             
-            print(path_B_grid) 
+            # print(path_B_grid) 
 
             # Checking if the B_grid already exists
             if os.path.exists(path_B_grid):
@@ -558,7 +558,7 @@ class TDm:
                         getattr(D,'Z-magnfield'),
                         ])
                     
-                    print('Saving')
+                    # print('Saving')
                     # Saving
                     np.save(
                             path_B_grid,
@@ -574,7 +574,7 @@ class TDm:
                 )
             
 
-            print(f'B_amb is {B_amb}')
+            print(f'Bperp is {B_amb:.2f}')
             # print(f'B_amb_D is at {B_amb_D}')
 
 
@@ -594,7 +594,7 @@ class TDm:
             Rhovar = list_var.index('rho')
             Prsvar = list_var.index('prs')
 
-            print(list_var) 
+            # print(list_var) 
 
 
             # Number of parameters
@@ -776,7 +776,7 @@ class TDm:
         Add the TDm flux rope to the coconut simulation
         '''
         
-        print('Spherical geometry is hard coded in formula_TDm.TDm_setup')
+        # print('Spherical geometry is hard coded in formula_TDm.TDm_setup')
 
 
         print('')

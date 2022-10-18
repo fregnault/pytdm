@@ -12,7 +12,7 @@ This python module initializes a modified Titov-Démoulin
 [PLUTO](http://plutocode.ph.unito.it/) AMR data file. (Mignone et al. 2014)
 
 There is currently (October 2022) work to extend that module to be able to
-add the TDm in the static version of PLUTO and also in the coconut coronal model.
+add the TDm in the static version of PLUTO and also in the [coconut](https://iopscience.iop.org/article/10.3847/1538-4357/ac7237) coronal model.
 
 The code reads the `TDm.config` file (which contains the different parameters of the TDm) and add it to the corresponding datafile.
 
@@ -32,3 +32,9 @@ pip install .
 
 To see an example of the insertion of a TDm flux rope in a PLUTO AMR datafile
 see the [pluto_amr](https://github.com/fregnault/pytdm/tree/main/pytdm/examples/pluto_amr) example directory.
+
+
+# Incoming features
+
+
+Right now the code can add a TDm flux rope in a coconut simulation the `add_TDm_coconut`
