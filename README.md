@@ -8,11 +8,13 @@ Welcome to pytdm !
 
 
 This python module initializes a modified Titov-Démoulin
-(Titov et al. 2014) flux rope and writes it in a
-[PLUTO](http://plutocode.ph.unito.it/) AMR data file. (Mignone et al. 2014)
+[(Titov et al.
+2014)](https://iopscience.iop.org/article/10.1088/0004-637X/790/2/163) flux rope and writes it in a
+[PLUTO](http://plutocode.ph.unito.it/) AMR data file. [(Mignone et al.
+2012)](https://iopscience.iop.org/article/10.1088/0067-0049/198/1/7)
 
 There is currently (October 2022) work to extend that module to be able to
-add the TDm in the static version of PLUTO and also in the [coconut](https://iopscience.iop.org/article/10.3847/1538-4357/ac7237) coronal model.
+add the TDm in the static version of PLUTO and also in the [COCONUT](https://iopscience.iop.org/article/10.3847/1538-4357/ac7237) coronal model.
 
 The code reads the `TDm.config` file (which contains the different parameters of the TDm) and add it to the corresponding datafile.
 
@@ -37,4 +39,8 @@ see the [pluto_amr](https://github.com/fregnault/pytdm/tree/main/pytdm/examples/
 # Incoming features
 
 
-Right now the code can add a TDm flux rope in a coconut simulation the `add_TDm_coconut`
+ - Right now the module can add a TDm flux rope in a COCONUT simulation with the `add_TDm_coconut` but this has not been fully validated yes.
+ - There is ongoing work in inserting the TDm in a dbl file of a static grid with the
+   PLUTO simulation
+
+
