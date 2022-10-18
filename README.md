@@ -43,4 +43,6 @@ see the [pluto_amr](https://github.com/fregnault/pytdm/tree/main/pytdm/examples/
  - There is ongoing work in inserting the TDm in a dbl file of a static grid with the
    PLUTO simulation
 
+# Acknowlegdments
 
+The `pyPLUTO.py` was written by A. Strugarek, B. Perri and V. Réville.
