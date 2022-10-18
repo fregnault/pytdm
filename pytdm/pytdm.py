@@ -10,9 +10,9 @@ from . import pyPLUTO as pp
 import struct
 
 import h5py as h5
-
 # For loading EUHFORIA 
 from pyevtk.hl import gridToVTK
+
 import pyvista as pyv
 from vtk.util.numpy_support import vtk_to_numpy
 from scipy.interpolate import griddata
@@ -771,7 +771,7 @@ class TDm:
 
     
 
-    def add_TDm_coconut(self,filename,originals_dir=originals_dir,out_dir='./',geometry='spherical'):
+    def add_TDm_coconut(self,filename,originals_dir,out_dir='./',geometry='spherical'):
         ''' 
         Add the TDm flux rope to the coconut simulation
         '''
