@@ -225,7 +225,7 @@ class TDm:
         # In this model we define different boundary condition close to the
         # foot of the TDm FR. To define the contour of this boundary we compute
         # the magnetic energy of the B from the TD and of the solar wind. 
-        # The boundary are changed in PLUTO if E_TD / E_sw > 0.5
+        # The boundary are changed in PLUTO if E_TD / E_sw > 0.5
 
         E_TD = np.sqrt(B_r[3,...]**2 + B_t[3,...]**2 + B_p[3,...]**2)
         E_sw = np.sqrt(B_grid[0][0,...]**2 + B_grid[1][0,...]**2 + B_grid[2][0,...]**2)
@@ -250,16 +250,16 @@ class TDm:
                 for k in range(len(phi)):
                     flag_bc.write(struct.pack('i',flag[j,k]))
 
-        # Saving the size in each direction in a binary arrays that contains
-        # 3 int
+        # Saving the size in each direction in a binary arrays that contains
+        # 3 int
         size_ar = np.array([len(real_ghost),len(theta),len(phi)])
 
-        # Saving size
+        # Saving size
         with open('{}/bc_sizes.bin'.format(bDirOut),'wb') as f:      
             for int_value in size_ar:                      
                 f.write(struct.pack('i', int_value))  
 
-        # Saving the actual data
+        # Saving the actual data
         with open('{}/bc_data.bin'.format(bDirOut),'wb') as f_array:
 
             for i in r_real_ghost:
@@ -314,12 +314,12 @@ class TDm:
         
         originals_dir: path of the directory containing the data to which we
         add the TDm (and the other necessary file to read it, ie grid.out for
-        PLUTO AMR file)
+        PLUTO AMR file)
 
         filetype: 'chk' (default) or 'data', type of PLUTO file to which we want to add
         the TDm
         
-        geometry: 'spherical' (default) or 'cartesian', type of geometry to use
+        geometry: 'spherical' (default) or 'cartesian', type of geometry to use
         as output of the magnetic field
         '''
         
@@ -771,7 +771,7 @@ class TDm:
 
     
 
-    def add_TDm_coconut(self,iteration,filename,geometry='spherical',ori_dir=False):
+    def add_TDm_coconut(self,filename,originals_dir=originals_dir,out_dir='./',geometry='spherical'):
         ''' 
         Add the TDm flux rope to the coconut simulation
         '''
@@ -783,10 +783,10 @@ class TDm:
         print('THIS BRANCH IS STILL EXPERIMENTAL')
         print('')
             
-        if ori_dir:
-            originals_dir = ori_dir
-        else:
-            originals_dir = os.environ['TDM_ORIGINALS_EUHFORIA']
+        # if ori_dir:
+            # originals_dir = ori_dir
+        # else:
+            # originals_dir = os.environ['TDM_ORIGINALS_EUHFORIA']
 
 
         # Directory where the filed to be modified is
@@ -947,7 +947,7 @@ class TDm:
 
         # Estimating the B_amb
          
-        r0 = 1 + self.setup['R'] - self.setup['D'] # Height at which B_amb is measured
+        r0 = 1 + self.setup['R'] - self.setup['D'] # Height at which B_amb is measured
         t0 = self.setup['THETA_0']
         p0 = self.setup['PHI_0']
     
@@ -997,7 +997,7 @@ class TDm:
  
         # Now putting everything in cartesian and save to vtk file
 
-        #  coordinates
+        #  coordinates
         # x = X1 * np.sin(X2) * np.cos(X3)
         # y = X1 * np.sin(X2) * np.sin(X3)
         # z = X1 * np.cos(X2)

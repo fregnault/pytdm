@@ -1,1 +1,9 @@
 numpy
+h5py
+tqdm
+pyevtk
+matplotlib
+scipy
+pyvista
+vtk
+pandas

@@ -4,7 +4,6 @@ import sys
 import struct
 import array
 import numpy as np
-import pdb
 import linecache
 try:
     import scipy as S
@@ -53,10 +52,6 @@ except ImportError:
     except ImportError:
         hasVTK=False
 from tqdm import tqdm 
-from numba import jit
-from multiprocessing import Pool
-from joblib import Parallel,delayed
-from subprocess import call
 
 def curdir():
     """ Get the current working directory.
@@ -870,8 +865,6 @@ class pload(object):
             # args = (i,dim,il,fl,data,boxes,nbox,vars,AMRBoxes,AMRLevel,flagAMR,
             # ncount,LevelDic,x1b,x2b,x3b,dx,freb,logr,ystr,zstr,noload,nvar)
             
-            # res = Parallel(n_jobs=4)(delayed(self.InterpGrid)(j,*args)  
-                            # for j in range(nbox))
 
             # AMRBoxes = res[0]
             # AMRLevel = res[1]
