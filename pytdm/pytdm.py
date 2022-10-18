@@ -195,7 +195,7 @@ class TDm:
         # We add 2 points around these value in order to avoid uncentered derivative
         # in the curl 
         ghost_r = np.array([r[0]-3*dr,r[0]-2*dr,r[0]-dr,r[0],r[1],r[2],r[3],r[4]])
-        print(ghost_r)
+        # print(ghost_r)
 
         real_ghost = ghost_r[1:4]
         r_real_ghost = range(1,4)
