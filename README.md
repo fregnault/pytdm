@@ -26,7 +26,7 @@ in the most efficient way.
 
 ```
 git clone https://github.com/fregnault/pyTDm.git
-cd pytdm
+cd pyTDm
 pip install .
 ```
 
