@@ -2,7 +2,7 @@
 import numpy as np 
 from tqdm import tqdm 
 from scipy.special import ellipk,ellipe
-import pyPLUTO as pp
+from . import pyPLUTO as pp
 import math
 import os
 import matplotlib.pyplot as plt 
