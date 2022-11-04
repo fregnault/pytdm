@@ -39,7 +39,7 @@ see the [pluto_amr](https://github.com/fregnault/pytdm/tree/main/pytdm/examples/
 # Incoming features
 
 
- - Right now the module can add a TDm flux rope in a COCONUT simulation with the `add_TDm_coconut` but this has not been fully validated yes.
+ - Right now the module can add a TDm flux rope in a COCONUT simulation with the `add_TDm_coconut` but this has not been fully validated yet.
  - There is ongoing work in inserting the TDm in a dbl file of a static grid with the
    PLUTO simulation
 
